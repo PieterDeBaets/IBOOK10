@@ -10,7 +10,6 @@ public class BookApplication extends Sprite {
         addChild(textField);
         trace("start up IBOOK10");
 
-        trace('pull test');
     }
 }
 }
