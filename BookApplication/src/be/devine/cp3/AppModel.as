@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3 {
-public class AppModel {
+public class Appmodel {
     /*************************************/
     //Properties
     /*************************************/
@@ -16,7 +16,7 @@ public class AppModel {
     //Constructor
     /*************************************/
 
-    public function AppModel() {
+    public function Appmodel() {
         trace("hier gaat er veel info in bijgehouden worden!");
     }
 
