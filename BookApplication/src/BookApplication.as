@@ -9,6 +9,8 @@ public class BookApplication extends Sprite {
         textField.text = "Hello, World";
         addChild(textField);
         trace("start up IBOOK10");
+
+        trace('pull test');
     }
 }
 }
