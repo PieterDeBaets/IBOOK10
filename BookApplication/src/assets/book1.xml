@@ -1,0 +1,52 @@
+<!-- gewoon een test xml. Zoeken naar een structuur die goed zou kunnen werken -->
+
+<book title='Eerste boek test'>
+    <page style='chapter'>
+        <title>Boek test</title>
+    </page>
+
+    <page style="text">
+        <par>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec tellus lorem, ut porta justo. Vivamus
+            ligula dolor, fermentum id fringilla id, hendrerit nec nunc. Sed posuere, neque at pharetra rutrum, velit
+            urna ornare velit, id iaculis turpis sem quis tellus. Nam ultricies leo sed purus congue mollis. Sed sapien
+            odio, rutrum eu posuere nec, congue eget mi. Nunc quam ipsum, molestie at accumsan et, rutrum sed elit.
+            Fusce ac nunc arcu, mattis porta orci. Proin purus urna, dictum ac iaculis eu, mollis quis tellus. In
+            varius ante a mauris tristique vel blandit leo laoreet. In eget tortor libero. Nulla sit amet vestibulum
+            ligula. Praesent nec eros quis leo vehicula congue id a leo. Vivamus vel sapien sapien, ut luctus massa.
+            Vestibulum ultricies vulputate leo, et pretium odio tincidunt id. In hac habitasse platea dictumst.
+        </par>
+
+        <par>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec tellus lorem, ut porta justo. Vivamus
+            ligula dolor, fermentum id fringilla id, hendrerit nec nunc. Sed posuere, neque at pharetra rutrum, velit
+            urna ornare velit, id iaculis turpis sem quis tellus. Nam ultricies leo sed purus congue mollis. Sed sapien
+            odio, rutrum eu posuere nec, congue eget mi. Nunc quam ipsum, molestie at accumsan et, rutrum sed elit.
+            Fusce ac nunc arcu, mattis porta orci. Proin purus urna, dictum ac iaculis eu, mollis quis tellus. In
+            varius ante a mauris tristique vel blandit leo laoreet. In eget tortor libero. Nulla sit amet vestibulum
+            ligula. Praesent nec eros quis leo vehicula congue id a leo. Vivamus vel sapien sapien, ut luctus massa.
+            Vestibulum ultricies vulputate leo, et pretium odio tincidunt id. In hac habitasse platea dictumst.
+        </par>
+    </page>
+
+    <page style="imageText">
+        <image caption='Dit is een mega zotte afbeelding' url="assets/images/book1foto1.jpg"/>
+        <par>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec tellus lorem, ut porta justo. Vivamus
+            ligula dolor, fermentum id fringilla id, hendrerit nec nunc. Sed posuere, neque at pharetra rutrum, velit
+            urna ornare velit, id iaculis turpis sem quis tellus. Nam ultricies leo sed purus congue mollis. Sed sapien
+            odio, rutrum eu posuere nec, congue eget mi. Nunc quam ipsum, molestie at accumsan et, rutrum sed elit.
+        </par>
+    </page>
+
+    <page style="image">
+        <image caption='Alweer een zotte afbeelding' url="assets/images/book1foto2.jpg"/>
+        <image caption='Ja ja captions' url="assets/images/book1foto3.jpg"/>
+    </page>
+
+    <page style="">
+
+    </page>
+</book>
+
+
