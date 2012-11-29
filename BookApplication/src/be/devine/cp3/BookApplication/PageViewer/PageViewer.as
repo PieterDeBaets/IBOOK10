@@ -6,10 +6,15 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.BookApplication.PageViewer {
+import be.devine.cp3.BookApplication.PageViewer.VO.Spread;
+
 public class PageViewer {
     /*************************************/
     //Properties
     /*************************************/
+    private var currentSpread:int;
+    private var background:*; // BasicPageViewerBackground
+    private var spread: Spread;
 
 
     /*************************************/

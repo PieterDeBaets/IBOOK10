@@ -6,7 +6,11 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.BookApplication.PageViewer.VO {
-public class TextPage {
+import be.devine.cp3.BookApplication.PageViewer.IAmAPage;
+
+import flash.display.Sprite;
+
+public class TextPage extends Sprite implements IAmAPage{
     /*************************************/
     //Properties
     /*************************************/

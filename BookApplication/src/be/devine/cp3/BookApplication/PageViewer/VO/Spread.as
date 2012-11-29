@@ -6,7 +6,11 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.BookApplication.PageViewer.VO {
-public class Spread {
+import be.devine.cp3.BookApplication.PageViewer.IAmAPage;
+
+import flash.display.Sprite;
+
+public class Spread extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
@@ -16,7 +20,7 @@ public class Spread {
     //Constructor
     /*************************************/
 
-    public function Spread() {
+    public function Spread(page1:IAmAPage, page2:IAmAPage) {
     }
 
 

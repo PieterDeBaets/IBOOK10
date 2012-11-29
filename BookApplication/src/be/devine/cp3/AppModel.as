@@ -10,6 +10,18 @@ public class Appmodel {
     /*************************************/
     //Properties
     /*************************************/
+    private var currentSpread:int;
+    private var totalPages:int;
+    private var totalSpreads:int;
+
+    private var arrBook:Array; // enkele spreads, niet in chapters opgedeeld
+    private var arrChapter:Array;
+    private var spreadsPerChapter:Array;
+    private var arrColors:Array;
+
+    private var lightMode:Boolean;
+    private var timelineVisible:Boolean;
+    private var indexVisible:Boolean;
 
 
     /*************************************/
