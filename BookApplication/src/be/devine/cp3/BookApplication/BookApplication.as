@@ -1,4 +1,4 @@
-package {
+package be.devine.cp3.BookApplication {
 
 import be.devine.cp3.Appmodel;
 
