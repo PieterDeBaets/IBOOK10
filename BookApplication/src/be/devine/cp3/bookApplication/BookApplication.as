@@ -1,4 +1,4 @@
-package be.devine.cp3.bookApplicationTets {
+package be.devine.cp3.bookApplication {
 
 import be.devine.cp3.AppModel;
 
@@ -29,10 +29,10 @@ public class BookApplication extends Sprite {
         //instantie Appmodel
         //appmodel variabelen instellen adhv xml
 
-        //instantie pageViewerTest
-        //instantie controlsTest
-        //instantie indexTest
-        //instantie timelineTest
+        //instantie pageViewer
+        //instantie controls
+        //instantie index
+        //instantie timeline
 
 
     }
