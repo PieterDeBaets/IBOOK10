@@ -1,5 +1,5 @@
 
-package be.devine.cp3.BookApplication.Timeline.scrollbar {
+package be.devine.cp3.bookApplication.timeline.scrollbar {
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.events.MouseEvent;

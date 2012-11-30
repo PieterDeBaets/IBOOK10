@@ -5,7 +5,7 @@
  * Time: 15:25
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.BookApplication.Controls {
+package be.devine.cp3.bookApplication.controls {
 public class NextButton {
     /*************************************/
     //Properties

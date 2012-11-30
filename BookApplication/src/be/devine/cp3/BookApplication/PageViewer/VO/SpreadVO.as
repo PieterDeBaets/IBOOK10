@@ -1,16 +1,12 @@
 /**
  * Created with IntelliJ IDEA.
  * User: pieterdebaets
- * Date: 29/11/12
- * Time: 15:26
+ * Date: 30/11/12
+ * Time: 09:27
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.BookApplication.PageViewer.VO {
-import be.devine.cp3.BookApplication.PageViewer.IAmAPage;
-
-import flash.display.Sprite;
-
-public class Spread extends Sprite{
+package be.devine.cp3.bookApplication.pageViewer.vo {
+public class SpreadVO {
     /*************************************/
     //Properties
     /*************************************/
@@ -20,7 +16,7 @@ public class Spread extends Sprite{
     //Constructor
     /*************************************/
 
-    public function Spread(page1:IAmAPage, page2:IAmAPage) {
+    public function SpreadVO() {
     }
 
 
