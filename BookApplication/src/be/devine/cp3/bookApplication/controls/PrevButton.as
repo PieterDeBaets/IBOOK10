@@ -17,6 +17,8 @@ public class PrevButton {
     /*************************************/
 
     public function PrevButton() {
+        //bg-asset
+        //clickhandler dispatcht event PREV_SPREAD
     }
 
 

@@ -28,6 +28,7 @@ public class Main extends Sprite {
     public function Main() {
         //stage settings
         //andere settings om het frame goed te stellen (Desktop-specifiek)
+        //starling setting
         //preloader laadt bookApplication in
 
         stage.align = StageAlign.TOP_LEFT;

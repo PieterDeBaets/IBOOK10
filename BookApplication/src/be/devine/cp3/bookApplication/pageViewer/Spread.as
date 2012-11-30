@@ -13,6 +13,9 @@ public class Spread extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
+    //private var background:BasicSpreadBackground;
+    private var page1:Page;
+    private var page2:Page;
 
 
     /*************************************/

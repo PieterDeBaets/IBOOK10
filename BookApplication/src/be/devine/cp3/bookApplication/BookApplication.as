@@ -32,13 +32,14 @@ public class BookApplication extends starling.display.Sprite {
 
         //instantie RequestQueue
         //xml inladen
+
         //instantie Appmodel
         //appmodel variabelen instellen adhv xml
 
-        //instantie pageViewer
-        //instantie controls
-        //instantie index
-        //instantie timeline
+        //instantie PageViewer
+        //instantie Controls
+        //instantie Index
+        //instantie Timeline
 
 
     }

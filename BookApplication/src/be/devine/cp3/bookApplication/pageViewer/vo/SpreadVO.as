@@ -10,7 +10,8 @@ public class SpreadVO {
     /*************************************/
     //Properties
     /*************************************/
-
+    public var page1:PageVO;
+    public var page2:PageVO;
 
     /*************************************/
     //Constructor

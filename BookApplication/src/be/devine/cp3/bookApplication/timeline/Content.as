@@ -6,10 +6,18 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.bookApplication.timeline {
-public class Content {
+import be.devine.cp3.bookApplication.timeline.SpreadIcon;
+
+import flash.display.Sprite;
+
+public class Content extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
+    private var totalSpreads:int;
+    private var currentSpread:int;
+    private var arrBook:Array;
+    private var spreadIcon:SpreadIcon;
 
 
     /*************************************/
@@ -17,6 +25,7 @@ public class Content {
     /*************************************/
 
     public function Content() {
+
     }
 
 
