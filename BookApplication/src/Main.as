@@ -6,7 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 package {
-public class Main {
+import flash.display.Sprite;
+
+public class Main extends Sprite {
     /*************************************/
     //Properties
     /*************************************/
