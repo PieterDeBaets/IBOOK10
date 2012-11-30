@@ -1,25 +1,34 @@
 /**
  * Created with IntelliJ IDEA.
  * User: pieterdebaets
- * Date: 30/11/12
- * Time: 09:14
+ * Date: 29/11/12
+ * Time: 15:26
  * To change this template use File | Settings | File Templates.
  */
-package {
-public class Main {
+package be.devine.cp3.bookApplication.pageViewer {
+import be.devine.cp3.bookApplication.pageViewer.Spread;
+
+public class PageViewer {
     /*************************************/
     //Properties
     /*************************************/
+    private var currentSpread:int;
+    private var background:*; // BasicPageViewerBackground
+    private var spread: Spread;
 
 
     /*************************************/
     //Constructor
     /*************************************/
 
-    public function Main() {
-        //stage settings
-        //andere settings om het frame goed te stellen (Desktop-specifiek)
-        //preloader laadt bookApplicationTets in
+    public function PageViewer() {
+
+        //instantie background (de gradients)
+        //instantie Spread
+        //Spread luistert naar CHANGE_CURRENT_SPREAD
+        //animatie
+
+
     }
 
 

@@ -2,11 +2,13 @@
  * Created with IntelliJ IDEA.
  * User: pieterdebaets
  * Date: 30/11/12
- * Time: 09:14
+ * Time: 09:13
  * To change this template use File | Settings | File Templates.
  */
-package {
-public class Main {
+package be.devine.cp3.bookApplication.pageViewer {
+import be.devine.cp3.bookApplication.pageViewer.vo.PageVO;
+
+public class Page {
     /*************************************/
     //Properties
     /*************************************/
@@ -16,10 +18,9 @@ public class Main {
     //Constructor
     /*************************************/
 
-    public function Main() {
-        //stage settings
-        //andere settings om het frame goed te stellen (Desktop-specifiek)
-        //preloader laadt bookApplicationTets in
+    public function Page(data:PageVO) {
+        //switch op properties van data: Check welke niet null zijn
+        //
     }
 
 

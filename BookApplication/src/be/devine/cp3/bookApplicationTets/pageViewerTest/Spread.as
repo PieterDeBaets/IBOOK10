@@ -1,12 +1,15 @@
 /**
  * Created with IntelliJ IDEA.
  * User: pieterdebaets
- * Date: 30/11/12
- * Time: 09:14
+ * Date: 29/11/12
+ * Time: 15:26
  * To change this template use File | Settings | File Templates.
  */
-package {
-public class Main {
+package be.devine.cp3.bookApplication.pageViewer {
+
+import flash.display.Sprite;
+
+public class Spread extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
@@ -16,10 +19,9 @@ public class Main {
     //Constructor
     /*************************************/
 
-    public function Main() {
-        //stage settings
-        //andere settings om het frame goed te stellen (Desktop-specifiek)
-        //preloader laadt bookApplicationTets in
+    public function Spread() {
+        //2 instanties page
+
     }
 
 

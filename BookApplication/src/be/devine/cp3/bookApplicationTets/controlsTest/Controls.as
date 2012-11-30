@@ -1,25 +1,30 @@
 /**
  * Created with IntelliJ IDEA.
  * User: pieterdebaets
- * Date: 30/11/12
- * Time: 09:14
+ * Date: 29/11/12
+ * Time: 15:24
  * To change this template use File | Settings | File Templates.
  */
-package {
-public class Main {
+package be.devine.cp3.bookApplication.controls {
+import flash.display.MovieClip;
+import flash.display.Sprite;
+
+public class Controls extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
+    private var nextButton:MovieClip; // Komt uit assets
+    private var prevButton:MovieClip; // Komt uit assets
+    private var lightSwitch:MovieClip; // Komt uit assets
+    private var currentPage:int;
+    private var totalPages:int;
 
 
     /*************************************/
     //Constructor
     /*************************************/
 
-    public function Main() {
-        //stage settings
-        //andere settings om het frame goed te stellen (Desktop-specifiek)
-        //preloader laadt bookApplicationTets in
+    public function Controls() {
     }
 
 

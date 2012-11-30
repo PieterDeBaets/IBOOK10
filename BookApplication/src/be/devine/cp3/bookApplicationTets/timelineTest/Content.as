@@ -1,12 +1,12 @@
 /**
  * Created with IntelliJ IDEA.
  * User: pieterdebaets
- * Date: 30/11/12
- * Time: 09:14
+ * Date: 29/11/12
+ * Time: 15:31
  * To change this template use File | Settings | File Templates.
  */
-package {
-public class Main {
+package be.devine.cp3.bookApplication.timeline {
+public class Content {
     /*************************************/
     //Properties
     /*************************************/
@@ -16,10 +16,7 @@ public class Main {
     //Constructor
     /*************************************/
 
-    public function Main() {
-        //stage settings
-        //andere settings om het frame goed te stellen (Desktop-specifiek)
-        //preloader laadt bookApplicationTets in
+    public function Content() {
     }
 
 
