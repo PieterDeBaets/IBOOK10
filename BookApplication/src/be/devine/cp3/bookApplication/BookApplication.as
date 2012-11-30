@@ -2,10 +2,11 @@ package be.devine.cp3.bookApplication {
 
 import be.devine.cp3.AppModel;
 
-import flash.display.Sprite;
-import flash.text.TextField;
 
-public class BookApplication extends Sprite {
+import starling.display.Quad;
+import starling.text.TextField;
+
+public class BookApplication extends starling.display.Sprite {
     /*************************************/
     //Properties
     /*************************************/
@@ -16,14 +17,12 @@ public class BookApplication extends Sprite {
     /*************************************/
 
     public function BookApplication() {
-        var textField:TextField = new TextField();
-        textField.text = "IBOOK 10 start";
+        var textField:starling.text.TextField = new TextField(100, 20, "IBOOK 10 start", "Verdana", 12);
         addChild(textField);
         trace("start up IBOOK10");
 
         appModel = AppModel.getInstance();
-        trace(appModel);
-        
+
         //instantie RequestQueue
         //xml inladen
         //instantie Appmodel
