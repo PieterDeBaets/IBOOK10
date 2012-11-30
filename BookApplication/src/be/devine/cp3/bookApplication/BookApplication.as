@@ -8,7 +8,6 @@ import starling.animation.Tween;
 
 import starling.core.Starling;
 
-
 import starling.display.Quad;
 import starling.text.TextField;
 
@@ -29,6 +28,30 @@ public class BookApplication extends starling.display.Sprite {
         trace("start up IBOOK10");
 
         appModel = AppModel.getInstance();
+
+        var quad:Quad;
+        var tween:Tween;
+
+        /*
+        quad = new Quad(100, 100, Math.random()* 0xffffff);
+        quad.x = Math.random()*100;
+        quad.y = Math.random()*100;
+        quad.alpha = 0;
+        quad.scaleX = quad.scaleY = 0;
+
+        addChild(quad);
+
+        tween = new Tween(quad, 1, "ease");
+        tween.animate('x', 100 + Math.random()*100);
+        tween.animate('y', 100 + Math.random()*100);
+        tween.animate("scaleX", 1);
+        tween.animate("scaleY", 1);
+        tween.animate('alpha', 1);
+        trace('tween');
+        Starling.juggler.add(tween);
+        */
+
+        }
 
         //instantie RequestQueue
         //xml inladen
@@ -54,5 +77,4 @@ public class BookApplication extends starling.display.Sprite {
     /*************************************/
     //Getters & Setters
     /*************************************/
-}
 }
