@@ -23,6 +23,7 @@ public class Index {
     /*************************************/
 
     public function Index() {
+        //clickhandler dispatcht CURRENT_PAGE_CHANGED naar 1e pagina van het geselecteerde chapter
     }
 
 

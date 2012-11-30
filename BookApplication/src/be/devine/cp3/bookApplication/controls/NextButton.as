@@ -17,6 +17,8 @@ public class NextButton {
     /*************************************/
 
     public function NextButton() {
+        //bg-asset
+        //clickhandler dispatcht event NEXT_SPREAD
     }
 
 

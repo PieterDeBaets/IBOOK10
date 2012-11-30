@@ -50,8 +50,7 @@ public class PageVO {
     /*************************************/
 
     public function PageVO() {
-        //Check welke attributen beschikbaar zijn in XML
-        //Sla op in de variabelen
+
     }
 
 

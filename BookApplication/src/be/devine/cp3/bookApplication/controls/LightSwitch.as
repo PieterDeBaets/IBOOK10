@@ -17,6 +17,8 @@ public class LightSwitch {
     /*************************************/
 
     public function LightSwitch() {
+        //background asset
+        //clickhandler dispatcht event: LIGHTMODE_CHANGED
     }
 
 
