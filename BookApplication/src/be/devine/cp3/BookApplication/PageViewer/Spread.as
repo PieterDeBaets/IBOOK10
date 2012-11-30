@@ -21,7 +21,7 @@ public class Spread extends Sprite{
 
     public function Spread() {
         //2 instanties page
-        //
+
     }
 
 
