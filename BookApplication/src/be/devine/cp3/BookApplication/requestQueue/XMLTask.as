@@ -1,5 +1,5 @@
 
-package be.devine.cp3.BookApplication.RequestQueue {
+package be.devine.cp3.bookApplication.requestQueue {
 import flash.net.URLLoader;
 import flash.net.URLRequest;
 

@@ -1,4 +1,4 @@
-package be.devine.cp3.BookApplication.RequestQueue {
+package be.devine.cp3.bookApplication.requestQueue {
 import flash.display.Loader;
 import flash.events.Event;
 import flash.net.URLRequest;

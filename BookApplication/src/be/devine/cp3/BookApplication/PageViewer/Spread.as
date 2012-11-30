@@ -2,15 +2,14 @@
  * Created with IntelliJ IDEA.
  * User: pieterdebaets
  * Date: 29/11/12
- * Time: 15:27
+ * Time: 15:26
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.BookApplication.PageViewer.VO {
-import be.devine.cp3.BookApplication.PageViewer.IAmAPage;
+package be.devine.cp3.bookApplication.pageViewer {
 
 import flash.display.Sprite;
 
-public class TitlePage extends Sprite implements IAmAPage{
+public class Spread extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
@@ -20,7 +19,9 @@ public class TitlePage extends Sprite implements IAmAPage{
     //Constructor
     /*************************************/
 
-    public function TitlePage() {
+    public function Spread() {
+        //2 instanties page
+        //
     }
 
 

@@ -5,8 +5,8 @@
  * Time: 15:26
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.BookApplication.PageViewer {
-import be.devine.cp3.BookApplication.PageViewer.VO.Spread;
+package be.devine.cp3.bookApplication.pageViewer {
+import be.devine.cp3.bookApplication.pageViewer.Spread;
 
 public class PageViewer {
     /*************************************/
@@ -22,6 +22,13 @@ public class PageViewer {
     /*************************************/
 
     public function PageViewer() {
+
+        //instantie background (de gradients)
+        //instantie Spread
+        //Spread luistert naar CHANGE_CURRENT_SPREAD
+        //animatie
+
+
     }
 
 

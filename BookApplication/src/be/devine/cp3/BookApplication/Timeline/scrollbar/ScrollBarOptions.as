@@ -1,5 +1,5 @@
 
-package be.devine.cp3.BookApplication.Timeline.scrollbar {
+package be.devine.cp3.bookApplication.timeline.scrollbar {
 public class ScrollBarOptions {
     private var _width:Number;
     private var _height:Number;

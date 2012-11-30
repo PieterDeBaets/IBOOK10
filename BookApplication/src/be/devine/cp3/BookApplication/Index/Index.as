@@ -5,7 +5,7 @@
  * Time: 15:25
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.BookApplication.Index {
+package be.devine.cp3.bookApplication.index {
 import flash.text.TextField;
 
 public class Index {

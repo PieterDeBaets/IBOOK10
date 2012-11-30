@@ -5,7 +5,7 @@
  * Time: 15:31
  * To change this template use File | Settings | File Templates.
  */
-package be.devine.cp3.BookApplication.Timeline {
+package be.devine.cp3.bookApplication.timeline {
 public class Content {
     /*************************************/
     //Properties
