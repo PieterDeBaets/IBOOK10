@@ -6,6 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3 {
+import flash.events.Event;
 import flash.events.EventDispatcher;
 
 public class AppModel extends EventDispatcher{
@@ -15,18 +16,23 @@ public class AppModel extends EventDispatcher{
 
     public static var instance:AppModel;
 
-    private var currentSpread:int;
-    private var totalPages:int;
-    private var totalSpreads:int;
+    private var _currentSpread:int;
+    private var _totalPages:int;
+    private var _totalSpreads:int;
 
-    private var arrBook:Array; // enkele spreads, niet in chapters opgedeeld
-    private var arrChapter:Array;
-    private var spreadsPerChapter:Array;
-    private var arrColors:Array;
+    private var _arrBook:Array; // enkele spreads, niet in chapters opgedeeld
+    private var _arrChapter:Array;
+    private var _spreadsPerChapter:Array;
+    private var _arrColors:Array;
 
-    private var lightMode:Boolean;
-    private var timelineVisible:Boolean;
-    private var indexVisible:Boolean;
+    private var _lightMode:Boolean;
+    private var _timelineVisible:Boolean;
+    private var _indexVisible:Boolean;
+
+    public static const CURRENT_SPREAD_CHANGED:String="CURRENT_SPREAD_CHANGED";
+    public static const LIGHTMODE_CHANGED:String="LIGHTMODE_CHANGED";
+    public static const TIMELINEVISIBLE_CHANGED:String="TIMELINEVISIBLE_CHANGED";
+    public static const INDEXVISIBLE_CHANGED:String="INDEXVISIBLE_CHANGED";
 
 
     /*************************************/
@@ -56,6 +62,120 @@ public class AppModel extends EventDispatcher{
     //Getters & Setters
     /*************************************/
 
+    public function get currentSpread():int {
+        return _currentSpread;
+    }
+
+    public function set currentSpread(value:int):void {
+        if(value != _currentSpread){
+            _currentSpread = value;
+            dispatchEvent(new Event(CURRENT_SPREAD_CHANGED))
+        }
+    }
+
+
+    public function get totalPages():int {
+        return _totalPages;
+    }
+
+    public function set totalPages(value:int):void {
+        if(value != _totalPages){
+            _totalPages = value;
+        }
+    }
+
+
+    public function get totalSpreads():int {
+        return _totalSpreads;
+    }
+
+    public function set totalSpreads(value:int):void {
+        if(value != _totalSpreads){
+            _totalSpreads = value;
+        }
+    }
+
+
+    public function get arrBook():Array {
+        return _arrBook;
+    }
+
+    public function set arrBook(value:Array):void {
+        if(value != _arrBook){
+            _arrBook = value;
+        }
+    }
+
+
+    public function get arrChapter():Array {
+        return _arrChapter;
+    }
+
+    public function set arrChapter(value:Array):void {
+        if(value != _arrChapter){
+            _arrChapter = value;
+        }
+    }
+
+
+    public function get spreadsPerChapter():Array {
+        return _spreadsPerChapter;
+    }
+
+    public function set spreadsPerChapter(value:Array):void {
+        if(value != _spreadsPerChapter){
+            _spreadsPerChapter = value;
+        }
+    }
+
+
+    public function get arrColors():Array {
+        return _arrColors;
+    }
+
+    public function set arrColors(value:Array):void {
+        if(value != _arrColors){
+            _arrColors = value;
+        }
+    }
+
+
+    public function get lightMode():Boolean {
+        return _lightMode;
+    }
+
+    public function set lightMode(value:Boolean):void {
+        if(value != _lightMode){
+            _lightMode = value;
+            dispatchEvent(new Event(LIGHTMODE_CHANGED));
+        }
+    }
+
+
+    public function get timelineVisible():Boolean {
+        return _timelineVisible;
+    }
+
+    public function set timelineVisible(value:Boolean):void {
+        if(_timelineVisible != value){
+            _timelineVisible = value;
+            dispatchEvent(new Event(TIMELINEVISIBLE_CHANGED));
+        }
+
+    }
+
+
+    public function get indexVisible():Boolean {
+        return _indexVisible;
+    }
+
+    public function set indexVisible(value:Boolean):void {
+        if(_indexVisible != value){
+            _indexVisible = value;
+            dispatchEvent(new Event(INDEXVISIBLE_CHANGED));
+        }
+
+    }
 }
 }
 
