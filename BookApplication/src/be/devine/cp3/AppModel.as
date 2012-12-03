@@ -16,18 +16,18 @@ public class AppModel extends EventDispatcher{
 
     public static var instance:AppModel;
 
-    private var _currentSpread:int;
-    private var _totalPages:int;
-    private var _totalSpreads:int;
+    private var _currentSpread:int = 0;
+    private var _totalPages:int = 0;
+    private var _totalSpreads:int = 0;
 
-    private var _arrBook:Array; // enkele spreads, niet in chapters opgedeeld
-    private var _arrChapter:Array;
-    private var _spreadsPerChapter:Array;
-    private var _arrColors:Array;
+    private var _arrBook:Array = []; // enkele spreads, niet in chapters opgedeeld
+    private var _arrChapter:Array = [];
+    private var _spreadsPerChapter:Array= [];
+    private var _arrColors:Array = [];
 
-    private var _lightMode:Boolean;
-    private var _timelineVisible:Boolean;
-    private var _indexVisible:Boolean;
+    private var _lightMode:Boolean = false;
+    private var _timelineVisible:Boolean = false;
+    private var _indexVisible:Boolean = false;
 
     public static const CURRENT_SPREAD_CHANGED:String="CURRENT_SPREAD_CHANGED";
     public static const LIGHTMODE_CHANGED:String="LIGHTMODE_CHANGED";
@@ -39,8 +39,6 @@ public class AppModel extends EventDispatcher{
     /*************************************/
 
     public function AppModel(enforcer:Enforcer) {
-        trace("hier gaat er veel info in bijgehouden worden!");
-
         if(enforcer == null){
             throw new Error('AppModel is a singleton');
         }

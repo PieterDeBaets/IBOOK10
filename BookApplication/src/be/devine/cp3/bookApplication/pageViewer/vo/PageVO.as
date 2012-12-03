@@ -13,26 +13,27 @@ public class PageVO {
     //Properties
     /*************************************/
     public var title:String;
-    public var titleX:int;
-    public var titleY:int;
-    public var titleWidth:int;
-    public var titleHeight:int;
+    public var titleX:int= 58;
+    public var titleY:int= 57;
+    public var titleWidth:int = 390;
+    public var titleHeight:int = 400;
 
     public var paragraph:String;
-    public var paragraphX:int;
-    public var paragraphY:int;
-    public var paragraphWidth:int;
-    public var paragraphHeight:int;
+    public var paragraphX:int = 58;
+    public var paragraphY:int= 43;
+    public var paragraphWidth:int = 351;
+    public var paragraphHeight:int = 489;
 
     public var image1:ImageLoader;
-    public var image1X:int;
-    public var image1Y:int;
-    public var image1Width:int;
-    public var image1Height:int;
+    public var imageUrl:String = "assets/";
+    public var image1X:int = 64;
+    public var image1Y:int = 46;
+    public var image1Width:int = 391;
+    public var image1Height:int = 585;
 
     public var pageNumber:int;
-    public var pageNumberX:int;
-    public var pageNumberY:int;
+    public var pageNumberX:int = 409;
+    public var pageNumberY:int = 675;
     public var pageNumberWidth:int;
     public var pageNumberHeight:int;
 

@@ -1,6 +1,11 @@
 <book title='Operating Manual For Spaceship Earth' author='R. Buckminster Füller' year='1968' src='cover.jpg'>
 
-    <page style="index"></page>
+    <chapter title='index'>
+        <spread>
+            <page style="empty"></page>
+            <page style="index"></page>
+        </spread>
+    </chapter>
 
     <chapter title='Comprehensive Propensities'>
 
@@ -20,7 +25,7 @@
         </spread>
 
         <spread>
-            <page style="text">
+            <page style="text" X='100' Y='100'>
                 <p>
                     I am enthusiastic over humanity’s extraordinary and sometimes very timely ingenuities. If you are in
                     a shipwreck and all the boats are gone, a piano top buoyant enough to keep you afloat that comes

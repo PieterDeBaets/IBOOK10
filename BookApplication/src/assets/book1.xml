@@ -51,7 +51,7 @@
         </spread>
 
         <spread>
-            <page style="text">
+            <page style="text" X='100'>
                 <p>
                     1927’S prognosticating went only to 1952---that is, for a quarter-century, but some of it went on
                     for a half-century, to 1977.

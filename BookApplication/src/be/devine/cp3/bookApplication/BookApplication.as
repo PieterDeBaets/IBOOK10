@@ -1,6 +1,9 @@
 package be.devine.cp3.bookApplication {
 
 import be.devine.cp3.AppModel;
+import be.devine.cp3.bookApplication.service.BookService;
+
+import flash.events.Event;
 
 import starling.animation.Transitions;
 
@@ -16,6 +19,7 @@ public class BookApplication extends starling.display.Sprite {
     //Properties
     /*************************************/
     private var appModel:AppModel;
+    private var bookService:BookService;
 
     /*************************************/
     //Constructor
@@ -25,14 +29,17 @@ public class BookApplication extends starling.display.Sprite {
         var textField:starling.text.TextField = new TextField(100, 20, "IBOOK 10 start", "Verdana", 12);
         addChild(textField);
 
-        trace("start up IBOOK10");
-
         appModel = AppModel.getInstance();
 
+
+        bookService = new BookService();
+        bookService.addEventListener(Event.COMPLETE, bookCompleted);
+        bookService.load();
+        /*
         var quad:Quad;
         var tween:Tween;
 
-        /*
+
         quad = new Quad(100, 100, Math.random()* 0xffffff);
         quad.x = Math.random()*100;
         quad.y = Math.random()*100;
@@ -50,8 +57,21 @@ public class BookApplication extends starling.display.Sprite {
         trace('tween');
         Starling.juggler.add(tween);
         */
+    }
 
-        }
+    private function bookCompleted(event:Event){
+        trace("VO's aangemaak!");
+    }
+
+    /*************************************/
+    //Methods
+    /*************************************/
+
+
+    /*************************************/
+    //Getters & Setters
+    /*************************************/
+
 
         //instantie RequestQueue
         //xml inladen
@@ -67,14 +87,4 @@ public class BookApplication extends starling.display.Sprite {
 
     }
 
-
-
-    /*************************************/
-    //Methods
-    /*************************************/
-
-
-    /*************************************/
-    //Getters & Setters
-    /*************************************/
 }
