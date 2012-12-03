@@ -1,0 +1,87 @@
+<book title='Operating Manual For Spaceship Earth' author='R. Buckminster Füller' year='1968' src='cover.jpg'>
+
+    <page style="index"></page>
+
+    <chapter title='Comprehensive Propensities'>
+
+        <spread>
+            <page style="empty"></page>
+
+            <page style='front'>
+                <title>Comprehensive Propensities</title>
+            </page>
+
+        </spread>
+
+        <spread>
+            <page style="empty"></page>
+
+            <page style="index"></page>
+        </spread>
+
+        <spread>
+            <page style="text">
+                <p>
+                    I am enthusiastic over humanity’s extraordinary and sometimes very timely ingenuities. If you are in
+                    a shipwreck and all the boats are gone, a piano top buoyant enough to keep you afloat that comes
+                    along makes a fortuitous life preserver. But this is not to say that the best way to design a life
+                    preserver is in the form of a piano top. I think that we are clinging to a great many piano tops in
+                    accepting yesterday’s fortuitous contrivings as constituting the only means for solving a given
+                    problem. Our brains deal exclusively with special-case experiences. Only our minds are able to
+                    discover the generalized principles operating without exception in each and every special-experience
+                    case which if detected and mastered will give knowledgeable advantage in all instances.Because our
+                    spontaneous initiative has been frustrated, too often inadvertently, in earliest childhood we do not
+                    tend, customarily, to dare to think competently regarding our potentials. We find it socially easier
+                    to go on with our narrow, shortsighted specialization’s and leave it to others---primarily to the
+                    politicians---to find some way of resolving our common dilemmas. Countering that spontaneous grownup
+                    trend to narrowness I will do my, hopefully "childish," best to confront
+                </p>
+            </page>
+
+            <page style="text">
+                <p>
+                    as many of our problems as possible by employing the longest-distance thinking of which I am capable
+                    ---though that may not take us very far into the future.
+                </p>
+                <p>
+                    Having been trained at the U. S. Naval Academy and practically experienced in the powerfully
+                    effective forecasting arts of celestial navigation, pilotage, ballistics, and logistics, and in the
+                    long-range, anticipatory, design science governing yesterday’s naval mastery of the world from which
+                    our present day’s general systems theory has been derived, I recall that in 1927 I set about
+                    deliberately exploring to see how far ahead we could make competent forecasts regarding the direction
+                    in which all humanity is trending and to see how effectively we could interpret the physical details
+                    of what comprehensive evolution might be portending as disclosed by the available data. I came to
+                    the conclusion that it is possible to make a fairly reasonable forecast of about twenty-five years.
+                    That seems to be about one industrial "tooling" generation. On the average, all inventions seem to
+                    get melted up about every twenty-five years, after which the metals come back into recirculation in
+                    new and usually more effective uses. At any rate, in 1927 I evolved a forecast. Most of my
+                </p>
+            </page>
+        </spread>
+
+        <spread>
+            <page style="image" caption='dit is een super toffe foto' url="images/foto.jpg"></page>
+
+            <page style="text">
+                <p>
+                    as many of our problems as possible by employing the longest-distance thinking of which I am capable
+                    ---though that may not take us very far into the future.
+                </p>
+                <p>
+                    Having been trained at the U. S. Naval Academy and practically experienced in the powerfully
+                    effective forecasting arts of celestial navigation, pilotage, ballistics, and logistics, and in the
+                    long-range, anticipatory, design science governing yesterday’s naval mastery of the world from which
+                    our present day’s general systems theory has been derived, I recall that in 1927 I set about
+                    deliberately exploring to see how far ahead we could make competent forecasts regarding the direction
+                    in which all humanity is trending and to see how effectively we could interpret the physical details
+                    of what comprehensive evolution might be portending as disclosed by the available data. I came to
+                    the conclusion that it is possible to make a fairly reasonable forecast of about twenty-five years.
+                    That seems to be about one industrial "tooling" generation. On the average, all inventions seem to
+                    get melted up about every twenty-five years, after which the metals come back into recirculation in
+                    new and usually more effective uses. At any rate, in 1927 I evolved a forecast. Most of my
+                </p>
+            </page>
+        </spread>
+
+    </chapter>
+</book>

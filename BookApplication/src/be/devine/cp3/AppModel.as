@@ -28,7 +28,6 @@ public class AppModel extends EventDispatcher{
     private var timelineVisible:Boolean;
     private var indexVisible:Boolean;
 
-
     /*************************************/
     //Constructor
     /*************************************/
