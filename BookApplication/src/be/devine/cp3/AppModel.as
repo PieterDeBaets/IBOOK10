@@ -34,7 +34,6 @@ public class AppModel extends EventDispatcher{
     public static const TIMELINEVISIBLE_CHANGED:String="TIMELINEVISIBLE_CHANGED";
     public static const INDEXVISIBLE_CHANGED:String="INDEXVISIBLE_CHANGED";
 
-
     /*************************************/
     //Constructor
     /*************************************/
