@@ -45,7 +45,6 @@ public class PageVO {
 
     public var style:String;
 
-
     /*************************************/
     //Constructor
     /*************************************/

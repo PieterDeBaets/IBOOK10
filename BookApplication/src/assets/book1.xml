@@ -1,6 +1,12 @@
 <book title='Operating Manual For Spaceship Earth' author='R. Buckminster Füller' year='1968' src='cover.jpg'>
 
-    <page style="index"></page>
+    <chapter title='index'>
+        <spread>
+            <page style="emtpy"></page>
+            <page style="index"></page>
+        </spread>
+    </chapter>
+
 
     <chapter title='Comprehensive Propensities'>
 
@@ -1502,7 +1508,7 @@
         </spread>
     </chapter>
 
-    <chapter title="">
+    <chapter title="Integral Functions">
         <spread>
             <page style="empty"></page>
             <page style="front">
@@ -1520,7 +1526,7 @@
         </spread>
     </chapter>
 
-    <chapter title="">
+    <chapter title="Regenerative Landscape">
         <spread>
             <page style="empty"></page>
             <page style="front">

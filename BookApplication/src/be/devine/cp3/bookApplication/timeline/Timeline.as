@@ -19,6 +19,7 @@ import starling.display.Quad;
 import starling.display.Sprite;
 import starling.events.Event;
 import starling.events.KeyboardEvent;
+import starling.events.Touch;
 import starling.events.TouchEvent;
 import starling.events.TouchPhase;
 import starling.textures.Texture;
@@ -55,33 +56,38 @@ public class Timeline extends Sprite{
         //background is asset
         background = new Quad(1024, 159, 0x000000);
         background.alpha = transparency;
-        background.addEventListener(TouchEvent.TOUCH, checkHover);
         addChild(background);
+
+        //instantie TimelineScroll
+        timelineScroll = new TimelineScroll();
+        addChild(timelineScroll);
 
         this.addEventListener(Event.ADDED_TO_STAGE, addedToStage);
         appModel.addEventListener(AppModel.TIMELINEVISIBLE_CHANGED, toggleVisibility);
 
         toggleVisibility(null);
 
-        /*if(appModel.timelineVisible == false){
-            this.y =  -this.height+btnTimeline.height;
-        } */
-        //instantie TimelineScroll
     }
 
     private function addedToStage(event:Event){
         //TODO added to stage vervangen
+
         //slide up en slide down toggle op pijltje
         stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
     }
 
     private function checkHover(event:TouchEvent){
-        if(event.getTouch(btnTimeline, TouchPhase.HOVER) || event.getTouch(background, TouchPhase.HOVER)){
-            appModel.timelineVisible = true;
-        }else{
-            appModel.timelineVisible = false;
-        }
+        var touch:Touch = event.getTouch(this);
 
+        if(touch){
+            if(touch.phase == TouchPhase.HOVER){
+            }else if(touch.phase == TouchPhase.BEGAN){
+                appModel.timelineVisible = !appModel.timelineVisible;
+            }else if(touch.phase == TouchPhase.ENDED){
+            }else if(touch.phase == TouchPhase.MOVED){
+            }else{
+            }
+        }
     }
 
     private function createBtn(state:String){

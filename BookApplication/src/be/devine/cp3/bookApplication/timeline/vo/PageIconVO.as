@@ -11,7 +11,7 @@ public class PageIconVO {
     //Properties
     /*************************************/
     public var style:String;
-    public var chapter:String;
+    public var chapter:uint;
 
     /*************************************/
     //Constructor

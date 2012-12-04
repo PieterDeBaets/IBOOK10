@@ -73,10 +73,6 @@ public class BookApplication extends starling.display.Sprite {
         timeline = new Timeline();
         addChild(timeline);
 
-        for each(var spread:SpreadVO in appModel.arrBook){
-            trace(spread.page1.style);
-            trace(spread.page2.style);
-        }
     }
 
     /*************************************/

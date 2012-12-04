@@ -25,6 +25,8 @@ public class SpreadVOFactory {
             appModel.totalPages ++;
         }
 
+        spreadVO.chapterIndex = appModel.spreadsPerChapter.length;
+
         return spreadVO;
     }
 }
