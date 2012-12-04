@@ -9,7 +9,7 @@ package be.devine.cp3.bookApplication.timeline {
 import be.devine.cp3.bookApplication.timeline.scrollbar.ScrollBar;
 import be.devine.cp3.bookApplication.timeline.scrollbar.ScrollBarOptions;
 
-import flash.display.Sprite;
+import starling.display.Sprite;
 
 public class TimelineScroll extends Sprite{
     /*************************************/
@@ -28,6 +28,10 @@ public class TimelineScroll extends Sprite{
     public function TimelineScroll() {
         //uitpluizen hoe je content in de scrollbar krijgt
         //scrollbar.position wordt upgedated adhv CURRENT_PAGE_CHANGE event uit appmodel
+        generateScrollBar();
+    }
+
+    private function generateScrollBar(){
 
     }
 
