@@ -1,7 +1,9 @@
 package be.devine.cp3.bookApplication {
 
 import be.devine.cp3.AppModel;
+import be.devine.cp3.bookApplication.pageViewer.vo.SpreadVO;
 import be.devine.cp3.bookApplication.service.BookService;
+import be.devine.cp3.bookApplication.timeline.Timeline;
 
 import flash.events.Event;
 
@@ -20,6 +22,12 @@ public class BookApplication extends starling.display.Sprite {
     /*************************************/
     private var appModel:AppModel;
     private var bookService:BookService;
+    private var timeline:Timeline;
+
+    [Embed(source='../../../../../libs/IBookAssets.xml', mimeType='application/octet-stream')]
+    public static const uiXml:Class;
+    [Embed(source='../../../../../libs/IBookAssets.png')]
+    public static const uiTexture:Class;
 
     /*************************************/
     //Constructor
@@ -31,10 +39,10 @@ public class BookApplication extends starling.display.Sprite {
 
         appModel = AppModel.getInstance();
 
-
         bookService = new BookService();
         bookService.addEventListener(Event.COMPLETE, bookCompleted);
         bookService.load();
+
         /*
         var quad:Quad;
         var tween:Tween;
@@ -60,7 +68,15 @@ public class BookApplication extends starling.display.Sprite {
     }
 
     private function bookCompleted(event:Event){
-        trace("VO's aangemaak!");
+        trace('continue app');
+
+        timeline = new Timeline();
+        addChild(timeline);
+
+        for each(var spread:SpreadVO in appModel.arrBook){
+            trace(spread.page1.style);
+            trace(spread.page2.style);
+        }
     }
 
     /*************************************/

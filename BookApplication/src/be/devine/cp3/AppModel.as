@@ -22,11 +22,11 @@ public class AppModel extends EventDispatcher{
 
     private var _arrBook:Array = []; // enkele spreads, niet in chapters opgedeeld
     private var _arrChapter:Array = [];
-    private var _spreadsPerChapter:Array= [];
+    private var _spreadsPerChapter:Array= new Array();
     private var _arrColors:Array = [];
 
     private var _lightMode:Boolean = false;
-    private var _timelineVisible:Boolean = false;
+    private var _timelineVisible:Boolean = true;
     private var _indexVisible:Boolean = false;
 
     public static const CURRENT_SPREAD_CHANGED:String="CURRENT_SPREAD_CHANGED";

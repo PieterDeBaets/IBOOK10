@@ -8,9 +8,12 @@
 package {
 import be.devine.cp3.bookApplication.BookApplication;
 
+import flash.display.Screen;
+
 import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
+import flash.geom.Rectangle;
 
 import starling.core.Starling;
 
@@ -33,6 +36,16 @@ public class Main extends Sprite {
 
         stage.align = StageAlign.TOP_LEFT;
         stage.scaleMode = StageScaleMode.NO_SCALE;
+        stage.nativeWindow.width= 1024;
+        stage.nativeWindow.height = 720;
+        stage.nativeWindow.visible = true;
+
+        stage.nativeWindow.bounds = new Rectangle(
+            (Screen.mainScreen.bounds.width - stage.nativeWindow.width) *.5,
+            (Screen.mainScreen.bounds.height - stage.nativeWindow.height) *.5,
+            stage.nativeWindow.width,
+            stage.nativeWindow.height
+        );
 
         starling = new Starling(BookApplication, stage);
         starling.start();

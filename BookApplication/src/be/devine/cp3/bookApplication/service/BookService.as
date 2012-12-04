@@ -39,21 +39,24 @@ public class BookService extends EventDispatcher{
         var bookXMLTask:XMLTask = requestQueue.completedTasks[0] as XMLTask;
         var bookXML:XML = new XML(bookXMLTask.data);
 
-        var chapters:Array = [];
-
         for each(var chapter:XML in bookXML.chapter){
             appModel.arrChapter.push(chapter.@title);
+            appModel.spreadsPerChapter.push(0);
 
             for each( var spread:XML in chapter.spread){
                 appModel.totalSpreads ++;
+                appModel.spreadsPerChapter[chapter.childIndex()] += 1;
+                //trace('current value: ' + appModel.spreadsPerChapter[chapter.childIndex()]);
+
                 appModel.arrBook.push(SpreadVOFactory.createSpreadVO(spread));
             }
         }
 
         trace('DONE!');
-        trace(appModel.totalSpreads);
-        trace(appModel.arrBook[0].page1.pageNumber);
-        trace(appModel.arrChapter);
+        trace('totaal aantal spreads: ' + appModel.totalSpreads);
+        trace('totaal aantal paginas: ' + appModel.totalPages);
+        trace('spreads per chapter: ' + appModel.spreadsPerChapter);
+        trace('hoofdstukken: ' + appModel.arrChapter);
 
         dispatchEvent(new Event(Event.COMPLETE));
     }
