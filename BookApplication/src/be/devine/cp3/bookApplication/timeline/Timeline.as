@@ -9,11 +9,9 @@ package be.devine.cp3.bookApplication.timeline {
 
 import be.devine.cp3.AppModel;
 import be.devine.cp3.bookApplication.BookApplication;
-import be.devine.cp3.bookApplication.starlingExtensions.PixelMaskDisplayObject;
 
 import flash.ui.Keyboard;
 
-import starling.animation.Tween;
 import starling.display.Image;
 
 import starling.display.Quad;
@@ -21,10 +19,13 @@ import starling.display.Quad;
 import starling.display.Sprite;
 import starling.events.Event;
 import starling.events.KeyboardEvent;
+import starling.events.TouchEvent;
+import starling.events.TouchPhase;
 import starling.textures.Texture;
 import starling.textures.TextureAtlas;
 
-public class Timeline extends starling.display.Sprite{
+
+public class Timeline extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
@@ -32,11 +33,15 @@ public class Timeline extends starling.display.Sprite{
     private var xml:XML = XML(new BookApplication.uiXml);
     private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
 
+    private var background:Quad;
+    private var btnTimelineTexture:Texture;
+    private var btnTimeline:Image;
+
     private var isVisible:Boolean;
     private var timelineScroll:TimelineScroll;
 
-    private var background:Sprite;
-    private var tween:Tween;
+    //private var tween:Tween;
+    private var transparency:Number = 0.76;
 
     private var appModel:AppModel;
 
@@ -48,52 +53,79 @@ public class Timeline extends starling.display.Sprite{
         appModel = AppModel.getInstance();
 
         //background is asset
-        var backgroundTexture:Texture = atlas.getTexture('BasicTimelineBackground');
-        var backgroundImage:Image = new Image(backgroundTexture);
-        backgroundImage.alpha = 0.76;
-        addChild(backgroundImage);
-
-        //check isVisible in appmodel
-        if(appModel.timelineVisible){
-            trace('tijdslijn visible');
-            toggleVisibility('show');
-        }else{
-            trace('tijdslijn niet visible');
-            toggleVisibility('hide');
-        }
+        background = new Quad(1024, 159, 0x000000);
+        background.alpha = transparency;
+        background.addEventListener(TouchEvent.TOUCH, checkHover);
+        addChild(background);
 
         this.addEventListener(Event.ADDED_TO_STAGE, addedToStage);
+        appModel.addEventListener(AppModel.TIMELINEVISIBLE_CHANGED, toggleVisibility);
 
+        toggleVisibility(null);
+
+        /*if(appModel.timelineVisible == false){
+            this.y =  -this.height+btnTimeline.height;
+        } */
         //instantie TimelineScroll
     }
 
-    public function addedToStage(event:Event){
+    private function addedToStage(event:Event){
         //TODO added to stage vervangen
         //slide up en slide down toggle op pijltje
         stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
     }
 
+    private function checkHover(event:TouchEvent){
+        if(event.getTouch(btnTimeline, TouchPhase.HOVER) || event.getTouch(background, TouchPhase.HOVER)){
+            appModel.timelineVisible = true;
+        }else{
+            appModel.timelineVisible = false;
+        }
+
+    }
+
+    private function createBtn(state:String){
+        if(btnTimeline != null){
+            btnTimeline.removeEventListeners();
+            btnTimeline.removeFromParent();
+        }
+
+        if(state == 'hover'){
+            btnTimelineTexture= atlas.getTexture('timelineBtnHover');
+            btnTimeline = new Image(btnTimelineTexture);
+        }else{
+            btnTimelineTexture= atlas.getTexture('timelineBtn');
+            btnTimeline = new Image(btnTimelineTexture);
+        }
+
+        btnTimeline.x = background.width - btnTimeline.width;
+        btnTimeline.y = background.height;
+        btnTimeline.alpha = transparency;
+        btnTimeline.addEventListener(TouchEvent.TOUCH, checkHover);
+        addChild(btnTimeline);
+    }
+
+
     private function keyHandler(event:KeyboardEvent){
         switch (event.keyCode){
             case Keyboard.UP:
-                toggleVisibility('hide');
+                appModel.timelineVisible = false;
                 trace('hide timeline');
                 break;
             case Keyboard.DOWN:
-                toggleVisibility('show');
+                appModel.timelineVisible = true;
                 trace('show timeline');
                 break;
         }
     }
 
     private function toggleVisibility(state:String){
-        switch (state){
-            case'show':
-                this.y = 0;
-                break;
-            case'hide':
-                this.y = -this.height;
-                break;
+        if(appModel.timelineVisible){
+            createBtn('hover');
+            this.y = 0;
+        }else{
+            createBtn('normal');
+            this.y = -this.height+btnTimeline.height;
         }
     }
 
