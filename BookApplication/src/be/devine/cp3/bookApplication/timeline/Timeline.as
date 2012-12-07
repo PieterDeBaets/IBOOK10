@@ -76,7 +76,7 @@ public class Timeline extends Sprite{
         stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
     }
 
-    private function checkHover(event:TouchEvent){
+    private function checkClick(event:TouchEvent){
         var touch:Touch = event.getTouch(this);
 
         if(touch){
@@ -91,6 +91,7 @@ public class Timeline extends Sprite{
     }
 
     private function createBtn(state:String){
+        //TODO VERANDEREN VAN TEXTURE VAN KNOP ZODAT DIE NIET TELKENS OPNIEUW AANGEMAAKT WORDT
         if(btnTimeline != null){
             btnTimeline.removeEventListeners();
             btnTimeline.removeFromParent();
@@ -107,7 +108,7 @@ public class Timeline extends Sprite{
         btnTimeline.x = background.width - btnTimeline.width;
         btnTimeline.y = background.height;
         btnTimeline.alpha = transparency;
-        btnTimeline.addEventListener(TouchEvent.TOUCH, checkHover);
+        btnTimeline.addEventListener(TouchEvent.TOUCH, checkClick);
         addChild(btnTimeline);
     }
 

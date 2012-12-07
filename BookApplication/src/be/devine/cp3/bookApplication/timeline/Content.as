@@ -38,6 +38,8 @@ public class Content extends Sprite{
         appModel = AppModel.getInstance();
 
         var thumbnailContainer:Sprite = new Sprite();
+        thumbnailContainer.y = 25;
+        thumbnailContainer.x=18;
         var xpos:uint = 0;
 
         for each(var spread:SpreadVO in appModel.arrBook){
