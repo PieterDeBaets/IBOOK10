@@ -80,7 +80,7 @@ public class Index extends starling.display.Sprite{
         addChild(background);
 
         //PIJL
-        btnIndexTexture = atlas.getTexture('timelineBtn');
+        btnIndexTexture = atlas.getTexture('timelineBtnSpatie');
         btnIndex = new Image(btnIndexTexture);
         btnIndex.pivotX = btnIndex.width/2;
         btnIndex.pivotY = btnIndex.height/2;

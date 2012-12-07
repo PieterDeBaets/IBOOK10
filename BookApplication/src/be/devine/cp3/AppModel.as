@@ -25,8 +25,7 @@ public class AppModel extends EventDispatcher{
     private var _arrBook:Array = []; // enkele spreads, niet in chapters opgedeeld
     private var _arrChapter:Array = [];
     private var _spreadsPerChapter:Array= new Array();
-    //private var _arrColors:Array = [0xDD675B, 0xE9D14E, 0x66BFB0, 0xCE3040,0x7A8A73, 0xFADBC2, 0x748B8A, 0x86778B, 0x64ACF1];
-    private var _arrColors:Array = [0xDD675B, 0xE9D14E];
+    private var _arrColors:Array = [0xDD675B, 0xE9D14E, 0x66BFB0, 0xCE3040,0x7A8A73, 0xFADBC2, 0x748B8A, 0x86778B, 0x64ACF1];
 
     private var _lightMode:Boolean = false;
     private var _timelineVisible:Boolean = false;
