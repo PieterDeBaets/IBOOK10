@@ -58,11 +58,6 @@ public class Index extends starling.display.Sprite{
     private var arrTextfields:Array;
     private var spaceIcon:Quad;
 
-
-
-
-
-
     /*************************************/
     //Constructor
     /*************************************/

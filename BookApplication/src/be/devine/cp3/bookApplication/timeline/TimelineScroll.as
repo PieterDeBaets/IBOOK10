@@ -12,12 +12,15 @@ import be.devine.cp3.bookApplication.timeline.scrollbar.ScrollBar;
 import be.devine.cp3.bookApplication.timeline.scrollbar.ScrollBarOptions;
 
 import flash.geom.Point;
-import flash.ui.Mouse;
+
+import starling.animation.Transitions;
+
+import starling.animation.Tween;
+import starling.core.Starling;
 
 import starling.display.Image;
 
 import starling.display.Quad;
-import starling.display.Sprite;
 
 import starling.display.Sprite;
 import starling.events.Touch;
@@ -46,6 +49,9 @@ public class TimelineScroll extends Sprite{
     private var texture:Texture = Texture.fromBitmap(new BookApplication.uiTexture);
     private var xml:XML = XML(new BookApplication.uiXml);
     private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
+
+    private var tween:Tween;
+    private var tweenspeed:Number = 0.5;
 
     /*************************************/
     //Constructor
@@ -147,8 +153,19 @@ public class TimelineScroll extends Sprite{
         if(value != _scrollProcent){
             _scrollProcent = value;
             trace(_scrollProcent);
-            content.x = ((totalScroll.width/2)-35) - ((content.width-71) * _scrollProcent );
+            //content.x = ((totalScroll.width/2)-35) - ((content.width-71) * _scrollProcent );
+            setupTween(((totalScroll.width/2)-35) - ((content.width-71) * _scrollProcent ));
         }
+    }
+
+    private function setupTween(value){
+        trace('set up tween');
+        if (tween) tween.reset(content, tweenspeed, Transitions.EASE_OUT);
+        else tween = new Tween(content, tweenspeed, Transitions.EASE_OUT);
+
+        trace('bla');
+        tween.animate("x", value);
+        Starling.juggler.add(tween);
     }
 }
 }

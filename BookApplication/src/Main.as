@@ -37,7 +37,7 @@ public class Main extends Sprite {
         stage.align = StageAlign.TOP_LEFT;
         stage.scaleMode = StageScaleMode.NO_SCALE;
         stage.nativeWindow.width= 1024;
-        stage.nativeWindow.height = 720;
+        stage.nativeWindow.height = 768;
         stage.nativeWindow.visible = true;
 
         stage.nativeWindow.bounds = new Rectangle(

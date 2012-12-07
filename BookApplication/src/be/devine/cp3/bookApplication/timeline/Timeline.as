@@ -14,7 +14,6 @@ import flash.events.Event;
 
 import flash.ui.Keyboard;
 
-import starling.animation.Juggler;
 import starling.animation.Transitions;
 
 import starling.animation.Tween;
@@ -74,8 +73,16 @@ public class Timeline extends Sprite{
         this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStage);
         appModel.addEventListener(AppModel.TIMELINEVISIBLE_CHANGED, toggleVisibility);
 
+        appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, changePosition);
+
         toggleVisibility(null);
 
+    }
+
+    private function changePosition(event:flash.events.Event):void {
+        trace(appModel.currentSpread);
+        trace(appModel.currentSpread/appModel.totalSpreads);
+        timelineScroll.scrollProcent = appModel.currentSpread/appModel.totalSpreads;
     }
 
     private function addedToStage(event:starling.events.Event){
@@ -134,20 +141,12 @@ public class Timeline extends Sprite{
         }
     }
 
-    //TODO welk event uit appmodel?
     private function toggleVisibility(event:flash.events.Event){
+        createBtn();
         if(appModel.timelineVisible){
-            createBtn();
-
             setupTween(0);
-
-            //this.y = 0;
         }else{
-            createBtn();
             setupTween(-this.height+btnTimeline.height);
-            //Tween;
-
-            //this.y = -this.height+btnTimeline.height;
         }
     }
 

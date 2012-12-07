@@ -59,7 +59,12 @@ public class PageIcon extends Sprite{
         iconImage = new Image(iconTexture);
         addChild(iconImage);*/
 
-        this.addEventListener(TouchEvent.TOUCH, newPageSelected);
+        if(pageNumberString == 0){
+            pageNumber.alpha = 0;
+            backgroundColor.alpha = 0;
+        }else{
+            this.addEventListener(TouchEvent.TOUCH, newPageSelected);
+        }
     }
 
     private function newPageSelected(event:TouchEvent){
