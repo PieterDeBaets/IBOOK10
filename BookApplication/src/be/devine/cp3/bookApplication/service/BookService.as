@@ -47,7 +47,7 @@ public class BookService extends EventDispatcher{
                 appModel.spreadsPerChapter[chapter.childIndex()] += 1;
                 //trace('current value: ' + appModel.spreadsPerChapter[chapter.childIndex()]);
 
-                appModel.arrBook.push(SpreadVOFactory.createSpreadVO(spread));
+                appModel.arrBook.push(SpreadVOFactory.createSpreadVO(spread, appModel.totalSpreads-1));
             }
         }
 

@@ -80,9 +80,10 @@ public class PageIcon extends Sprite{
         if(pageNumberString == 0){
             pageNumber.alpha = 0;
             backgroundColor.alpha = 0;
-        }else{
-            this.addEventListener(TouchEvent.TOUCH, newPageSelected);
         }
+        /*else{
+            this.addEventListener(TouchEvent.TOUCH, newPageSelected);
+        } */
 
         this.flatten();
     }

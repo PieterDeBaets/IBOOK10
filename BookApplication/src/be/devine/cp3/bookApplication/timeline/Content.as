@@ -37,13 +37,19 @@ public class Content extends Sprite{
 
         appModel = AppModel.getInstance();
 
-        var thumbnailContainer:Sprite = new Sprite();
-        thumbnailContainer.y = 25;
-        thumbnailContainer.x = 18;
+        var spreadContainer:Sprite = new Sprite();
+        spreadContainer.y = 25;
+        spreadContainer.x = 18;
         var xpos:uint = 0;
 
         for each(var spread:SpreadVO in appModel.arrBook){
-            var pageIcon:PageIcon = new PageIcon(PageIconVOFactory.createPageIconVO(spread.page1.style, spread.chapterIndex), spread.page1.pageNumber);
+            trace('create spread');
+            var spreadIcon:SpreadIcon = new SpreadIcon(spread.page1, spread.page2, spread.chapterIndex, spread.spreadNumber);
+            spreadIcon.x = xpos;
+            spreadContainer.addChild(spreadIcon);
+            xpos += spreadIcon.width + 21;
+
+            /*var pageIcon:PageIcon = new PageIcon(PageIconVOFactory.createPageIconVO(spread.page1.style, spread.chapterIndex), spread.page1.pageNumber);
             pageIcon.x = xpos;
             thumbnailContainer.addChild(pageIcon);
 
@@ -51,16 +57,16 @@ public class Content extends Sprite{
 
             var pageIcon2:PageIcon = new PageIcon(PageIconVOFactory.createPageIconVO(spread.page2.style, spread.chapterIndex), spread.page2.pageNumber);
             pageIcon2.x = xpos;
-            thumbnailContainer.addChild(pageIcon2);
+            thumbnailContainer.addChild(pageIcon2);*/
 
-            xpos += pageIcon2.width + 21;
+
 
             /*trace(appModel.arrChapter[spread.chapterIndex-1]);
             trace(spread.page1.style);
             trace(spread.page2.style);*/
         }
 
-        addChild(thumbnailContainer);
+        addChild(spreadContainer);
     }
 
 

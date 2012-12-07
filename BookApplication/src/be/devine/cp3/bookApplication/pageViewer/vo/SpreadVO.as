@@ -13,6 +13,7 @@ public class SpreadVO {
     public var page1:PageVO;
     public var page2:PageVO;
     public var chapterIndex:uint;
+    public var spreadNumber:uint;
 
     /*************************************/
     //Constructor

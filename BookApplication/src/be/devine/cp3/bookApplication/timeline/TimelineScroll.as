@@ -10,6 +10,8 @@ import be.devine.cp3.AppModel;
 import be.devine.cp3.bookApplication.timeline.scrollbar.ScrollBar;
 import be.devine.cp3.bookApplication.timeline.scrollbar.ScrollBarOptions;
 
+import flash.events.Event;
+
 import flash.geom.Point;
 
 import starling.animation.Transitions;
@@ -150,11 +152,12 @@ public class TimelineScroll extends Sprite{
             _scrollProcent = value;
             trace(_scrollProcent);
             //content.x = ((totalScroll.width/2)-35) - ((content.width-71) * _scrollProcent );
-            setupTween(((totalScroll.width/2)-35) - ((content.width-71) * _scrollProcent ));
+            setupTweenContent(((totalScroll.width/2)-35) - ((content.width-71) * _scrollProcent ));
+            button.x = totalScroll.x + (totalScroll.width -  ((button.width/2) + 5))* scrollProcent;
         }
     }
 
-    private function setupTween(value){
+    private function setupTweenContent(value){
         trace('set up tween');
         if (tween) tween.reset(content, tweenspeed, Transitions.EASE_OUT);
         else tween = new Tween(content, tweenspeed, Transitions.EASE_OUT);

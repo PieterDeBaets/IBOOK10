@@ -76,9 +76,7 @@ public class Timeline extends Sprite{
     }
 
     private function changePosition(event:flash.events.Event):void {
-        trace(appModel.currentSpread);
-        trace(appModel.currentSpread/appModel.totalSpreads);
-        timelineScroll.scrollProcent = appModel.currentSpread/appModel.totalSpreads;
+        timelineScroll.scrollProcent = appModel.currentSpread/(appModel.totalSpreads-1);
     }
 
     private function checkHover(event:TouchEvent){
