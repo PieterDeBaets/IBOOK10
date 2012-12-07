@@ -67,7 +67,7 @@ public class AppModel extends EventDispatcher{
 
     public function set currentSpread(value:int):void {
         if(value != _currentSpread){
-            //trace("currentSpread in appmodel "+value);
+            trace("currentSpread in appmodel "+value);
             _currentSpread = value;
             dispatchEvent(new Event(CURRENT_SPREAD_CHANGED))
         }
