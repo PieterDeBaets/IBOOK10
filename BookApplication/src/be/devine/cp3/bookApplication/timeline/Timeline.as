@@ -46,11 +46,13 @@ public class Timeline extends Sprite{
     private var btnTimelineTexture:Texture;
     private var btnTimeline:Image;
 
+    private var isVisible:Boolean;
     private var timelineScroll:TimelineScroll;
 
     private var tween:Tween;
     private var tweenspeed:Number = 0.5;
     private var transparency:Number = 0.76;
+
     private var appModel:AppModel;
 
     /*************************************/
@@ -73,6 +75,7 @@ public class Timeline extends Sprite{
         appModel.addEventListener(AppModel.TIMELINEVISIBLE_CHANGED, toggleVisibility);
 
         toggleVisibility(null);
+
     }
 
     private function addedToStage(event:starling.events.Event){

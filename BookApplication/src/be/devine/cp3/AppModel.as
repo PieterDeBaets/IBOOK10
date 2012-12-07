@@ -7,7 +7,9 @@
  */
 package be.devine.cp3 {
 import flash.events.Event;
+import flash.events.Event;
 import flash.events.EventDispatcher;
+
 
 public class AppModel extends EventDispatcher{
     /*************************************/
@@ -66,6 +68,7 @@ public class AppModel extends EventDispatcher{
 
     public function set currentSpread(value:int):void {
         if(value != _currentSpread){
+            //trace("currentSpread in appmodel "+value);
             _currentSpread = value;
             dispatchEvent(new Event(CURRENT_SPREAD_CHANGED))
         }
@@ -170,7 +173,7 @@ public class AppModel extends EventDispatcher{
     public function set indexVisible(value:Boolean):void {
         if(_indexVisible != value){
             _indexVisible = value;
-            dispatchEvent(new Event(INDEXVISIBLE_CHANGED));
+            dispatchEvent(new flash.events.Event(INDEXVISIBLE_CHANGED,true));
         }
 
     }
