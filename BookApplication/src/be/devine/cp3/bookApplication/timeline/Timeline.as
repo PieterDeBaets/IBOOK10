@@ -153,6 +153,7 @@ public class Timeline extends Sprite{
         if (tween) tween.reset(this, tweenspeed, Transitions.EASE_OUT);
         else tween = new Tween(this, tweenspeed, Transitions.EASE_OUT);
 
+        trace('bla');
         tween.animate("y", value);
         Starling.juggler.add(tween);
     }
