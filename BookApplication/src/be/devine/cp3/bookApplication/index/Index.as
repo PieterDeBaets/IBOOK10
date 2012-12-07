@@ -15,6 +15,8 @@ import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
 
+import starling.animation.Transitions;
+
 
 import starling.animation.Tween;
 import starling.core.Starling;
@@ -26,7 +28,6 @@ import starling.display.Sprite;
 import starling.events.Event;
 import starling.events.KeyboardEvent;
 import starling.events.Touch;
-import starling.events.TouchEvent;
 import starling.events.TouchEvent;
 import starling.events.TouchPhase;
 import starling.text.TextField;
@@ -55,6 +56,7 @@ public class Index extends starling.display.Sprite{
     private var animation:Tween;
     private var tweenSpeed:Number = .5;
     private var arrTextfields:Array;
+    private var spaceIcon:Quad;
 
 
 
@@ -87,6 +89,7 @@ public class Index extends starling.display.Sprite{
         btnIndex.addEventListener(starling.events.TouchEvent.TOUCH, clickHandler);
         addChild(btnIndex);
 
+
         arrChapters = appModel.arrChapter;
         arrChapters.shift();
         trace(arrChapters);
@@ -111,10 +114,10 @@ public class Index extends starling.display.Sprite{
             }
 
             var chapterString:String = i+1 +". "+arrChapters[i];
-            var t:starling.text.TextField = new TextField(162, 90, chapterString, "Century", 12 ,color);
+            //var t:starling.text.TextField = new TextField(162, 90, chapterString, "Century", 12 ,color);
+            var t:IndexButton = new IndexButton(chapterString, color);
             t.x = xPos;
             t.y = yPos;
-            t.hAlign = "left";
             t.addEventListener(starling.events.TouchEvent.TOUCH,chapterClickHandler);
             arrTextfields.push(t);
             textContainer.addChild(t);
@@ -188,8 +191,8 @@ public class Index extends starling.display.Sprite{
     }
 
     private function setupAnimation(value:uint):void{
-        if (animation) animation.reset(this, tweenSpeed);
-        else           animation = new Tween(this, tweenSpeed);
+        if (animation) animation.reset(this, tweenSpeed,Transitions.EASE_OUT);
+        else           animation = new Tween(this, tweenSpeed,Transitions.EASE_OUT);
 
         animation.animate("y", value);
 
@@ -203,7 +206,19 @@ public class Index extends starling.display.Sprite{
             if(touch.phase == TouchPhase.BEGAN){
                 for each (var textfield:Object in arrTextfields) {
                     if(event.currentTarget == textfield){
-                        trace(textfield.text);
+                        //trace(textfield.text);
+                        trace(arrTextfields.indexOf(textfield)); // 0 tot 7 index
+                        var spreadsPerChapter:Array = appModel.spreadsPerChapter; //0-7 index
+                        trace(spreadsPerChapter);
+
+                        var currentSpread:uint=0;
+                        for(var i:int = 0; i<arrTextfields.indexOf(textfield)+1; i++){
+                            currentSpread += spreadsPerChapter[i];
+                        }
+
+
+                        appModel.currentSpread = currentSpread;
+
 
                     }
 
