@@ -6,9 +6,14 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3 {
+import be.devine.cp3.bookApplication.BookApplication;
+
 import flash.events.Event;
 import flash.events.Event;
 import flash.events.EventDispatcher;
+
+import starling.textures.Texture;
+import starling.textures.TextureAtlas;
 
 
 public class AppModel extends EventDispatcher{
@@ -17,6 +22,10 @@ public class AppModel extends EventDispatcher{
     /*************************************/
 
     public static var instance:AppModel;
+
+    private var texture:Texture = Texture.fromBitmap(new BookApplication.uiTexture);
+    private var xml:XML = XML(new BookApplication.uiXml);
+    public var atlas:TextureAtlas = new TextureAtlas(texture, xml);
 
     private var _currentSpread:int = 0;
     private var _totalPages:int = 0;

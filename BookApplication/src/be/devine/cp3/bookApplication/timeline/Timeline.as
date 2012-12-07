@@ -37,10 +37,6 @@ public class Timeline extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
-    private var texture:Texture = Texture.fromBitmap(new BookApplication.uiTexture);
-    private var xml:XML = XML(new BookApplication.uiXml);
-    private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
-
     private var background:Quad;
     private var btnTimelineTexture:Texture;
     private var btnTimeline:Image;
@@ -53,6 +49,7 @@ public class Timeline extends Sprite{
     private var transparency:Number = 0.76;
 
     private var appModel:AppModel;
+
 
     /*************************************/
     //Constructor
@@ -70,10 +67,9 @@ public class Timeline extends Sprite{
         timelineScroll = new TimelineScroll();
         addChild(timelineScroll);
 
-        this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStage);
         appModel.addEventListener(AppModel.TIMELINEVISIBLE_CHANGED, toggleVisibility);
-
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, changePosition);
+        Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
 
         toggleVisibility(null);
 
@@ -83,13 +79,6 @@ public class Timeline extends Sprite{
         trace(appModel.currentSpread);
         trace(appModel.currentSpread/appModel.totalSpreads);
         timelineScroll.scrollProcent = appModel.currentSpread/appModel.totalSpreads;
-    }
-
-    private function addedToStage(event:starling.events.Event){
-        //TODO added to stage vervangen
-
-        //slide up en slide down toggle op pijltje
-        stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
     }
 
     private function checkHover(event:TouchEvent){
@@ -113,9 +102,9 @@ public class Timeline extends Sprite{
         }
 
         if(appModel.timelineVisible){
-            btnTimelineTexture= atlas.getTexture('timelineBtnUp');
+            btnTimelineTexture= appModel.atlas.getTexture('timelineBtnUp');
         }else{
-            btnTimelineTexture= atlas.getTexture('timelineBtnHover');
+            btnTimelineTexture= appModel.atlas.getTexture('timelineBtnHover');
         }
 
         btnTimeline = new Image(btnTimelineTexture);

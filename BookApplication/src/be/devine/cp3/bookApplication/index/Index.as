@@ -115,39 +115,26 @@ public class Index extends starling.display.Sprite{
 
         addChild(textContainer);
 
-
-        this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStageHandler);
         appModel.addEventListener(AppModel.INDEXVISIBLE_CHANGED, toggleVisible);
 
-    }
-
-
-
-
-
-
-
-
-    /*************************************/
-    //Methods
-    /*************************************/
-    private function addedToStageHandler(event:starling.events.Event):void {
-        background.x = stage.stageWidth/2 - background.width/2;
+        background.x = Starling.current.stage.stageWidth/2 - background.width/2;
         background.y = 192;
 
-        btnIndex.x = stage.stageWidth/2;
+        btnIndex.x = Starling.current.stage.stageWidth/2;
         btnIndex.y = background.y - btnIndex.height/2;
 
         textContainer.x = background.x + 20;
         textContainer.y = background.y + 20;
 
 
-        stage.addEventListener(starling.events.KeyboardEvent.KEY_DOWN, keydownHandler)
+        Starling.current.stage.addEventListener(starling.events.KeyboardEvent.KEY_DOWN, keydownHandler)
         toggleVisible(null);
-
-
     }
 
+
+    /*************************************/
+    //Methods
+    /*************************************/
     private function keydownHandler(event:starling.events.KeyboardEvent):void {
         if(event.keyCode == Keyboard.SPACE){
             appModel.indexVisible = !appModel.indexVisible;
@@ -168,9 +155,9 @@ public class Index extends starling.display.Sprite{
 
     private function toggleVisible(event:flash.events.Event):void{
         if(!appModel.indexVisible){
-            setupAnimation(stage.stageHeight-190);
+            setupAnimation(Starling.current.stage.stageHeight-190);
         }else{
-            setupAnimation(stage.stageHeight-this.height-60);
+            setupAnimation(Starling.current.stage.stageHeight-this.height-60);
 
         }
     }

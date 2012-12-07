@@ -7,7 +7,6 @@
  */
 package be.devine.cp3.bookApplication.timeline {
 import be.devine.cp3.AppModel;
-import be.devine.cp3.bookApplication.BookApplication;
 import be.devine.cp3.bookApplication.timeline.scrollbar.ScrollBar;
 import be.devine.cp3.bookApplication.timeline.scrollbar.ScrollBarOptions;
 
@@ -46,9 +45,6 @@ public class TimelineScroll extends Sprite{
 
     private var button:Image;
     private var buttonTexture:Texture;
-    private var texture:Texture = Texture.fromBitmap(new BookApplication.uiTexture);
-    private var xml:XML = XML(new BookApplication.uiXml);
-    private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
 
     private var tween:Tween;
     private var tweenspeed:Number = 0.5;
@@ -64,12 +60,11 @@ public class TimelineScroll extends Sprite{
         //scrollbar.position wordt upgedated adhv CURRENT_PAGE_CHANGE event uit appmodel
         generateScrollBar();
         generateContent();
-
         addButton();
     }
 
     private function addButton(){
-        buttonTexture= atlas.getTexture('scrubber');
+        buttonTexture= appModel.atlas.getTexture('scrubber');
         button = new Image(buttonTexture);
         button.x = totalScroll.x - (button.width/2) + 5;
         button.y = totalScroll.y -(button.height/2) + 5;
@@ -107,6 +102,7 @@ public class TimelineScroll extends Sprite{
         content = new Content();
         content.x = (totalScroll.width/2)-35;
         addChild(content);
+        content.flatten();
     }
 
     private function generateScrollBar(){
