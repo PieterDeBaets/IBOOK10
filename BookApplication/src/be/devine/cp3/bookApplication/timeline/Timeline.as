@@ -10,7 +10,15 @@ package be.devine.cp3.bookApplication.timeline {
 import be.devine.cp3.AppModel;
 import be.devine.cp3.bookApplication.BookApplication;
 
+import flash.events.Event;
+
 import flash.ui.Keyboard;
+
+import starling.animation.Juggler;
+import starling.animation.Transitions;
+
+import starling.animation.Tween;
+import starling.core.Starling;
 
 import starling.display.Image;
 
@@ -38,12 +46,11 @@ public class Timeline extends Sprite{
     private var btnTimelineTexture:Texture;
     private var btnTimeline:Image;
 
-    private var isVisible:Boolean;
     private var timelineScroll:TimelineScroll;
 
-    //private var tween:Tween;
+    private var tween:Tween;
+    private var tweenspeed:Number = 0.5;
     private var transparency:Number = 0.76;
-
     private var appModel:AppModel;
 
     /*************************************/
@@ -62,14 +69,13 @@ public class Timeline extends Sprite{
         timelineScroll = new TimelineScroll();
         addChild(timelineScroll);
 
-        this.addEventListener(Event.ADDED_TO_STAGE, addedToStage);
+        this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStage);
         appModel.addEventListener(AppModel.TIMELINEVISIBLE_CHANGED, toggleVisibility);
 
         toggleVisibility(null);
-
     }
 
-    private function addedToStage(event:Event){
+    private function addedToStage(event:starling.events.Event){
         //TODO added to stage vervangen
 
         //slide up en slide down toggle op pijltje
@@ -90,19 +96,19 @@ public class Timeline extends Sprite{
         }
     }
 
-    private function createBtn(state:String){
+    private function createBtn(){
         if(btnTimeline != null){
             btnTimeline.removeEventListeners();
             btnTimeline.removeFromParent();
         }
 
-        if(state == 'hover'){
-            btnTimelineTexture= atlas.getTexture('timelineBtnHover');
-            btnTimeline = new Image(btnTimelineTexture);
+        if(appModel.timelineVisible){
+            btnTimelineTexture= atlas.getTexture('timelineBtnUp');
         }else{
-            btnTimelineTexture= atlas.getTexture('timelineBtn');
-            btnTimeline = new Image(btnTimelineTexture);
+            btnTimelineTexture= atlas.getTexture('timelineBtnHover');
         }
+
+        btnTimeline = new Image(btnTimelineTexture);
 
         btnTimeline.x = background.width - btnTimeline.width;
         btnTimeline.y = background.height;
@@ -125,14 +131,30 @@ public class Timeline extends Sprite{
         }
     }
 
-    private function toggleVisibility(state:String){
+    //TODO welk event uit appmodel?
+    private function toggleVisibility(event:flash.events.Event){
         if(appModel.timelineVisible){
-            createBtn('hover');
-            this.y = 0;
+            createBtn();
+
+            setupTween(0);
+
+            //this.y = 0;
         }else{
-            createBtn('normal');
-            this.y = -this.height+btnTimeline.height;
+            createBtn();
+            setupTween(-this.height+btnTimeline.height);
+            //Tween;
+
+            //this.y = -this.height+btnTimeline.height;
         }
+    }
+
+    private function setupTween(value){
+        trace('set up tween');
+        if (tween) tween.reset(this, tweenspeed, Transitions.EASE_OUT);
+        else tween = new Tween(this, tweenspeed, Transitions.EASE_OUT);
+
+        tween.animate("y", value);
+        Starling.juggler.add(tween);
     }
 
 

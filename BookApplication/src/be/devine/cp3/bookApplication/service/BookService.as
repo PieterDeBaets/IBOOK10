@@ -26,7 +26,6 @@ public class BookService extends EventDispatcher{
 
     public function load(){
         requestQueue = new RequestQueue();
-        //xmlTask = new XMLTask('assets/book1.xml');
         xmlTask = new XMLTask('assets/book1.xml');
 
         requestQueue.add(xmlTask);

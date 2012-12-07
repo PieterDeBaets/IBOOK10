@@ -1543,6 +1543,24 @@
             </page>
         </spread>
     </chapter>
+
+    <chapter title="Regenerative Landscape">
+        <spread>
+            <page style="empty"></page>
+            <page style="front">
+                <title></title>
+            </page>
+        </spread>
+
+        <spread>
+            <page style="text">
+
+            </page>
+            <page style="text">
+
+            </page>
+        </spread>
+    </chapter>
 </book>
 
 
