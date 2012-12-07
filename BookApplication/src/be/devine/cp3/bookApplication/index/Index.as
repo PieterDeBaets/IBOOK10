@@ -41,8 +41,6 @@ public class Index extends starling.display.Sprite{
     /*************************************/
     private var background:starling.display.Quad; // BasicIndexBackground
     private var transparency:Number = 0.76;
-    private var isVisible:Boolean = false;
-    private var aChapterTitle:TextField;
     private var arrChapters:Array;
     private var btnIndexTexture:Texture;
     private var btnIndex:Image;
@@ -56,7 +54,6 @@ public class Index extends starling.display.Sprite{
     private var animation:Tween;
     private var tweenSpeed:Number = .5;
     private var arrTextfields:Array;
-    private var spaceIcon:Quad;
 
 
 
@@ -72,14 +69,15 @@ public class Index extends starling.display.Sprite{
         this.y = 5;
 
         //clickhandler dispatcht CURRENT_PAGE_CHANGED naar 1e pagina van het geselecteerde chapter
-        trace("IN INDEX");
 
         //background is quad
+
         background = new Quad(212, 530, 0x000000);
         background.alpha = transparency;
         addChild(background);
 
         //PIJL
+
         btnIndexTexture = atlas.getTexture('timelineBtnSpatie');
         btnIndex = new Image(btnIndexTexture);
         btnIndex.pivotX = btnIndex.width/2;
@@ -92,7 +90,6 @@ public class Index extends starling.display.Sprite{
 
         arrChapters = appModel.arrChapter;
         arrChapters.shift();
-        trace(arrChapters);
 
         arrColors = appModel.arrColors;
 
@@ -101,17 +98,14 @@ public class Index extends starling.display.Sprite{
         textContainer.width = background.width - 30;
 
         //HOOFDSTUKKEN
+
         arrTextfields = new Array();
         var yPos:int = 0;
         var xPos:int = 0;
         for(var i:int = 0; i < arrChapters.length; i++){
 
-            var color:uint = arrColors[i];
-            if(i<appModel.arrColors.length){
-                color = arrColors[i];
-            }else{
-                color = arrColors[i-arrColors.length];
-            }
+            //var color:uint = arrColors[i+1];
+            var color:uint = appModel.arrColors[(i % appModel.arrColors.length)+1];
 
             var chapterString:String = i+1 +". "+arrChapters[i];
             //var t:starling.text.TextField = new TextField(162, 90, chapterString, "Century", 12 ,color);
@@ -161,7 +155,6 @@ public class Index extends starling.display.Sprite{
 
     private function keydownHandler(event:starling.events.KeyboardEvent):void {
         if(event.keyCode == Keyboard.SPACE){
-            trace("space");
             appModel.indexVisible = !appModel.indexVisible;
         }
 
@@ -171,7 +164,6 @@ public class Index extends starling.display.Sprite{
         var touch:Touch = event.getTouch(btnIndex);
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
-                trace("click op btnIndex");
                appModel.indexVisible = !appModel.indexVisible;
 
 
@@ -181,11 +173,9 @@ public class Index extends starling.display.Sprite{
 
     private function toggleVisible(event:flash.events.Event):void{
         if(!appModel.indexVisible){
-            //this.y = stage.stageHeight-190;
             setupAnimation(stage.stageHeight-190);
         }else{
-            //this.y = 5;
-            setupAnimation(5);
+            setupAnimation(stage.stageHeight-this.height-60);
 
         }
     }
@@ -206,10 +196,9 @@ public class Index extends starling.display.Sprite{
             if(touch.phase == TouchPhase.BEGAN){
                 for each (var textfield:Object in arrTextfields) {
                     if(event.currentTarget == textfield){
-                        //trace(textfield.text);
-                        trace(arrTextfields.indexOf(textfield)); // 0 tot 7 index
+                        //trace(arrTextfields.indexOf(textfield)); // 0 tot 7 index
                         var spreadsPerChapter:Array = appModel.spreadsPerChapter; //0-7 index
-                        trace(spreadsPerChapter);
+                        //trace(spreadsPerChapter);
 
                         var currentSpread:uint=0;
                         for(var i:int = 0; i<arrTextfields.indexOf(textfield)+1; i++){

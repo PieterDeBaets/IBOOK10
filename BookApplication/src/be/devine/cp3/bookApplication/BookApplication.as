@@ -2,6 +2,8 @@ package be.devine.cp3.bookApplication {
 
 import be.devine.cp3.AppModel;
 import be.devine.cp3.bookApplication.index.Index;
+import be.devine.cp3.bookApplication.pageViewer.Page;
+import be.devine.cp3.bookApplication.pageViewer.PageViewer;
 import be.devine.cp3.bookApplication.pageViewer.vo.SpreadVO;
 import be.devine.cp3.bookApplication.service.BookService;
 import be.devine.cp3.bookApplication.timeline.Timeline;
@@ -25,6 +27,7 @@ public class BookApplication extends starling.display.Sprite {
     private var bookService:BookService;
     private var timeline:Timeline;
     private var index:Index;
+    private var pageViewer:PageViewer;
 
     [Embed(source='../../../../../libs/IBookAssets.xml', mimeType='application/octet-stream')]
     public static const uiXml:Class;
@@ -73,11 +76,16 @@ public class BookApplication extends starling.display.Sprite {
     private function bookCompleted(event:Event){
         trace('continue app');
 
+        pageViewer = new PageViewer();
+        addChild(pageViewer);
+
         timeline = new Timeline();
         addChild(timeline);
 
         index = new Index();
         addChild(index);
+
+
 
     }
 
