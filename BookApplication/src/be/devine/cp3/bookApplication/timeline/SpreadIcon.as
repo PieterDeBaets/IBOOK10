@@ -26,8 +26,6 @@ public class SpreadIcon extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
-    private var pageIcon1:PageIcon;
-    private var pageIcon2:PageIcon;
     private var chapterIndex:uint;
     public var spreadNumber:uint;
 
@@ -67,10 +65,6 @@ public class SpreadIcon extends Sprite{
 
         this.addEventListener(TouchEvent.TOUCH, selectNewSpread);
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, toggleBorder);
-
-        //xpos += pageIcon2.width + 21;
-
-        //toggleBorder(true);
     }
 
     private function selectNewSpread(event:TouchEvent):void {
@@ -89,7 +83,19 @@ public class SpreadIcon extends Sprite{
     }
 
     public function toggleBorder(event:Event){
+        //trace(appModel.currentSpread + ' VS ' + this.spreadNumber);
         this.unflatten();
+
+        if(borderQuad1){
+            removeChild(borderQuad1);
+            borderQuad1.dispose();
+        }
+
+        if(borderQuad2){
+            removeChild(borderQuad2);
+            borderQuad2.dispose();
+        }
+
         if(this.spreadNumber == appModel.currentSpread){
             if(appModel.currentSpread != 0){
                 borderQuad1 = new Quad(37, 50, 0xfcfdfd);
@@ -103,14 +109,6 @@ public class SpreadIcon extends Sprite{
             borderQuad2.x = 37;
             borderQuad2.y = -2;
             setChildIndex(borderQuad2, 0);
-        }else{
-            if(borderQuad1){
-                removeChild(borderQuad1);
-            }
-
-            if(borderQuad2){
-                removeChild(borderQuad2);
-            }
         }
 
         this.flatten();

@@ -67,7 +67,7 @@ public class TimelineScroll extends Sprite{
         buttonTexture= appModel.atlas.getTexture('scrubber');
         button = new Image(buttonTexture);
         button.scaleX = button.scaleY = 0.9;
-        button.x = totalScroll.x - (button.width/2) + 5;
+        button.x = totalScroll.x - (button.width/2);
         button.y = totalScroll.y -(button.height/2) + 5;
         addChild(button);
 

@@ -26,7 +26,8 @@ public class AppModel extends EventDispatcher{
     private var xml:XML = XML(new BookApplication.uiXml);
     public var atlas:TextureAtlas = new TextureAtlas(texture, xml);
 
-    private var _currentSpread:int = 0;
+    //2 is random. gewoon om de setter te activeren de eerste keer.
+    private var _currentSpread:int = 2;
     private var _totalPages:int = 0;
     private var _totalSpreads:int = 0;
 
@@ -76,6 +77,11 @@ public class AppModel extends EventDispatcher{
     public function set currentSpread(value:int):void {
         if(value != _currentSpread){
             _currentSpread = value;
+            if(_currentSpread < 0){
+                _currentSpread = 0;
+            }else if(_currentSpread > (arrBook.length -1)){
+                _currentSpread = arrBook.length -1;
+            }
             dispatchEvent(new Event(CURRENT_SPREAD_CHANGED))
         }
     }

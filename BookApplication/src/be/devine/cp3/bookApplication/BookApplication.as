@@ -1,6 +1,7 @@
 package be.devine.cp3.bookApplication {
 
 import be.devine.cp3.AppModel;
+import be.devine.cp3.bookApplication.controls.Controls;
 import be.devine.cp3.bookApplication.index.Index;
 import be.devine.cp3.bookApplication.pageViewer.Page;
 import be.devine.cp3.bookApplication.pageViewer.PageViewer;
@@ -27,6 +28,7 @@ public class BookApplication extends starling.display.Sprite {
     private var bookService:BookService;
     private var timeline:Timeline;
     private var index:Index;
+    private var controls:Controls;
     private var pageViewer:PageViewer;
 
     [Embed(source='../../../../../libs/IBookAssets.xml', mimeType='application/octet-stream')]
@@ -39,8 +41,8 @@ public class BookApplication extends starling.display.Sprite {
     /*************************************/
 
     public function BookApplication() {
-        var textField:starling.text.TextField = new TextField(100, 20, "IBOOK 10 start", "Verdana", 12);
-        addChild(textField);
+        //var textField:starling.text.TextField = new TextField(100, 20, "IBOOK 10 start", "Verdana", 12);
+        //addChild(textField);
 
         appModel = AppModel.getInstance();
 
@@ -62,8 +64,13 @@ public class BookApplication extends starling.display.Sprite {
         index = new Index();
         addChild(index);
 
+        controls = new Controls();
+        addChild(controls);
 
+        setChildIndex(controls, 0);
+        setChildIndex(pageViewer, 0);
 
+        appModel.currentSpread = 0;
     }
 
     /*************************************/

@@ -103,6 +103,7 @@ public class Timeline extends Sprite{
         if(btnTimeline != null){
             btnTimeline.removeEventListeners();
             btnTimeline.removeFromParent();
+            btnTimeline.dispose();
         }
 
         if(appModel.timelineVisible){
