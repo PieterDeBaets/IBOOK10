@@ -52,7 +52,6 @@ public class PageIcon extends Sprite{
         pageNumber.y = backgroundColor.height;
         addChild(pageNumber);
 
-        trace(data.style);
         switch (data.style){
             case 'text':
                 iconTexture = appModel.atlas.getTexture('textIcon');
@@ -81,19 +80,9 @@ public class PageIcon extends Sprite{
             pageNumber.alpha = 0;
             backgroundColor.alpha = 0;
         }
-        /*else{
-            this.addEventListener(TouchEvent.TOUCH, newPageSelected);
-        } */
 
         this.flatten();
     }
-
-    private function newPageSelected(event:TouchEvent){
-        if(event.getTouch(this, TouchPhase.BEGAN)){
-            trace("De nieuwe pagina is: " + pageNumber);
-        }
-    }
-
 
     /*************************************/
     //Methods

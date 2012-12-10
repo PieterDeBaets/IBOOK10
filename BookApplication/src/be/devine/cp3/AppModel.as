@@ -9,7 +9,6 @@ package be.devine.cp3 {
 import be.devine.cp3.bookApplication.BookApplication;
 
 import flash.events.Event;
-import flash.events.Event;
 import flash.events.EventDispatcher;
 
 import starling.textures.Texture;
@@ -76,7 +75,6 @@ public class AppModel extends EventDispatcher{
 
     public function set currentSpread(value:int):void {
         if(value != _currentSpread){
-            trace("currentSpread in appmodel "+value);
             _currentSpread = value;
             dispatchEvent(new Event(CURRENT_SPREAD_CHANGED))
         }

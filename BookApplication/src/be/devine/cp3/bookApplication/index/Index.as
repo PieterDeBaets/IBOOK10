@@ -46,9 +46,9 @@ public class Index extends starling.display.Sprite{
     private var btnIndex:Image;
     private var arrColors:Array;
 
-    private var texture:starling.textures.Texture = Texture.fromBitmap(new BookApplication.uiTexture);
-    private var xml:XML = XML(new BookApplication.uiXml);
-    private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
+    //private var texture:starling.textures.Texture = Texture.fromBitmap(new BookApplication.uiTexture);
+    //private var xml:XML = XML(new BookApplication.uiXml);
+    //private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
     private var appModel:AppModel;
     private var textContainer:Sprite;
     private var animation:Tween;
@@ -73,7 +73,7 @@ public class Index extends starling.display.Sprite{
 
         //PIJL
 
-        btnIndexTexture = atlas.getTexture('timelineBtnSpatie');
+        btnIndexTexture = appModel.atlas.getTexture('timelineBtnSpatie');
         btnIndex = new Image(btnIndexTexture);
         btnIndex.pivotX = btnIndex.width/2;
         btnIndex.pivotY = btnIndex.height/2;
@@ -135,6 +135,8 @@ public class Index extends starling.display.Sprite{
     /*************************************/
     //Methods
     /*************************************/
+
+    //TODO als je blijft drukken op spatie dan flipt de index
     private function keydownHandler(event:starling.events.KeyboardEvent):void {
         if(event.keyCode == Keyboard.SPACE){
             appModel.indexVisible = !appModel.indexVisible;
@@ -186,13 +188,8 @@ public class Index extends starling.display.Sprite{
                         for(var i:int = 0; i<arrTextfields.indexOf(textfield)+1; i++){
                             currentSpread += spreadsPerChapter[i];
                         }
-
-
                         appModel.currentSpread = currentSpread;
-
-
                     }
-
                 }
             }
         }

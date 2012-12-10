@@ -34,7 +34,6 @@ public class BookService extends EventDispatcher{
     }
 
     private function bookLoaded(event:Event){
-        trace('XML book loaded');
         var bookXMLTask:XMLTask = requestQueue.completedTasks[0] as XMLTask;
         var bookXML:XML = new XML(bookXMLTask.data);
 
@@ -45,7 +44,6 @@ public class BookService extends EventDispatcher{
             for each( var spread:XML in chapter.spread){
                 appModel.totalSpreads ++;
                 appModel.spreadsPerChapter[chapter.childIndex()] += 1;
-                //trace('current value: ' + appModel.spreadsPerChapter[chapter.childIndex()]);
 
                 appModel.arrBook.push(SpreadVOFactory.createSpreadVO(spread, appModel.totalSpreads-1));
             }

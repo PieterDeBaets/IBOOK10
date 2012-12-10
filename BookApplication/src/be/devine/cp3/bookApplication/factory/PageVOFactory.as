@@ -42,8 +42,6 @@ public class PageVOFactory {
                     //set width and heigth if filled in
                     if(int(pageXML.img.@width) != 0) pageVO.image1Width = pageXML.img.@width;
                     if(int(pageXML.img.@height) != 0) pageVO.image1Height = pageXML.img.@height;
-
-                    trace(pageVO.image1Height, pageVO.image1Width);
                 break;
         }
         return pageVO;

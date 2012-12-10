@@ -10,9 +10,12 @@ import be.devine.cp3.AppModel;
 import be.devine.cp3.bookApplication.BookApplication;
 import be.devine.cp3.bookApplication.pageViewer.Spread;
 
+import starling.core.Starling;
+
 import starling.display.Image;
 
 import starling.display.Sprite;
+import starling.display.Stage;
 import starling.events.Event;
 import starling.textures.Texture;
 import starling.textures.TextureAtlas;
@@ -30,8 +33,6 @@ public class PageViewer extends Sprite{
     private var texture:starling.textures.Texture = Texture.fromBitmap(new BookApplication.uiTexture);
     private var xml:XML = XML(new BookApplication.uiXml);
     private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
-
-
 
     /*************************************/
     //Constructor
@@ -54,23 +55,12 @@ public class PageViewer extends Sprite{
 
         spread = new Spread();
 
-
-        this.addEventListener(Event.ADDED_TO_STAGE,atsHandler);
-
-
-
-
+        backgroundImage.x = Starling.current.stage.stageWidth/2 - backgroundImage.width/2;
     }
-
-
-
 
     /*************************************/
     //Methods
     /*************************************/
-    private function atsHandler(event:Event):void {
-        backgroundImage.x = stage.stageWidth/2 - backgroundImage.width/2;
-    }
 
     /*************************************/
     //Getters & Setters

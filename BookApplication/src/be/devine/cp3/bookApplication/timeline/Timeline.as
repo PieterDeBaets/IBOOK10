@@ -13,6 +13,8 @@ import be.devine.cp3.bookApplication.BookApplication;
 import flash.events.Event;
 
 import flash.ui.Keyboard;
+import flash.ui.Mouse;
+import flash.ui.MouseCursor;
 
 import starling.animation.Transitions;
 
@@ -84,12 +86,16 @@ public class Timeline extends Sprite{
 
         if(touch){
             if(touch.phase == TouchPhase.HOVER){
+                Mouse.cursor = MouseCursor.BUTTON;
             }else if(touch.phase == TouchPhase.BEGAN){
                 appModel.timelineVisible = !appModel.timelineVisible;
             }else if(touch.phase == TouchPhase.ENDED){
             }else if(touch.phase == TouchPhase.MOVED){
             }else{
+
             }
+        }else{
+            Mouse.cursor = MouseCursor.ARROW;
         }
     }
 
@@ -106,7 +112,6 @@ public class Timeline extends Sprite{
         }
 
         btnTimeline = new Image(btnTimelineTexture);
-
         btnTimeline.x = background.width - btnTimeline.width;
         btnTimeline.y = background.height;
         btnTimeline.alpha = transparency;
@@ -119,14 +124,14 @@ public class Timeline extends Sprite{
         switch (event.keyCode){
             case Keyboard.UP:
                 appModel.timelineVisible = false;
-                trace('hide timeline');
                 break;
             case Keyboard.DOWN:
                 appModel.timelineVisible = true;
-                trace('show timeline');
                 break;
         }
     }
+
+    //TODO tween kan normaal met 1 tween ipv 2
 
     private function toggleVisibility(event:flash.events.Event){
         createBtn();
@@ -138,11 +143,9 @@ public class Timeline extends Sprite{
     }
 
     private function setupTween(value){
-        trace('set up tween');
         if (tween) tween.reset(this, tweenspeed, Transitions.EASE_OUT);
         else tween = new Tween(this, tweenspeed, Transitions.EASE_OUT);
 
-        trace('bla');
         tween.animate("y", value);
         Starling.juggler.add(tween);
     }

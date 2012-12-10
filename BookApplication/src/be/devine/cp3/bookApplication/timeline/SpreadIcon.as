@@ -10,6 +10,13 @@ import be.devine.cp3.AppModel;
 import be.devine.cp3.bookApplication.factory.PageIconVOFactory;
 import be.devine.cp3.bookApplication.pageViewer.vo.PageVO;
 
+import flash.events.Event;
+
+import flash.ui.Mouse;
+import flash.ui.MouseCursor;
+
+import starling.display.Quad;
+
 import starling.display.Sprite;
 import starling.events.Touch;
 import starling.events.TouchEvent;
@@ -26,6 +33,9 @@ public class SpreadIcon extends Sprite{
 
     private var appModel:AppModel;
 
+    private var borderQuad1:Quad;
+    private var borderQuad2:Quad;
+
 
     /*************************************/
     //Constructor
@@ -39,9 +49,6 @@ public class SpreadIcon extends Sprite{
         this.spreadNumber = spreadNumber;
 
         //clickevent op this dispatcht CURRENT_PAGE_CHANGE
-        trace('page 1: ' +page1.style);
-        trace('page 2: ' + page2.style);
-
         var xpos:uint = 0;
         var thumbnailContainer:Sprite = new Sprite();
 
@@ -49,7 +56,7 @@ public class SpreadIcon extends Sprite{
         pageIcon.x = xpos;
         thumbnailContainer.addChild(pageIcon);
 
-        xpos += pageIcon.width + 4;
+        xpos += pageIcon.width + 6;
 
         var pageIcon2:PageIcon = new PageIcon(PageIconVOFactory.createPageIconVO(page2.style, chapterIndex), page2.pageNumber);
         pageIcon2.x = xpos;
@@ -58,9 +65,12 @@ public class SpreadIcon extends Sprite{
         addChild(thumbnailContainer);
         this.flatten();
 
-        this.addEventListener(TouchEvent.TOUCH, selectNewSpread)
+        this.addEventListener(TouchEvent.TOUCH, selectNewSpread);
+        appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, toggleBorder);
+
         //xpos += pageIcon2.width + 21;
 
+        //toggleBorder(true);
     }
 
     private function selectNewSpread(event:TouchEvent):void {
@@ -69,11 +79,42 @@ public class SpreadIcon extends Sprite{
             if(touch.phase == TouchPhase.BEGAN){
                 //trace(this.spreadNumber);
                 appModel.currentSpread = this.spreadNumber;
+            }else if(touch.phase == TouchPhase.HOVER){
+                Mouse.cursor = MouseCursor.BUTTON;
             }
+        }else{
+            Mouse.cursor = MouseCursor.ARROW;
         }
 
     }
 
+    public function toggleBorder(event:Event){
+        this.unflatten();
+        if(this.spreadNumber == appModel.currentSpread){
+            if(appModel.currentSpread != 0){
+                borderQuad1 = new Quad(37, 50, 0xfcfdfd);
+                addChild(borderQuad1);
+                borderQuad1.x = borderQuad1.y =-2;
+                setChildIndex(borderQuad1, 0);
+            }
+
+            borderQuad2 = new Quad(37, 50, 0xfcfdfd);
+            addChild(borderQuad2);
+            borderQuad2.x = 37;
+            borderQuad2.y = -2;
+            setChildIndex(borderQuad2, 0);
+        }else{
+            if(borderQuad1){
+                removeChild(borderQuad1);
+            }
+
+            if(borderQuad2){
+                removeChild(borderQuad2);
+            }
+        }
+
+        this.flatten();
+    }
 
     /*************************************/
     //Methods
