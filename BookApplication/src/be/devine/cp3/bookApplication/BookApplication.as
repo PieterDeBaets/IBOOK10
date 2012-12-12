@@ -31,10 +31,7 @@ public class BookApplication extends starling.display.Sprite {
     private var controls:Controls;
     private var pageViewer:PageViewer;
 
-    [Embed(source='../../../../../libs/IBookAssets.xml', mimeType='application/octet-stream')]
-    public static const uiXml:Class;
-    [Embed(source='../../../../../libs/IBookAssets.png')]
-    public static const uiTexture:Class;
+
 
     /*************************************/
     //Constructor

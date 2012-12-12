@@ -20,10 +20,16 @@ public class AppModel extends EventDispatcher{
     //Properties
     /*************************************/
 
+    [Embed(source='../../../../libs/IBookAssets.xml', mimeType='application/octet-stream')]
+    public static const uiXml:Class;
+    [Embed(source='../../../../libs/IBookAssets.png')]
+    public static const uiTexture:Class;
+
+
     public static var instance:AppModel;
 
-    private var texture:Texture = Texture.fromBitmap(new BookApplication.uiTexture);
-    private var xml:XML = XML(new BookApplication.uiXml);
+    private var texture:Texture = Texture.fromBitmap(new uiTexture);
+    private var xml:XML = XML(new uiXml);
     public var atlas:TextureAtlas = new TextureAtlas(texture, xml);
 
     //2 is random. gewoon om de setter te activeren de eerste keer.

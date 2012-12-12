@@ -30,9 +30,6 @@ public class PageViewer extends Sprite{
 
     private var backgroundTexture:Texture;
     private var backgroundImage:Image;
-    private var texture:starling.textures.Texture = Texture.fromBitmap(new BookApplication.uiTexture);
-    private var xml:XML = XML(new BookApplication.uiXml);
-    private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
 
     /*************************************/
     //Constructor
@@ -47,7 +44,7 @@ public class PageViewer extends Sprite{
 
         appModel = AppModel.getInstance();
 
-        backgroundTexture = atlas.getTexture('BasicCenterSpreadBackground');
+        backgroundTexture = appModel.atlas.getTexture('BasicCenterSpreadBackground');
         backgroundImage = new Image(backgroundTexture);
         backgroundImage.y = 0;
         backgroundImage.scaleY=1.2;
