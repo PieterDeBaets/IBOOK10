@@ -52,10 +52,15 @@ public class PageViewer extends Sprite{
         backgroundImage.scaleY=1.2;
         addChild(backgroundImage);
 
+        trace(appModel.arrBook);
+
+
         spread = new Spread();
 
-
+        //replace atshandler with starling stage stuff
         this.addEventListener(Event.ADDED_TO_STAGE,atsHandler);
+        trace("[Pageviewer]");
+        trace(appModel.arrBook); // all spreadVO's
 
 
 

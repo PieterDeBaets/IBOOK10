@@ -31,6 +31,8 @@ public class PageVOFactory {
                     if(int(pageXML.@width) != 0) pageVO.paragraphWidth = pageXML.@width;
                     if(int(pageXML.@height) != 0) pageVO.paragraphHeight = pageXML.@height;
 
+
+
                 break;
             case 'image':
                     pageVO.imageUrl += pageXML.@url;

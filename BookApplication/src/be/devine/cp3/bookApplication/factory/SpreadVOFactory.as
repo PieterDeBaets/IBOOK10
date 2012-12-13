@@ -27,6 +27,7 @@ public class SpreadVOFactory {
 
         spreadVO.chapterIndex = appModel.spreadsPerChapter.length;
 
+
         return spreadVO;
     }
 }
