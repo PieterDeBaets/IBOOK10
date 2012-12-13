@@ -18,6 +18,7 @@ public class PageVOFactory {
         pageVO.pageNumber = appModel.totalPages;
 
         switch(String(pageXML.@style)){
+
             case 'text':
                     for each(var paragraph in pageXML.p){
                         pageVO.paragraph += paragraph + '\n \n';
@@ -30,8 +31,8 @@ public class PageVOFactory {
                     //set width and heigth if filled in
                     if(int(pageXML.@width) != 0) pageVO.paragraphWidth = pageXML.@width;
                     if(int(pageXML.@height) != 0) pageVO.paragraphHeight = pageXML.@height;
-
                 break;
+
             case 'image':
                     pageVO.imageUrl += pageXML.@url;
                     trace(pageVO.imageUrl);
@@ -44,7 +45,34 @@ public class PageVOFactory {
                     if(int(pageXML.img.@width) != 0) pageVO.image1Width = pageXML.img.@width;
                     if(int(pageXML.img.@height) != 0) pageVO.image1Height = pageXML.img.@height;
                 break;
+
+            case 'index':
+                //set X and Y offset if filled in
+                if(int(pageXML.@X) != 0) pageVO.indexX = pageXML.@X;
+                if(int(pageXML.@Y) != 0) pageVO.indexY= pageXML.@Y;
+
+                //set width and heigth if filled in
+                if(int(pageXML.@width) != 0) pageVO.indexWidth = pageXML.@width;
+                if(int(pageXML.@height) != 0) pageVO.indexHeight= pageXML.@height;
+
+                //de hele xml is hier nog niet ingeladen, dus kan nog niet aan alle chapterTitles
+                //index inladen in de page zelf
+                break;
+
+            case 'front':
+                //set X and Y offset if filled in
+                if(int(pageXML.@X) != 0) pageVO.titleX = pageXML.@X;
+                if(int(pageXML.@Y) != 0) pageVO.titleY= pageXML.@Y;
+
+                //set width and heigth if filled in
+                if(int(pageXML.@width) != 0) pageVO.titleWidth= pageXML.@width;
+                if(int(pageXML.@height) != 0) pageVO.titleHeight= pageXML.@height;
+
+                if(String(pageXML.title) != "") pageVO.title = pageXML.title;
+
+                break;
         }
+
         return pageVO;
     }
 

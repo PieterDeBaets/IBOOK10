@@ -49,6 +49,8 @@ public class Main extends Sprite {
 
         starling = new Starling(BookApplication, stage);
         starling.start();
+
+        //test
     }
 
 

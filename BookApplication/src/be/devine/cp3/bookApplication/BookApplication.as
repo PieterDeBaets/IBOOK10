@@ -62,8 +62,7 @@ public class BookApplication extends starling.display.Sprite {
 
     private function bookCompleted(event:Event){
 
-        pageViewer = new PageViewer();
-        addChild(pageViewer);
+
 
         timeline = new Timeline();
         addChild(timeline);
@@ -75,9 +74,15 @@ public class BookApplication extends starling.display.Sprite {
         addChild(controls);
 
         setChildIndex(controls, 0);
+        appModel.currentSpread = 0;
+
+
+        pageViewer = new PageViewer();
+        addChild(pageViewer);
+
         setChildIndex(pageViewer, 0);
 
-        appModel.currentSpread = 0;
+
     }
 
     /*************************************/

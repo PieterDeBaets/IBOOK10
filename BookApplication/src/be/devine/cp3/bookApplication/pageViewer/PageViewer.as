@@ -10,6 +10,8 @@ import be.devine.cp3.AppModel;
 import be.devine.cp3.bookApplication.BookApplication;
 import be.devine.cp3.bookApplication.pageViewer.Spread;
 
+import flash.events.Event;
+
 import starling.core.Starling;
 
 import starling.display.Image;
@@ -50,15 +52,31 @@ public class PageViewer extends Sprite{
         backgroundImage.scaleY=1.2;
         addChild(backgroundImage);
 
-        spread = new Spread();
+        trace(appModel.arrBook[appModel.currentSpread]);
+        appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, currentSpreadChangedHandler)
+
 
         backgroundImage.x = Starling.current.stage.stageWidth/2 - backgroundImage.width/2;
+
+       // trace(appModel.currentSpread);
+        //trace(appModel.arrBook);
+
     }
+
 
     /*************************************/
     //Methods
     /*************************************/
 
+    private function currentSpreadChangedHandler(event:flash.events.Event):void {
+        this.removeChild(spread);
+
+        spread = new Spread(appModel.arrBook[appModel.currentSpread]);
+        addChild(spread);
+        trace("IN CURRENTSPREADCHANGEDHANDLER PAGEVIEWER");
+
+
+    }
     /*************************************/
     //Getters & Setters
     /*************************************/
