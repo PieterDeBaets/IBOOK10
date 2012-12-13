@@ -56,8 +56,9 @@ public class Page extends starling.display.Sprite{
             case "text":
                     trace("EERSTE TEKST");
                // string = string.split("\r").join("");
-                    var paragraphText:String = removeTabsAndNewLines(data.paragraph);
-                    paragraph = new TextField(data.paragraphWidth, data.paragraphHeight, paragraphText, "Century", 12, color);
+                    //var paragraphText:String;
+                    //if(data.paragraph != "") paragraphText = removeTabsAndNewLines(data.paragraph);
+                    paragraph = new TextField(data.paragraphWidth, data.paragraphHeight, data.paragraph, "Century", 12, color);
                     paragraph.x = data.paragraphX;
                     paragraph.y = data.paragraphY;
                     paragraph.hAlign = "left";
@@ -148,7 +149,7 @@ public class Page extends starling.display.Sprite{
 
     private function removeTabsAndNewLines($str:String):String
     {
-        var rex:RegExp = /(\t|\n|\r)/gi;
+        var rex:RegExp = /(\t|\r)/gi;
         $str = $str.replace(rex,'');
         return $str;
     }
