@@ -14,6 +14,8 @@ import be.devine.cp3.bookApplication.BookApplication;
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
+import flash.ui.Mouse;
+import flash.ui.MouseCursor;
 
 import starling.animation.Transitions;
 
@@ -191,8 +193,13 @@ public class Index extends starling.display.Sprite{
                         appModel.currentSpread = currentSpread;
                     }
                 }
+            }else if(touch.phase == TouchPhase.HOVER){
+                Mouse.cursor = MouseCursor.BUTTON;
             }
+        }else{
+            Mouse.cursor = MouseCursor.ARROW;
         }
+
     }
 
     /*************************************/

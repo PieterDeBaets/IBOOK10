@@ -35,6 +35,7 @@ public class PageVOFactory {
 
             case 'image':
                     pageVO.imageUrl += pageXML.@url;
+                    trace(pageVO.imageUrl);
 
                     //set X and Y offset if filled in
                     if(int(pageXML.img.@X) != 0) pageVO.image1X =pageXML.img.@X;

@@ -93,7 +93,7 @@ public class Timeline extends Sprite{
         if(touch){
             if(touch.phase == TouchPhase.HOVER){
                 Mouse.cursor = MouseCursor.BUTTON;
-            }else if(touch.phase == TouchPhase.BEGAN){
+            }else if(touch.phase == TouchPhase.ENDED){
                 appModel.timelineVisible = !appModel.timelineVisible;
             }else if(touch.phase == TouchPhase.ENDED){
             }else if(touch.phase == TouchPhase.MOVED){

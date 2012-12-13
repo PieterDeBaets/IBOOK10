@@ -15,6 +15,11 @@ import flash.events.Event;
 import flash.ui.Mouse;
 import flash.ui.MouseCursor;
 
+import starling.animation.Transitions;
+
+import starling.animation.Tween;
+import starling.core.Starling;
+
 import starling.display.Quad;
 
 import starling.display.Sprite;
@@ -33,7 +38,7 @@ public class SpreadIcon extends Sprite{
 
     private var borderQuad1:Quad;
     private var borderQuad2:Quad;
-
+    private var borderSprite:Sprite;
 
     /*************************************/
     //Constructor
@@ -61,10 +66,25 @@ public class SpreadIcon extends Sprite{
         thumbnailContainer.addChild(pageIcon2);
 
         addChild(thumbnailContainer);
-        this.flatten();
 
         this.addEventListener(TouchEvent.TOUCH, selectNewSpread);
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, toggleBorder);
+
+        borderSprite = new Sprite();
+        addChildAt(borderSprite, 0);
+
+        borderQuad1 = new Quad(37, 50, 0xfcfdfd);
+        borderSprite.addChildAt(borderQuad1, 0);
+        borderQuad1.x = borderQuad1.y =-2;
+
+        borderQuad2 = new Quad(37, 50, 0xfcfdfd);
+        borderSprite.addChildAt(borderQuad2, 0);
+        borderQuad2.x = 37;
+        borderQuad2.y = -2;
+
+        borderSprite.alpha = 0.8;
+
+        this.flatten();
     }
 
 
@@ -89,31 +109,34 @@ public class SpreadIcon extends Sprite{
 
     public function toggleBorder(event:Event){
         //trace(appModel.currentSpread + ' VS ' + this.spreadNumber);
+
+        //TODO tween op border
+
         this.unflatten();
 
         if(borderQuad1){
-            removeChild(borderQuad1);
             borderQuad1.dispose();
+            borderSprite.removeChild(borderQuad1);
         }
 
         if(borderQuad2){
-            removeChild(borderQuad2);
             borderQuad2.dispose();
+            borderSprite.removeChild(borderQuad2);
         }
 
         if(this.spreadNumber == appModel.currentSpread){
             if(appModel.currentSpread != 0){
                 borderQuad1 = new Quad(37, 50, 0xfcfdfd);
-                addChild(borderQuad1);
+                borderSprite.addChildAt(borderQuad1, 0);
                 borderQuad1.x = borderQuad1.y =-2;
-                setChildIndex(borderQuad1, 0);
+                //setChildIndex(borderQuad1, 0);
             }
 
             borderQuad2 = new Quad(37, 50, 0xfcfdfd);
-            addChild(borderQuad2);
+            borderSprite.addChildAt(borderQuad2, 0);
             borderQuad2.x = 37;
             borderQuad2.y = -2;
-            setChildIndex(borderQuad2, 0);
+            //setChildIndex(borderQuad2, 0);
         }
 
         this.flatten();
