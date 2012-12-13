@@ -41,6 +41,8 @@ public class AppModel extends EventDispatcher{
     private var _currentSpread:int = 2;
     private var _currentChapter:int = 0;
 
+    //comment
+
     private var _totalPages:int = 0;
     private var _totalSpreads:int = 0;
 
