@@ -11,10 +11,11 @@ import be.devine.cp3.bookApplication.pageViewer.vo.SpreadVO;
 
 public class SpreadVOFactory {
 
-    public static function createSpreadVO(spreadXML:XML):SpreadVO{
+    public static function createSpreadVO(spreadXML:XML, spreadNumber:uint):SpreadVO{
         var appModel:AppModel = AppModel.getInstance();
 
         var spreadVO:SpreadVO = new SpreadVO();
+
 
         for each( var page:XML in spreadXML.page){
             if(page.childIndex() == 0){
@@ -26,6 +27,7 @@ public class SpreadVOFactory {
         }
 
         spreadVO.chapterIndex = appModel.spreadsPerChapter.length;
+        spreadVO.spreadNumber = spreadNumber;
 
 
         return spreadVO;

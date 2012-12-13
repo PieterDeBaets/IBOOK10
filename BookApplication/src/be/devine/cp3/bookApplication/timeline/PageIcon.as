@@ -15,6 +15,7 @@ import starling.display.Image;
 import starling.display.Quad;
 
 import starling.display.Sprite;
+import starling.events.Event;
 import starling.events.TouchEvent;
 import starling.events.TouchPhase;
 import starling.text.TextField;
@@ -25,10 +26,6 @@ public class PageIcon extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
-
-    /*private var texture:Texture = Texture.fromBitmap(new BookApplication.uiTexture);
-    private var xml:XML = XML(new BookApplication.uiXml);
-    private var atlas:TextureAtlas = new TextureAtlas(texture, xml);*/
 
     private var iconTexture:Texture;
     private var iconImage:Image;
@@ -55,24 +52,37 @@ public class PageIcon extends Sprite{
         pageNumber.y = backgroundColor.height;
         addChild(pageNumber);
 
-        /*iconTexture = atlas.getTexture('textIcon');
-        iconImage = new Image(iconTexture);
-        addChild(iconImage);*/
+        switch (data.style){
+            case 'text':
+                iconTexture = appModel.atlas.getTexture('textIcon');
+                break;
+            case 'front':
+                iconTexture = appModel.atlas.getTexture('titleIcon');
+                break;
+            case 'empty':
+                iconTexture = null;
+                break;
+            case 'index':
+                iconTexture = appModel.atlas.getTexture('indexIcon');
+                break;
+            case 'image':
+                iconTexture = appModel.atlas.getTexture('imageIcon');
+                break;
+        }
+
+        if(iconTexture != null){
+            iconImage = new Image(iconTexture);
+            iconImage.alpha = 0.76;
+            addChild(iconImage);
+        }
 
         if(pageNumberString == 0){
             pageNumber.alpha = 0;
             backgroundColor.alpha = 0;
-        }else{
-            this.addEventListener(TouchEvent.TOUCH, newPageSelected);
         }
-    }
 
-    private function newPageSelected(event:TouchEvent){
-        if(event.getTouch(this, TouchPhase.BEGAN)){
-            trace("De nieuwe pagina is: " + pageNumber);
-        }
+        this.flatten();
     }
-
 
     /*************************************/
     //Methods

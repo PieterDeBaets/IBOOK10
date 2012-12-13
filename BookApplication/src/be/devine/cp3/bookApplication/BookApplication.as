@@ -1,6 +1,7 @@
 package be.devine.cp3.bookApplication {
 
 import be.devine.cp3.AppModel;
+import be.devine.cp3.bookApplication.controls.Controls;
 import be.devine.cp3.bookApplication.index.Index;
 import be.devine.cp3.bookApplication.pageViewer.Page;
 import be.devine.cp3.bookApplication.pageViewer.PageViewer;
@@ -27,20 +28,17 @@ public class BookApplication extends starling.display.Sprite {
     private var bookService:BookService;
     private var timeline:Timeline;
     private var index:Index;
+    private var controls:Controls;
     private var pageViewer:PageViewer;
 
-    [Embed(source='../../../../../libs/IBookAssets.xml', mimeType='application/octet-stream')]
-    public static const uiXml:Class;
-    [Embed(source='../../../../../libs/IBookAssets.png')]
-    public static const uiTexture:Class;
 
     /*************************************/
     //Constructor
     /*************************************/
 
     public function BookApplication() {
-        var textField:starling.text.TextField = new TextField(100, 20, "IBOOK 10 start", "Verdana", 12);
-        addChild(textField);
+        //var textField:starling.text.TextField = new TextField(100, 20, "IBOOK 10 start", "Verdana", 12);
+        //addChild(textField);
 
         appModel = AppModel.getInstance();
 
@@ -49,32 +47,9 @@ public class BookApplication extends starling.display.Sprite {
         bookService.load();
 
         //TODO FONTS EMBEDDEN
-        /*
-        var quad:Quad;
-        var tween:Tween;
-
-
-        quad = new Quad(100, 100, Math.random()* 0xffffff);
-        quad.x = Math.random()*100;
-        quad.y = Math.random()*100;
-        quad.alpha = 0;
-        quad.scaleX = quad.scaleY = 0;
-
-        addChild(quad);
-
-        tween = new Tween(quad, 1, "ease");
-        tween.animate('x', 100 + Math.random()*100);
-        tween.animate('y', 100 + Math.random()*100);
-        tween.animate("scaleX", 1);
-        tween.animate("scaleY", 1);
-        tween.animate('alpha', 1);
-        trace('tween');
-        Starling.juggler.add(tween);
-        */
     }
 
     private function bookCompleted(event:Event){
-        trace('continue app');
 
         pageViewer = new PageViewer();
         addChild(pageViewer);
@@ -85,8 +60,13 @@ public class BookApplication extends starling.display.Sprite {
         index = new Index();
         addChild(index);
 
+        controls = new Controls();
+        addChild(controls);
 
+        setChildIndex(controls, 0);
+        setChildIndex(pageViewer, 0);
 
+        appModel.currentSpread = 0;
     }
 
     /*************************************/

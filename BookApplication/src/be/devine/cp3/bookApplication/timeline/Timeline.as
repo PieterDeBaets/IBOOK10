@@ -13,6 +13,8 @@ import be.devine.cp3.bookApplication.BookApplication;
 import flash.events.Event;
 
 import flash.ui.Keyboard;
+import flash.ui.Mouse;
+import flash.ui.MouseCursor;
 
 import starling.animation.Transitions;
 
@@ -37,10 +39,6 @@ public class Timeline extends Sprite{
     /*************************************/
     //Properties
     /*************************************/
-    private var texture:Texture = Texture.fromBitmap(new BookApplication.uiTexture);
-    private var xml:XML = XML(new BookApplication.uiXml);
-    private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
-
     private var background:Quad;
     private var btnTimelineTexture:Texture;
     private var btnTimeline:Image;
@@ -53,6 +51,7 @@ public class Timeline extends Sprite{
     private var transparency:Number = 0.76;
 
     private var appModel:AppModel;
+
 
     /*************************************/
     //Constructor
@@ -70,26 +69,22 @@ public class Timeline extends Sprite{
         timelineScroll = new TimelineScroll();
         addChild(timelineScroll);
 
-        this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStage);
         appModel.addEventListener(AppModel.TIMELINEVISIBLE_CHANGED, toggleVisibility);
-
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, changePosition);
+        Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
 
         toggleVisibility(null);
 
     }
 
+
+
+    /*************************************/
+    //Methods
+    /*************************************/
+
     private function changePosition(event:flash.events.Event):void {
-        trace(appModel.currentSpread);
-        trace(appModel.currentSpread/appModel.totalSpreads);
-        timelineScroll.scrollProcent = appModel.currentSpread/appModel.totalSpreads;
-    }
-
-    private function addedToStage(event:starling.events.Event){
-        //TODO added to stage vervangen
-
-        //slide up en slide down toggle op pijltje
-        stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
+        timelineScroll.scrollProcent = appModel.currentSpread/(appModel.totalSpreads-1);
     }
 
     private function checkHover(event:TouchEvent){
@@ -97,12 +92,16 @@ public class Timeline extends Sprite{
 
         if(touch){
             if(touch.phase == TouchPhase.HOVER){
+                Mouse.cursor = MouseCursor.BUTTON;
             }else if(touch.phase == TouchPhase.BEGAN){
                 appModel.timelineVisible = !appModel.timelineVisible;
             }else if(touch.phase == TouchPhase.ENDED){
             }else if(touch.phase == TouchPhase.MOVED){
             }else{
+
             }
+        }else{
+            Mouse.cursor = MouseCursor.ARROW;
         }
     }
 
@@ -110,16 +109,16 @@ public class Timeline extends Sprite{
         if(btnTimeline != null){
             btnTimeline.removeEventListeners();
             btnTimeline.removeFromParent();
+            btnTimeline.dispose();
         }
 
         if(appModel.timelineVisible){
-            btnTimelineTexture= atlas.getTexture('timelineBtnUp');
+            btnTimelineTexture= appModel.atlas.getTexture('timelineBtnUp');
         }else{
-            btnTimelineTexture= atlas.getTexture('timelineBtnHover');
+            btnTimelineTexture= appModel.atlas.getTexture('timelineBtnHover');
         }
 
         btnTimeline = new Image(btnTimelineTexture);
-
         btnTimeline.x = background.width - btnTimeline.width;
         btnTimeline.y = background.height;
         btnTimeline.alpha = transparency;
@@ -132,14 +131,14 @@ public class Timeline extends Sprite{
         switch (event.keyCode){
             case Keyboard.UP:
                 appModel.timelineVisible = false;
-                trace('hide timeline');
                 break;
             case Keyboard.DOWN:
                 appModel.timelineVisible = true;
-                trace('show timeline');
                 break;
         }
     }
+
+    //TODO tween kan normaal met 1 tween ipv 2
 
     private function toggleVisibility(event:flash.events.Event){
         createBtn();
@@ -151,20 +150,12 @@ public class Timeline extends Sprite{
     }
 
     private function setupTween(value){
-        trace('set up tween');
         if (tween) tween.reset(this, tweenspeed, Transitions.EASE_OUT);
         else tween = new Tween(this, tweenspeed, Transitions.EASE_OUT);
 
-        trace('bla');
         tween.animate("y", value);
         Starling.juggler.add(tween);
     }
-
-
-    /*************************************/
-    //Methods
-    /*************************************/
-
 
     /*************************************/
     //Getters & Setters

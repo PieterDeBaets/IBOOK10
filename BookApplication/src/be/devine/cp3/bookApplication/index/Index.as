@@ -46,9 +46,9 @@ public class Index extends starling.display.Sprite{
     private var btnIndex:Image;
     private var arrColors:Array;
 
-    private var texture:starling.textures.Texture = Texture.fromBitmap(new BookApplication.uiTexture);
-    private var xml:XML = XML(new BookApplication.uiXml);
-    private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
+    //private var texture:starling.textures.Texture = Texture.fromBitmap(new BookApplication.uiTexture);
+    //private var xml:XML = XML(new BookApplication.uiXml);
+    //private var atlas:TextureAtlas = new TextureAtlas(texture, xml);
     private var appModel:AppModel;
     private var textContainer:Sprite;
     private var animation:Tween;
@@ -73,7 +73,7 @@ public class Index extends starling.display.Sprite{
 
         //PIJL
 
-        btnIndexTexture = atlas.getTexture('timelineBtnSpatie');
+        btnIndexTexture = appModel.atlas.getTexture('timelineBtnSpatie');
         btnIndex = new Image(btnIndexTexture);
         btnIndex.pivotX = btnIndex.width/2;
         btnIndex.pivotY = btnIndex.height/2;
@@ -115,39 +115,28 @@ public class Index extends starling.display.Sprite{
 
         addChild(textContainer);
 
-
-        this.addEventListener(starling.events.Event.ADDED_TO_STAGE, addedToStageHandler);
         appModel.addEventListener(AppModel.INDEXVISIBLE_CHANGED, toggleVisible);
 
-    }
-
-
-
-
-
-
-
-
-    /*************************************/
-    //Methods
-    /*************************************/
-    private function addedToStageHandler(event:starling.events.Event):void {
-        background.x = stage.stageWidth/2 - background.width/2;
+        background.x = Starling.current.stage.stageWidth/2 - background.width/2;
         background.y = 192;
 
-        btnIndex.x = stage.stageWidth/2;
+        btnIndex.x = Starling.current.stage.stageWidth/2;
         btnIndex.y = background.y - btnIndex.height/2;
 
         textContainer.x = background.x + 20;
         textContainer.y = background.y + 20;
 
 
-        stage.addEventListener(starling.events.KeyboardEvent.KEY_DOWN, keydownHandler)
+        Starling.current.stage.addEventListener(starling.events.KeyboardEvent.KEY_DOWN, keydownHandler)
         toggleVisible(null);
-
-
     }
 
+
+    /*************************************/
+    //Methods
+    /*************************************/
+
+    //TODO als je blijft drukken op spatie dan flipt de index
     private function keydownHandler(event:starling.events.KeyboardEvent):void {
         if(event.keyCode == Keyboard.SPACE){
             appModel.indexVisible = !appModel.indexVisible;
@@ -168,9 +157,9 @@ public class Index extends starling.display.Sprite{
 
     private function toggleVisible(event:flash.events.Event):void{
         if(!appModel.indexVisible){
-            setupAnimation(stage.stageHeight-190);
+            setupAnimation(Starling.current.stage.stageHeight-190);
         }else{
-            setupAnimation(stage.stageHeight-this.height-60);
+            setupAnimation(Starling.current.stage.stageHeight-this.height-60);
 
         }
     }
@@ -199,13 +188,8 @@ public class Index extends starling.display.Sprite{
                         for(var i:int = 0; i<arrTextfields.indexOf(textfield)+1; i++){
                             currentSpread += spreadsPerChapter[i];
                         }
-
-
                         appModel.currentSpread = currentSpread;
-
-
                     }
-
                 }
             }
         }
