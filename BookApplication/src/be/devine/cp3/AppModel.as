@@ -25,7 +25,7 @@ public class AppModel extends EventDispatcher{
     [Embed(source='../../../../libs/IBookAssets.png')]
     public static const uiTexture:Class;
 
-    [Embed(source='../../../../libs/hitroad.ttf', embedAsCFF="false", fontFamily='HitRoad')]
+    [Embed(source='../../../../libs/GothamMedium.otf', embedAsCFF="false", fontFamily='Gotham')]
     public static const HitRoad:Class;
 
     public static var instance:AppModel;
