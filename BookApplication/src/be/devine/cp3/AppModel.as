@@ -26,7 +26,7 @@ public class AppModel extends EventDispatcher{
     public static const uiTexture:Class;
 
     [Embed(source='../../../../libs/GothamMedium.otf', embedAsCFF="false", fontFamily='Gotham')]
-    public static const HitRoad:Class;
+    public static const Gotham:Class;
 
     public static var instance:AppModel;
 
