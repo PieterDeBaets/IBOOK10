@@ -9,6 +9,7 @@ package be.devine.cp3.bookApplication.controls {
 import be.devine.cp3.AppModel;
 
 import flash.display.MovieClip;
+import flash.events.Event;
 import flash.system.ApplicationDomain;
 import flash.ui.Keyboard;
 import flash.ui.Mouse;
@@ -67,7 +68,19 @@ public class Controls extends Sprite{
         lightSwitch.addEventListener(TouchEvent.TOUCH, lightModeChanged);
         addChild(lightSwitch);
 
+        appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, checkIfLastOrFirst);
+
         Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
+    }
+
+    private function checkIfLastOrFirst(event:Event):void {
+        if(appModel.currentSpread == 0){
+            prevButton.alpha = 0;
+        }else if(appModel.currentSpread == appModel.arrBook.length-1){
+            nextButton.alpha = 0;
+        }else{
+            prevButton.alpha = nextButton.alpha = 1;
+        }
     }
 
     private function lightModeChanged(event:TouchEvent):void {
@@ -75,7 +88,7 @@ public class Controls extends Sprite{
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
                 appModel.lightMode = !appModel.lightMode;
-                trace(appModel.lightMode);
+
             }else if(touch.phase == TouchPhase.HOVER){
                 Mouse.cursor = MouseCursor.BUTTON;
             }
@@ -85,7 +98,6 @@ public class Controls extends Sprite{
     }
 
     private function keyHandler(event:KeyboardEvent):void {
-        trace('------------');
         switch (event.keyCode){
             case Keyboard.RIGHT:
                 appModel.currentSpread ++;
@@ -100,7 +112,6 @@ public class Controls extends Sprite{
         var touch:Touch = event.getTouch(prevButton);
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
-                trace('prev page');
                 appModel.currentSpread --;
             }else if(touch.phase == TouchPhase.HOVER){
                 Mouse.cursor = MouseCursor.BUTTON;
@@ -114,7 +125,6 @@ public class Controls extends Sprite{
         var touch:Touch = event.getTouch(nextButton);
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
-                trace('next page');
                 appModel.currentSpread ++;
             }else if(touch.phase == TouchPhase.HOVER){
                 Mouse.cursor = MouseCursor.BUTTON;

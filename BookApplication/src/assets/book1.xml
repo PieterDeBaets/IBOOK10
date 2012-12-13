@@ -1,6 +1,10 @@
 <book title='Operating Manual For Spaceship Earth' author='R. Buckminster Füller' year='1968' src='cover.jpg'>
 
-    <chapter title='index'>
+    <chapter title='Index'>
+        <spread>
+            <page style="empty"></page>
+            <page style="image" url="cover.jpg"></page>
+        </spread>
         <spread>
             <page style="emtpy"></page>
             <page style="index"></page>
@@ -18,20 +22,10 @@
         </spread>
 
         <spread>
-            <page style="text">
+            <page style="text" X='0' Y='0' width='200'>
                 <p>
                     I am enthusiastic over humanity’s extraordinary and sometimes very timely ingenuities. If you are in a shipwreck and all the boats are gone, a piano top buoyant enough to keep you afloat that comes
-along makes a fortuitous life preserver. But this is not to say that the best way to design a life
-preserver is in the form of a piano top. I think that we are clinging to a great many piano tops in
-accepting yesterday’s fortuitous contrivings as constituting the only means for solving a given
-problem. Our brains deal exclusively with special-case experiences. Only our minds are able to
-discover the generalized principles operating without exception in each and every special-experience
-case which if detected and mastered will give knowledgeable advantage in all instances.Because our
-spontaneous initiative has been frustrated, too often inadvertently, in earliest childhood we do not
-tend, customarily, to dare to think competently regarding our potentials. We find it socially easier
-to go on with our narrow, shortsighted specialization’s and leave it to others---primarily to the
-politicians---to find some way of resolving our common dilemmas. Countering that spontaneous grownup
- trend to narrowness I will do my, hopefully "childish," best to confront
+along makes a fortuitous life preserver. But this is not to say that the best way to design a life preserver is in the form of a piano top. I think that we are clinging to a great many piano tops in accepting yesterday’s fortuitous contrivings as constituting the only means for solving a given problem. Our brains deal exclusively with special-case experiences. Only our minds are able to discover the generalized principles operating without exception in each and every special-experience case which if detected and mastered will give knowledgeable advantage in all instances.Because our spontaneous initiative has been frustrated, too often inadvertently, in earliest childhood we do not tend, customarily, to dare to think competently regarding our potentials. We find it socially easier to go on with our narrow, shortsighted specialization’s and leave it to others---primarily to the politicians---to find some way of resolving our common dilemmas. Countering that spontaneous grownup trend to narrowness I will do my, hopefully "childish," best to confront
                 </p>
             </page>
             <page style="text">
@@ -56,7 +50,7 @@ new and usually more effective uses. At any rate, in 1927 I evolved a forecast. 
         </spread>
 
         <spread>
-            <page style="text" X='100'>
+            <page style="text">
                 <p>
 1927’S prognosticating went only to 1952---that is, for a quarter-century, but some of it went on
 for a half-century, to 1977.
@@ -244,6 +238,7 @@ cargoes in their ships, due to nature’s floatability-cargoes so large they cou
 carried on the backs of animals or the backs of men. Furthermore, the ships could sail across a
                 </p>
             </page>
+
         </spread>
 
         <spread>
@@ -282,6 +277,11 @@ anti-evolutionary or men will no longer be living on Earth. If you don’t compr
 listen to me closely.
                 </p>
             </page>
+        </spread>
+
+        <spread>
+            <page style="image" url='1-3.jpg'></page>
+            <page style="empty"></page>
         </spread>
     </chapter>
 
@@ -353,31 +353,31 @@ Thus secrecy became the essence of the lives of the successful pirates; ergo, ho
 today of that which I am relating.
                 </p>
                 <p>
-                    Leonardo da Vinci is the outstanding example of the comprehensively anticipatory design scientist.
-                    Operating under the patronage of the Duke of Milan he designed the fortified defenses and weaponry
-                    as well as the tools of peaceful production. Many other great military powers had
+Leonardo da Vinci is the outstanding example of the comprehensively anticipatory design scientist.
+Operating under the patronage of the Duke of Milan he designed the fortified defenses and weaponry
+as well as the tools of peaceful production. Many other great military powers had
                 </p>
             </page>
             <page style="text">
                 <p>
-                    their comprehensive design scientist-artist inventors; Michelangelo was one of them.
+their comprehensive design scientist-artist inventors; Michelangelo was one of them.
                 </p>
                 <p>
-                    Many persons wonder why we do not have such men today. It is a mistake to think we cannot. What
-                    happened at the time of Leonardo and Galileo was that mathematics was so improved by the advent of
-                    the zero that not only was much more scientific shipbuilding made possible but also much more
-                    reliable navigation. Immediately thereafter truly large-scale venturing on the world’s oceans
-                    commenced, and the strong sword-leader patrons as admirals put their Leonardos to work, first in
-                    designing their new and more powerful world-girdling ships. Next they took their Leonardos to sea
-                    with them as their seagoing Merlins to invent ever more powerful tools and strategies on a
-                    world-around basis to implement their great campaigns to best all the other great pirates, thereby
-                    enabling them to become masters of the world and of all its people and wealth. The required and
-                    scientifically designed secrecy of the sea operations thus pulled a curtain that hid the Leonardos
-                    from public view, popular ken, and recorded history.
+Many persons wonder why we do not have such men today. It is a mistake to think we cannot. What
+happened at the time of Leonardo and Galileo was that mathematics was so improved by the advent of
+the zero that not only was much more scientific shipbuilding made possible but also much more
+reliable navigation. Immediately thereafter truly large-scale venturing on the world’s oceans
+commenced, and the strong sword-leader patrons as admirals put their Leonardos to work, first in
+designing their new and more powerful world-girdling ships. Next they took their Leonardos to sea
+with them as their seagoing Merlins to invent ever more powerful tools and strategies on a
+world-around basis to implement their great campaigns to best all the other great pirates, thereby
+enabling them to become masters of the world and of all its people and wealth. The required and
+scientifically designed secrecy of the sea operations thus pulled a curtain that hid the Leonardos
+from public view, popular ken, and recorded history.
                 </p>
                 <p>
-                    Finally, the sea-dwelling Leonardos became Captains of the ships or even Admirals of Fleets, or
-                    Commandants of the Navy yards where they designed
+Finally, the sea-dwelling Leonardos became Captains of the ships or even Admirals of Fleets, or
+Commandants of the Navy yards where they designed
                 </p>
 
             </page>
@@ -386,81 +386,41 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    and built the fleets, or they became the commandants of the naval war colleges where they designed
-                    and developed the comprehensive strategy for running the world for a century to come. This included
-                    not only the designing of the network of world-around voyaging and of the ships for each task but
-                    also the designing of the industrial establishments and world-around mining operations and naval
-                    base-building for production and maintenance of the ships. This Leonardo-type planning inaugurated
-                    today’s large-scale, world-around industrialization’s vast scale of thinking. When the Great Pirates
-                    came to building steel steamships and blast furnaces and railroad tracks to handle the logistics,
-                    the Leonardos appeared momentarily again in such men as Telford who built the railroads, tunnels,
-                    and bridges of England, as well as the first great steamship.
+and built the fleets, or they became the commandants of the naval war colleges where they designed
+and developed the comprehensive strategy for running the world for a century to come. This included
+not only the designing of the network of world-around voyaging and of the ships for each task but
+also the designing of the industrial establishments and world-around mining operations and naval
+base-building for production and maintenance of the ships. This Leonardo-type planning inaugurated
+today’s large-scale, world-around industrialization’s vast scale of thinking. When the Great Pirates
+came to building steel steamships and blast furnaces and railroad tracks to handle the logistics,
+the Leonardos appeared momentarily again in such men as Telford who built the railroads, tunnels,
+and bridges of England, as well as the first great steamship.
                 </p>
                 <p>
-                    You may say, "Aren’t you talking about the British Empire?" I answer, No The so-called British
-                    Empire was a manifest of the world-around misconception of who ran things and a disclosure of the
-                    popular ignorance of the Great Pirates’ absolute world-controlling through their local-stooge
-                    sovereigns and their prime ministers, as only innocuously and locally modified here and there by
-                    the separate sovereignties’ internal democratic processes. As we soon shall see, the
-                </p>
-            </page>
-            <page style="text">
-                <p>
-                    British Isles lying off the coast of Europe constituted in effect a fleet of unsinkable ships and
-                    naval bases commanding all the great harbours of Europe. Those islands were the possession of the
-                    topmost Pirates. Since the Great Pirates were building, maintaining, supplying their ships on those
-                    islands, they also logically made up their crews out of the native islanders who were simply seized
-                    or commanded aboard by imperial edict. Seeing these British Islanders aboard the top pirate ships
-                    the people around the world mistakenly assumed that the world conquest by the Great Pirates was a
-                    conquest by the will, ambition, and organization of the British people. Thus was the G. P.’s grand
-                    deception victorious. But the people of those islands never had the ambition to go out and conquer
-                    the world. As a people they were manipulated by the top pirates and learned to cheer as they were told of their nation’s world prowess.
-                </p>
-                <p>
-                    The topmost Great Pirates’ Leonardos discovered-both in their careful, long-distance planning and
-                    in their anticipatory inventing‹that the grand strategies of sea power made it experimentally clear
-                    that a plurality of ships could usually outmaneuver one ship. So the Great Pirates’ Leonardos
-                    invented navies. Then, of
-                </p>
-            </page>
-        </spread>
-
-        <spread>
-            <page style="text">
-                <p>
-                    course, they had to control various resource-supplying mines, forests, and lands with which and
-                    upon which to build the ships and establish the industries essential to building, supplying, and
-                    maintaining their navy’s ships. Then came the grand strategy which said, "divide and conquer." You
-                    divide up the other man’s ships in battle or you best him when several of his ships are hauled out
-                    on the land for repairs. They also had a grand strategy of anticipatory divide and conquer.
-                    Anticipatory divide and conquer was much more effective than tardy divide and conquer, since it
-                    enabled those who employed it to surprise the other pirate under conditions unfavorable to the
-                    latter, So the great top pirates of the world, realizing that dull people were innocuous and that
-                    the only people who could contrive to displace the supreme pirates were the bright ones, set about
-                    to apply their grand strategy of anticipatory divide and conquer to solve that situation comprehensively.
-                </p>
-                <p>
-                    The Great Pirate came into each of the various lands where he either acquired or sold goods
-                    profitably and picked the strongest man there to be his local head man. The Pirate’s picked man
-                    became the Pirate’s general manager of the
+You may say, "Aren’t you talking about the British Empire?" I answer, No The so-called British
+Empire was a manifest of the world-around misconception of who ran things and a disclosure of the
+popular ignorance of the Great Pirates’ absolute world-controlling through their local-stooge
+sovereigns and their prime ministers, as only innocuously and locally modified here and there by
+the separate sovereignties’ internal democratic processes. As we soon shall see, the
                 </p>
             </page>
             <page style="text">
                 <p>
-                    local realm. If the Great Pirate’s local strong man in a given land had not already done so, the
-                    Great Pirate told him to proclaim himself king. Despite the local head man’s secret subservience
-                    to him, the Great Pirate allowed and counted upon his king-stooge to convince his countrymen that
-                    he, the local king, was indeed the head man of all men ‹the god-ordained ruler. To guarantee that
-                    sovereign claim the Pirates gave their stooge-kings secret lines of supplies which provided
-                    everything required to enforce the sovereign claim. The more massively bejeweled the kings gold
-                    crown, and the more visible his court and castle, the less visible was his pirate master.
+British Isles lying off the coast of Europe constituted in effect a fleet of unsinkable ships and
+naval bases commanding all the great harbours of Europe. Those islands were the possession of the
+topmost Pirates. Since the Great Pirates were building, maintaining, supplying their ships on those
+islands, they also logically made up their crews out of the native islanders who were simply seized
+or commanded aboard by imperial edict. Seeing these British Islanders aboard the top pirate ships
+the people around the world mistakenly assumed that the world conquest by the Great Pirates was a
+conquest by the will, ambition, and organization of the British people. Thus was the G. P.’s grand
+deception victorious. But the people of those islands never had the ambition to go out and conquer
+the world. As a people they were manipulated by the top pirates and learned to cheer as they were told of their nation’s world prowess.
                 </p>
                 <p>
-                    The Great Pirates said to all their lieutenants around the world, "Any time bright young people
-                    show up, I’d like to know about it, because we need bright men." So each time the Pirate came into
-                    port the local king-ruler would mention that he had some bright, young men whose capabilities and
-                    thinking shone out in the community. The Great Pirate would say to the king, "All right, you summon
-                    them and deal with them as follows: As each young man is brought forward you say to him, ’Young
+The topmost Great Pirates’ Leonardos discovered-both in their careful, long-distance planning and
+in their anticipatory inventing‹that the grand strategies of sea power made it experimentally clear
+that a plurality of ships could usually outmaneuver one ship. So the Great Pirates’ Leonardos
+invented navies. Then, of
                 </p>
             </page>
         </spread>
@@ -468,44 +428,84 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    man, you are very bright. I’m going to assign you to a great history tutor and in due course if
-                    you study well and learn enough I’m going to make you my Royal Historian, but you’ve got to pass
-                    many examinations by both your teacher and myself.’" And when the next bright boy was brought
-                    before him the King was to say, "I’m going to make you my Royal Treasurer," and so forth. Then
-                    the Pirate said to the king, "You will finally say to all of them: But each of you must mind your
-                    own business or off go your heads. I’m the only one who minds everybody’s business.’ "
+course, they had to control various resource-supplying mines, forests, and lands with which and
+upon which to build the ships and establish the industries essential to building, supplying, and
+maintaining their navy’s ships. Then came the grand strategy which said, "divide and conquer." You
+divide up the other man’s ships in battle or you best him when several of his ships are hauled out
+on the land for repairs. They also had a grand strategy of anticipatory divide and conquer.
+Anticipatory divide and conquer was much more effective than tardy divide and conquer, since it
+enabled those who employed it to surprise the other pirate under conditions unfavorable to the
+latter, So the great top pirates of the world, realizing that dull people were innocuous and that
+the only people who could contrive to displace the supreme pirates were the bright ones, set about
+to apply their grand strategy of anticipatory divide and conquer to solve that situation comprehensively.
                 </p>
                 <p>
-                    And this is the way schools began‹as the royal tutorial schools. You realize, I hope, that I am not
-                    being facetious. That is it. This is the beginning of schools and colleges and the beginning of
-                    intellectual specialization. Of course, it took great wealth to start schools, to have great teachers,
-                    and to house, clothe, feed, and cultivate both teachers and students. Only the Great-Pirate-protected
-                    robber-barons and the Pirate-protected and secret intelligence-exploited international religious
-                    organizations could afford such scholarship investment. And the development of the bright ones into
-                    specialists
+The Great Pirate came into each of the various lands where he either acquired or sold goods
+profitably and picked the strongest man there to be his local head man. The Pirate’s picked man
+became the Pirate’s general manager of the
                 </p>
             </page>
             <page style="text">
                 <p>
-                    gave the king very great brain power, and made him and his kingdom the most powerful in the land and
-                    thus, secretly and greatly, advantaged his patron Pirate in the world competition with the other
-                    Great Pirates.
+local realm. If the Great Pirate’s local strong man in a given land had not already done so, the
+Great Pirate told him to proclaim himself king. Despite the local head man’s secret subservience
+to him, the Great Pirate allowed and counted upon his king-stooge to convince his countrymen that
+he, the local king, was indeed the head man of all men ‹the god-ordained ruler. To guarantee that
+sovereign claim the Pirates gave their stooge-kings secret lines of supplies which provided
+everything required to enforce the sovereign claim. The more massively bejeweled the kings gold
+crown, and the more visible his court and castle, the less visible was his pirate master.
                 </p>
                 <p>
-                    But specialization is in fact only a fancy form of slavery wherein the "expert" is fooled into
-                    accepting his slavery by making him feel that in return he is in a socially and culturally preferred,
-                    ergo, highly secure, lifelong position. But only the king’s son received the Kingdom-wide scope of
-                    training.
+The Great Pirates said to all their lieutenants around the world, "Any time bright young people
+show up, I’d like to know about it, because we need bright men." So each time the Pirate came into
+port the local king-ruler would mention that he had some bright, young men whose capabilities and
+thinking shone out in the community. The Great Pirate would say to the king, "All right, you summon
+them and deal with them as follows: As each young man is brought forward you say to him, ’Young
+                </p>
+            </page>
+        </spread>
+
+        <spread>
+            <page style="text">
+                <p>
+man, you are very bright. I’m going to assign you to a great history tutor and in due course if
+you study well and learn enough I’m going to make you my Royal Historian, but you’ve got to pass
+many examinations by both your teacher and myself.’" And when the next bright boy was brought
+before him the King was to say, "I’m going to make you my Royal Treasurer," and so forth. Then
+the Pirate said to the king, "You will finally say to all of them: But each of you must mind your
+own business or off go your heads. I’m the only one who minds everybody’s business.’ "
                 </p>
                 <p>
-                    However, the big thinking in general of a spherical Earth and celestial navigation was retained
-                    exclusively by the Great Pirates, in contradistinction to a four-cornered, flat world concept,
-                    with empire and kingdom circumscribed knowledge, constricted to only that which could be learned
-                    through localized preoccupations. Knowledge of the world and its resources was enjoyed exclusively
-                    by the Great Pirates, as were also the arts of navigation, shipbuilding and handling, and of grand
-                    logistical strategies and of nationally-undetectable,therefore effectively deceptive, international
-                    exchange media and trade balancing tricks by which the top pirate, as (in gambler’s parlance)
-                    "the house," always won.
+And this is the way schools began‹as the royal tutorial schools. You realize, I hope, that I am not
+being facetious. That is it. This is the beginning of schools and colleges and the beginning of
+intellectual specialization. Of course, it took great wealth to start schools, to have great teachers,
+and to house, clothe, feed, and cultivate both teachers and students. Only the Great-Pirate-protected
+robber-barons and the Pirate-protected and secret intelligence-exploited international religious
+organizations could afford such scholarship investment. And the development of the bright ones into
+specialists
+                </p>
+            </page>
+            <page style="text">
+                <p>
+gave the king very great brain power, and made him and his kingdom the most powerful in the land and
+thus, secretly and greatly, advantaged his patron Pirate in the world competition with the other
+Great Pirates.
+                </p>
+                <p>
+But specialization is in fact only a fancy form of slavery wherein the "expert" is fooled into
+accepting his slavery by making him feel that in return he is in a socially and culturally preferred,
+ergo, highly secure, lifelong position. But only the king’s son received the Kingdom-wide scope of
+training.
+                </p>
+                <p>
+However, the big thinking in general of a spherical Earth and celestial navigation was retained
+exclusively by the Great Pirates, in contradistinction to a four-cornered, flat world concept,
+with empire and kingdom circumscribed knowledge, constricted to only that which could be learned
+through localized preoccupations. Knowledge of the world and its resources was enjoyed exclusively
+by the Great Pirates, as were also the arts of navigation, shipbuilding and handling, and of grand
+logistical strategies and of nationally-undetectable,therefore effectively deceptive, international
+exchange media and trade balancing tricks by which the top pirate, as (in gambler’s parlance)
+"the house," always won.
                 </p>
 
             </page>
@@ -523,33 +523,33 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    Then there came a time, which was World War I, when the most powerful out-pirates challenged the
-                    in-pirates with the scientific and technological innovation of an entirely new geometry of thinking.
-                    The out-pirates attack went under and above the sea surface and into the invisible realm of
-                    electronics and chemical warfaring. Caught off-guard, the in-pirates, in order to save themselves,
-                    had to allow their scientists to go to work on their own inscrutable terms. Thus, in saving
-                    themselves, the Great Pirates allowed the scientists to plunge their grand, industrial logistics,
-                    support strategy into the vast ranges of the electro-magnetic spectrum that were utterly invisible
-                    to the pirates.The pirates until then had ruled the world through their extraordinarily keen senses.
-                    They judged things for themselves, and they didn’t trust anyone else’s eyes. They trusted only that
-                    which they could personally smell, hear, touch, or see. But the Great Pirates couldn’t see what was
-                    going on in the vast ranges of the electro-magnetic reality. Technology was going from wire to
-                    wireless, from track to trackless, from pipe to pipeless, and from visible structural muscle to the
-                    invisible chemical element strengths of metallic alloys and electro-magnetics.
+Then there came a time, which was World War I, when the most powerful out-pirates challenged the
+in-pirates with the scientific and technological innovation of an entirely new geometry of thinking.
+The out-pirates attack went under and above the sea surface and into the invisible realm of
+electronics and chemical warfaring. Caught off-guard, the in-pirates, in order to save themselves,
+had to allow their scientists to go to work on their own inscrutable terms. Thus, in saving
+themselves, the Great Pirates allowed the scientists to plunge their grand, industrial logistics,
+support strategy into the vast ranges of the electro-magnetic spectrum that were utterly invisible
+to the pirates.The pirates until then had ruled the world through their extraordinarily keen senses.
+They judged things for themselves, and they didn’t trust anyone else’s eyes. They trusted only that
+which they could personally smell, hear, touch, or see. But the Great Pirates couldn’t see what was
+going on in the vast ranges of the electro-magnetic reality. Technology was going from wire to
+wireless, from track to trackless, from pipe to pipeless, and from visible structural muscle to the
+invisible chemical element strengths of metallic alloys and electro-magnetics.
                 </p>
                 <p>
-                    The Great Pirates came out of that
+The Great Pirates came out of that
                 </p>
             </page>
             <page style="text">
                 <p>
-                    first world war unable to cope knowledgeably with what was going on in the advanced scientific
-                    frontiers of industry. The pirates delegated inspection to their "troubleshooter" experts, but had to content themselves with relayed second-hand information. This forced them to appraise blindly-ergo, only opinionatedly‹ whether this or that man really knew what he was talking about, for the G. P.’s couldn’t judge for themselves. Thus the Great Pirates were no longer the masters. That was the end. The Great Pirates became extinct. But because the G. P.’s had always operated secretly, and because they hoped they were not through, they of course did not announce or allow it to be announced that they were extinct. And because the public had never known of them and had been fooled into thinking of their kingly stooges and local politicians as being in reality the head men, society was and is as yet unaware either that the Great Pirates once ran the world or that they are now utterly extinct.
+first world war unable to cope knowledgeably with what was going on in the advanced scientific
+frontiers of industry. The pirates delegated inspection to their "troubleshooter" experts, but had to content themselves with relayed second-hand information. This forced them to appraise blindly-ergo, only opinionatedly‹ whether this or that man really knew what he was talking about, for the G. P.’s couldn’t judge for themselves. Thus the Great Pirates were no longer the masters. That was the end. The Great Pirates became extinct. But because the G. P.’s had always operated secretly, and because they hoped they were not through, they of course did not announce or allow it to be announced that they were extinct. And because the public had never known of them and had been fooled into thinking of their kingly stooges and local politicians as being in reality the head men, society was and is as yet unaware either that the Great Pirates once ran the world or that they are now utterly extinct.
                 </p>
                 <p>
-                    Though the pirates are extinct, all of our international trade balancing and money ratings, as
-                    well as all economic accounting, in both the capitalistic and communistic countries, hold strictly
-                    to the rules, value
+Though the pirates are extinct, all of our international trade balancing and money ratings, as
+well as all economic accounting, in both the capitalistic and communistic countries, hold strictly
+to the rules, value
                 </p>
             </page>
         </spread>
@@ -557,53 +557,53 @@ today of that which I am relating.
         <spread>
             <page style="text">
                <p>
-                   systems, terminology, and concepts established by those Great Pirates. Powerful though many
-                   successors to the Great Pirates’ fragmented dominions may be, no one government, religion, or
-                   enterprise now holds the world’s physical or metaphysical initiatives.
+systems, terminology, and concepts established by those Great Pirates. Powerful though many
+successors to the Great Pirates’ fragmented dominions may be, no one government, religion, or
+enterprise now holds the world’s physical or metaphysical initiatives.
                </p>
                 <p>
-                    The metaphysical initiative, too, has gone into competitive confusion between old religions
-                    and more recent political or scientific ideologies. These competitors are already so heavily
-                    weighted with physical investments and proprietary expediencies as to vitiate any metaphysical
-                    initiative. A new, physically uncompromised, metaphysical initiative of unbiased integrity could
-                    unify the world. It could
+The metaphysical initiative, too, has gone into competitive confusion between old religions
+and more recent political or scientific ideologies. These competitors are already so heavily
+weighted with physical investments and proprietary expediencies as to vitiate any metaphysical
+initiative. A new, physically uncompromised, metaphysical initiative of unbiased integrity could
+unify the world. It could
                 </p>
                 <p>
-                    and probably will be provided by the utterly impersonal problem solutions of the computers. Only
-                    to their superhuman range of calculative capabilities can and may all political, scientific, and
-                    religious leaders face-savingly acquiesce.
+and probably will be provided by the utterly impersonal problem solutions of the computers. Only
+to their superhuman range of calculative capabilities can and may all political, scientific, and
+religious leaders face-savingly acquiesce.
                 </p>
                 <p>
-                    Abraham Lincoln’s concept of "right triumphing over might" was realized when Einstein as
-                    metaphysical intellect wrote the equation of physical universe E = Mc2 and thus comprehended it.
-                    Thus the metaphysical took the measure of, and mastered, the physical. That relationship seems by
-                    experience to be irreversible. Nothing in our experience suggests that energy could comprehend and
-                    write the equation of intellect. That equation is operating inexorably, and the metaphysical is
-                    now manifesting its ability to reign over the physical.
+Abraham Lincoln’s concept of "right triumphing over might" was realized when Einstein as
+metaphysical intellect wrote the equation of physical universe E = Mc2 and thus comprehended it.
+Thus the metaphysical took the measure of, and mastered, the physical. That relationship seems by
+experience to be irreversible. Nothing in our experience suggests that energy could comprehend and
+write the equation of intellect. That equation is operating inexorably, and the metaphysical is
+now manifesting its ability to reign over the physical.
                 </p>
             </page>
             <page style="text">
                 <p>
-                    This is the essence of human evolution upon Spaceship Earth. If the present planting of humanity
-                    upon Spaceship Earth cannot comprehend this inexorable process and discipline itself to serve
-                    exclusively that function of metaphysical mastering of the physical it will be discontinued, and
-                    its potential mission in universe will be carried on by the metaphysically endowed capabilities of
-                    other beings on other spaceship planets of universe.
+This is the essence of human evolution upon Spaceship Earth. If the present planting of humanity
+upon Spaceship Earth cannot comprehend this inexorable process and discipline itself to serve
+exclusively that function of metaphysical mastering of the physical it will be discontinued, and
+its potential mission in universe will be carried on by the metaphysically endowed capabilities of
+other beings on other spaceship planets of universe.
                 </p>
                 <p>
-                    The Great Pirates did run the world. They were the first and last to do so. They were world men,
-                    and they ran the world with ruthless and brilliant pragmatism based on the mis-seemingly
-                    "fundamental" information of their scientifically specialized servants. First came their Royal
-                    Society scientific servants, with their "Great" Second Law of thermodynamics, whose "entropy"
-                    showed that every energy machine kept losing energy and eventually "ran down." In their
-                    pre-speed-of-light-measurement misconceptioning of an omnisimultaneous-instant universe"‹that
-                    universe, as an energy machine was thought, also to be "running down." And thus the energy
-                    wealth and life support were erroneously thought to be in continuous depletion-orginating the
-                    misconception of "spending."
+The Great Pirates did run the world. They were the first and last to do so. They were world men,
+and they ran the world with ruthless and brilliant pragmatism based on the mis-seemingly
+"fundamental" information of their scientifically specialized servants. First came their Royal
+Society scientific servants, with their "Great" Second Law of thermodynamics, whose "entropy"
+showed that every energy machine kept losing energy and eventually "ran down." In their
+pre-speed-of-light-measurement misconceptioning of an omnisimultaneous-instant universe"‹that
+universe, as an energy machine was thought, also to be "running down." And thus the energy
+wealth and life support were erroneously thought to be in continuous depletion-orginating the
+misconception of "spending."
                 </p>
                 <p>
-                    Next came Thomas Malthus, professor of political economics of the Great Pirate’s East India
-                    Company, who said that man was multiplying himself at a
+Next came Thomas Malthus, professor of political economics of the Great Pirate’s East India
+Company, who said that man was multiplying himself at a
                 </p>
             </page>
         </spread>
@@ -611,46 +611,46 @@ today of that which I am relating.
         <spread>
             <page style="text">
                  <p>
-                     geometrical rate and that food was multiplying only at an arithmetical rate. And lastly,
-                     thirty-five years later, came the G. P.’s biological specialist servant, Charles Darwin, who,
-                     explaining his theory of animate evolution, said that survival was only for the fittest.
+geometrical rate and that food was multiplying only at an arithmetical rate. And lastly,
+thirty-five years later, came the G. P.’s biological specialist servant, Charles Darwin, who,
+explaining his theory of animate evolution, said that survival was only for the fittest.
 
 
                  </p>
                 <p>
-                    Quite clearly to the Great Pirates it was a scientific fact that not only was there not enough to
-                    go around but apparently not enough to go around for even I per cent of humanity to live at a
-                    satisfactorily-sustaining standard of living. And because of entropy the inadequacy would always
-                    increase. Hence, said the G. P.’s, survival was obviously a cruel and almost hopeless battle. They
-                    ran the world on the basis that these Malthusian-Darwinian entropy concepts were absolute scientific
-                    laws, for that was what their scientifically respected, intellectual slave specialists had told them.
+Quite clearly to the Great Pirates it was a scientific fact that not only was there not enough to
+go around but apparently not enough to go around for even I per cent of humanity to live at a
+satisfactorily-sustaining standard of living. And because of entropy the inadequacy would always
+increase. Hence, said the G. P.’s, survival was obviously a cruel and almost hopeless battle. They
+ran the world on the basis that these Malthusian-Darwinian entropy concepts were absolute scientific
+laws, for that was what their scientifically respected, intellectual slave specialists had told them.
                 </p>
                 <p>
-                    Then we have the great pragmatic ideologist Marx running into that entropic-Malthusian-Darwinian
-                    information and saying, "Well, the workers who produce things are the fittest because they are the
-                    only ones who know how to physically produce and therefore they ought to be the ones to survive."
-                    That was the beginning of the great "class warfare." All of the ideologies range somewhere between
-                    the Great
+Then we have the great pragmatic ideologist Marx running into that entropic-Malthusian-Darwinian
+information and saying, "Well, the workers who produce things are the fittest because they are the
+only ones who know how to physically produce and therefore they ought to be the ones to survive."
+That was the beginning of the great "class warfare." All of the ideologies range somewhere between
+the Great
                 </p>
             </page>
             <page style="text">
                 <p>
-                    Pirates and the Marxists. But all of them assume that there is not enough to go around. And that’s
-                    been the rationalized working hypothesis of all the great sovereign claims to great areas of the
-                    Earth. Because of their respective exclusivities, all the class warfare ideologies have become
-                    extinct. Capitalism and socialism are mutually extinct. Why? Because science now finds there can
-                    be ample for all, but only if the sovereign fences are completely removed. The basic
-                    you-or-me-not-enough-for-both‹ergo, someone-must-die- tenets of the class warfaring are extinct.
+Pirates and the Marxists. But all of them assume that there is not enough to go around. And that’s
+been the rationalized working hypothesis of all the great sovereign claims to great areas of the
+Earth. Because of their respective exclusivities, all the class warfare ideologies have become
+extinct. Capitalism and socialism are mutually extinct. Why? Because science now finds there can
+be ample for all, but only if the sovereign fences are completely removed. The basic
+you-or-me-not-enough-for-both‹ergo, someone-must-die- tenets of the class warfaring are extinct.
                 </p>
                 <p>
-                    Now let us examine more closely what we know scientifically about extinction. At the annual
-                    Congress of the American Association for the Advancement of Science, as held approximately ten
-                    years ago in Philadelphia, two papers were presented in widely-separated parts of the Congress.
-                    One was presented in anthropology and the other in biology, and though the two author-scientists
-                    knew nothing of each other’s efforts they were closely related. The one in anthropology examined
-                    the case histories of all the known human tribes that had become extinct. The biological paper
-                    investigated the case histories of all the known biological species that had become extinct. Both
-                    scientists sought for a common cause of extinction. Both of
+Now let us examine more closely what we know scientifically about extinction. At the annual
+Congress of the American Association for the Advancement of Science, as held approximately ten
+years ago in Philadelphia, two papers were presented in widely-separated parts of the Congress.
+One was presented in anthropology and the other in biology, and though the two author-scientists
+knew nothing of each other’s efforts they were closely related. The one in anthropology examined
+the case histories of all the known human tribes that had become extinct. The biological paper
+investigated the case histories of all the known biological species that had become extinct. Both
+scientists sought for a common cause of extinction. Both of
                 </p>
             </page>
         </spread>
@@ -658,42 +658,42 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    them found a cause, and when the two papers were accidentally brought together it was discovered
-                    that the researchers had found the same causes. Extinction in both cases was the consequence of
-                    over-specialization. How does that come about?
+them found a cause, and when the two papers were accidentally brought together it was discovered
+that the researchers had found the same causes. Extinction in both cases was the consequence of
+over-specialization. How does that come about?
                 </p>
                 <p>
-                    We can develop faster and faster running horses as specialists. To do so we inbreed by mating
-                    two fast-running horses. By concentrating certain genes the probability of their dominance is
-                    increased. But in doing so we breed out or sacrifice general adaptability. Inbreeding and
-                    specialization always do away with general adaptability.
+We can develop faster and faster running horses as specialists. To do so we inbreed by mating
+two fast-running horses. By concentrating certain genes the probability of their dominance is
+increased. But in doing so we breed out or sacrifice general adaptability. Inbreeding and
+specialization always do away with general adaptability.
                 </p>
                 <p>
-                    There’s a major pattern of energy in universe wherein the very large events, earthquakes,
-                    and so forth, occur in any one area of universe very much less frequently than do the small
-                    energy events. Around the Earth insects occur more often than do earthquakes. In the
-                    patterning of total evolutionary events, there comes a time, once in a while, amongst the
-                    myriad of low energy events, when a large energy event transpires and is so disturbing
-                    that with their general adaptability lost, the ultra-specialized creatures perish. I will give you
-                    a typical history-that of a type of bird which lived on a special variety of micro-marine life.
-                    Flying around, these birds
+There’s a major pattern of energy in universe wherein the very large events, earthquakes,
+and so forth, occur in any one area of universe very much less frequently than do the small
+energy events. Around the Earth insects occur more often than do earthquakes. In the
+patterning of total evolutionary events, there comes a time, once in a while, amongst the
+myriad of low energy events, when a large energy event transpires and is so disturbing
+that with their general adaptability lost, the ultra-specialized creatures perish. I will give you
+a typical history-that of a type of bird which lived on a special variety of micro-marine life.
+Flying around, these birds
                 </p>
             </page>
             <page style="text">
                  <p>
-                     gradually discovered that there were certain places in which that particular marine life tended
-                     to pocket-in the marshes along certain ocean shores of certain lands. So, instead of flying
-                     aimlessly for chance finding of that marine life they went to where it was concentrated in
-                     bayside marshes. After a while, the water began to recede in the marshes, because the Earth’s
-                     polar ice cap was beginning to increase. Only the birds with very long beaks could reach deeply
-                     enough in the marsh holes to get at the marine life. The unfed, short-billed birds died off. This
-                     left only the long-beakers. When the birds’ inborn drive to reproduce occurred there were only
-                     other long-beakers surviving with whom to breed. This concentrated their long-beak genes. So, with
-                     continually receding waters and generation to generation inbreeding, longer and longer beaked
-                     birds were produced. The waters kept receding, and the beaks of successive generations of the
-                     birds grew bigger and bigger. The long-beakers seemed to be prospering when all at once there was
-                     a great fire in the marshes. It was discovered that because their beaks had become so heavy these
-                     birds could no longer fly. They could not escape the flames by flying
+gradually discovered that there were certain places in which that particular marine life tended
+to pocket-in the marshes along certain ocean shores of certain lands. So, instead of flying
+aimlessly for chance finding of that marine life they went to where it was concentrated in
+bayside marshes. After a while, the water began to recede in the marshes, because the Earth’s
+polar ice cap was beginning to increase. Only the birds with very long beaks could reach deeply
+enough in the marsh holes to get at the marine life. The unfed, short-billed birds died off. This
+left only the long-beakers. When the birds’ inborn drive to reproduce occurred there were only
+other long-beakers surviving with whom to breed. This concentrated their long-beak genes. So, with
+continually receding waters and generation to generation inbreeding, longer and longer beaked
+birds were produced. The waters kept receding, and the beaks of successive generations of the
+birds grew bigger and bigger. The long-beakers seemed to be prospering when all at once there was
+a great fire in the marshes. It was discovered that because their beaks had become so heavy these
+birds could no longer fly. They could not escape the flames by flying
                  </p>
             </page>
         </spread>
@@ -701,90 +701,45 @@ today of that which I am relating.
         <spread>
             <page style="text">
                <p>
-                   out of the marsh. Waddling on their legs they were too slow to escape, and so they perished. This is
-                   typical of the way in which extinction occurs‹through over-specialization.
+out of the marsh. Waddling on their legs they were too slow to escape, and so they perished. This is
+typical of the way in which extinction occurs‹through over-specialization.
                </p>
                 <p>
-                    When, as we have seen, the Great Pirates let their scientists have free rein in World War I the
-                    Pirates themselves became so preoccupied with enormous wealth harvesting that they not only lost
-                    track of what the scientists were doing within the vast invisible world but they inadvertently
-                    abandoned their own comprehensivity and they, too, became severe specialists as industrial production
-                    money makers, and thus they compounded their own acceleration to extinction in the world-paralyzing
-                    economic crash of 1929. But society, as we have seen, never knew that the Great Pirates had been
-                    running the world. Nor did society realize in 1929 that the Great Pirates had become extinct.
-                    However, world’ society was fully and painfully aware of the economic paralysis. Society consisted
-                    then, as now, almost entirely of specialized slaves in education, management, science, office
-                    routines, craft, farming, pick-and-shovel labour, and their families. Our world society now has
-                    none of the comprehensive and realistic world knowledge that the Great Pirates had.
+When, as we have seen, the Great Pirates let their scientists have free rein in World War I the
+Pirates themselves became so preoccupied with enormous wealth harvesting that they not only lost
+track of what the scientists were doing within the vast invisible world but they inadvertently
+abandoned their own comprehensivity and they, too, became severe specialists as industrial production
+money makers, and thus they compounded their own acceleration to extinction in the world-paralyzing
+economic crash of 1929. But society, as we have seen, never knew that the Great Pirates had been
+running the world. Nor did society realize in 1929 that the Great Pirates had become extinct.
+However, world’ society was fully and painfully aware of the economic paralysis. Society consisted
+then, as now, almost entirely of specialized slaves in education, management, science, office
+routines, craft, farming, pick-and-shovel labour, and their families. Our world society now has
+none of the comprehensive and realistic world knowledge that the Great Pirates had.
                 </p>
                 <p>
-                    Because world societies thought mistakenly of their local politicians,
-                </p>
-            </page>
-            <page style="text">
-                <p>
-                    who were only the stooges of the Great Pirates, as being realistically the head men, society went
-                    to them to get the industrial and economic machinery going again. Because industry is inherently
-                    world-coordinate these world economic depression events of the 1920’S and 1930’S meant that each
-                    of the local head politicians of a number of countries were asked separately to make the world work.
-                    On this basis the world-around inventory of resources was no longer integratable. Each of the
-                    political leaders’ mandates were given from different ideological groups, and their differing
-                    viewpoints and resource difficulties led inevitably to World War II.
-                </p>
-                <p>
-                    The politicians, having an automatic bias, were committed to defend and advantage only their own
-                    side. Each assumed the validity of the Malthusian-Darwin-you-or-me-to-the-death struggle. Because
-                    of the working concept that there was not enough to go around, the most aggressive political
-                    leaders exercised their political leadership by heading their countries into war to overcome the
-                    rest of the world, thus to dispose of the unsupportable excess population through decimation and
-                    starvation-the age-old, lethal formula of ignorant men. Thus we had all our world society
-                    specializing, whether under fascism, communism, or capitalism. All the great ideological groups
-                    assumed Armageddon.
-                </p>
-            </page>
-        </spread>
-
-        <spread>
-            <page style="text">
-                <p>
-                    Getting ready for the assumed inexorable Armageddon, each applied science and all of the great
-                    scientific specialization capabilities only toward weaponry, thus developing the ability to
-                    destroy themselves totally with no comprehensively organized oppositional thinking capability
-                    and initiative powerful enough to co-ordinate and prevent it. Thus by 1946, we were on the swift
-                    way to extinction despite the inauguration of the United Nations, to which none of the exclusive
-                    sovereign prerogatives were surrendered. Suddenly, all unrecognized as such by society, the
-                    evolutionary antibody to the extinction of humanity through specialization appeared in the form
-                    of the computer and its comprehensively commanded automation which made man obsolete as a physical
-                    production and control specialist-and just in time.
-                </p>
-                <p>
-                    The computer as superspecialist can persevere, day and night, day after day, in picking out the
-                    pink from the blue at superhumanly sustainable speeds. The computer can also operate in degrees
-                    of cold or heat at which man would perish. Man is going to be displaced altogether as a specialist
-                    by the computer. Man himself is being forced to reestablish, employ, and enjoy his innate
-                    "comprehensivlty." Coping with the totality of Spaceship Earth and universe is ahead for all of us.
-                    Evolution is apparently intent
+Because world societies thought mistakenly of their local politicians,
                 </p>
             </page>
             <page style="text">
                 <p>
-                    that man fulfill a much greater destiny than that of being a simple muscle and reflex machine-a
-                    slave automaton-automation displaces the automatons.
+who were only the stooges of the Great Pirates, as being realistically the head men, society went
+to them to get the industrial and economic machinery going again. Because industry is inherently
+world-coordinate these world economic depression events of the 1920’S and 1930’S meant that each
+of the local head politicians of a number of countries were asked separately to make the world work.
+On this basis the world-around inventory of resources was no longer integratable. Each of the
+political leaders’ mandates were given from different ideological groups, and their differing
+viewpoints and resource difficulties led inevitably to World War II.
                 </p>
                 <p>
-                    Evolution consists of many great revolutionary events taking place quite independently of man’s
-                    consciously attempting to bring them about. Man is very vain; he likes to feel that he is
-                    responsible for all the favorable things that happen, and he is innocent of all the unfavorable
-                    happenings. But all the larger evolutionary patternings seeming favorable or unfavorable to man’s
-                    conditioned reflexing are transpiring transcendentally to any of man’s conscious planning or contriving.
-                </p>
-                <p>
-                    To disclose to you your own vanity of reflexing, I remind you quickly that none of you is consciously
-                    routing the fish and potato you ate for lunch into this and that specific gland to make hair, skin,
-                    or anything like that. None of you are aware of how you came to grow from 7 pounds to 70 pounds and
-                    then to I70 pounds, and so forth. All of this is automated, and always has been. There is a great
-                    deal that is automated regarding our total salvation on Earth, and I would like to get in that frame
-                    of mind right now in order to
+The politicians, having an automatic bias, were committed to defend and advantage only their own
+side. Each assumed the validity of the Malthusian-Darwin-you-or-me-to-the-death struggle. Because
+of the working concept that there was not enough to go around, the most aggressive political
+leaders exercised their political leadership by heading their countries into war to overcome the
+rest of the world, thus to dispose of the unsupportable excess population through decimation and
+starvation-the age-old, lethal formula of ignorant men. Thus we had all our world society
+specializing, whether under fascism, communism, or capitalism. All the great ideological groups
+assumed Armageddon.
                 </p>
             </page>
         </spread>
@@ -792,48 +747,93 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    be useful in the short time we have.
+Getting ready for the assumed inexorable Armageddon, each applied science and all of the great
+scientific specialization capabilities only toward weaponry, thus developing the ability to
+destroy themselves totally with no comprehensively organized oppositional thinking capability
+and initiative powerful enough to co-ordinate and prevent it. Thus by 1946, we were on the swift
+way to extinction despite the inauguration of the United Nations, to which none of the exclusive
+sovereign prerogatives were surrendered. Suddenly, all unrecognized as such by society, the
+evolutionary antibody to the extinction of humanity through specialization appeared in the form
+of the computer and its comprehensively commanded automation which made man obsolete as a physical
+production and control specialist-and just in time.
                 </p>
                 <p>
-                    Let us now exercise our intellectual faculties as best we can to apprehend the evolutionary
-                    patternings transcending our spontaneous cognitions and recognitions. We may first note an
-                    evolutionary trend that countered all of the educational systems and the deliberately increased
-                    professional specialization of scientists. This contradiction occurred at the beginning of World
-                    War II, when extraordinary new scientific instruments had been developed and the biologists and
-                    chemists and physicists were meeting in Washington, D. C., on special war missions. Those scientists
-                    began to realize that whereas a biologist used to think he was dealing only in cells and that a
-                    chemist was dealing only in molecules and the physicist was dealing only in atoms, they now found
-                    their new powerful instrumentation and contiguous operations overlapping. Each specialist suddenly
-                    realized that he was concerned alike with atoms, molecules, and cells. They found there was no real
-                    dividing line between their professional interests. They hadn’t meant to do this, but their
-                    professional fields were being integrated ‹inadvertently, on their part, but apparently
-                    purposefully-by inexorable evolution. So, as of World War II, the scientists began to invert
-                    new professional designations: the bio-chemist, the bio-physicist, and
+The computer as superspecialist can persevere, day and night, day after day, in picking out the
+pink from the blue at superhumanly sustainable speeds. The computer can also operate in degrees
+of cold or heat at which man would perish. Man is going to be displaced altogether as a specialist
+by the computer. Man himself is being forced to reestablish, employ, and enjoy his innate
+"comprehensivlty." Coping with the totality of Spaceship Earth and universe is ahead for all of us.
+Evolution is apparently intent
                 </p>
             </page>
             <page style="text">
                 <p>
-                    so forth. They were forced to. Despite their deliberate attempts only to specialize, they were
-                    being merged into ever more inclusive fields of consideration. Thus was deliberately specializing
-                    man led back unwittingly once more to reemploy his innately comprehensive capabilities.
+that man fulfill a much greater destiny than that of being a simple muscle and reflex machine-a
+slave automaton-automation displaces the automatons.
                 </p>
                 <p>
-                    I find it very important in disembarrassing ourselves of our vanity, short-sightedness, biases, and
-                    ignorance in general, in respect to universal evolution, to think in the following manner. I’ve
-                    often heard people say, ’I wonder what it would be like to be on board a spaceship," and the answer
-                    is very simple. What does it feel like? That’s all we have ever experienced. We are all astronauts.
+Evolution consists of many great revolutionary events taking place quite independently of man’s
+consciously attempting to bring them about. Man is very vain; he likes to feel that he is
+responsible for all the favorable things that happen, and he is innocent of all the unfavorable
+happenings. But all the larger evolutionary patternings seeming favorable or unfavorable to man’s
+conditioned reflexing are transpiring transcendentally to any of man’s conscious planning or contriving.
                 </p>
                 <p>
-                    I know you are paying attention, but I’m sure you don’t immediately agree and say, "Yes, that’s
-                    right, I am an astronaut." I’m sure that you don’t really sense yourself to be aboard a
-                    fantastically real spaceship‹our spherical Spaceship Earth. Of our little sphere you have seen
-                    only small portions. However, you have viewed more than did pre-twentieth-century man, for in
-                    his entire lifetime he saw only one-millionth of the Earth’s surface. You’ve seen a lot more.
-                    If you are a veteran world airlines pilot you may have seen one one-hundredth of Earth’s
+To disclose to you your own vanity of reflexing, I remind you quickly that none of you is consciously
+routing the fish and potato you ate for lunch into this and that specific gland to make hair, skin,
+or anything like that. None of you are aware of how you came to grow from 7 pounds to 70 pounds and
+then to I70 pounds, and so forth. All of this is automated, and always has been. There is a great
+deal that is automated regarding our total salvation on Earth, and I would like to get in that frame
+of mind right now in order to
+                </p>
+            </page>
+        </spread>
+
+        <spread>
+            <page style="text">
+                <p>
+be useful in the short time we have.
                 </p>
                 <p>
-                    surface. But even that is sum totally not enough to see and feel Earth to be a sphere‹unless,
-                    unbeknownst to me, one of you happens to be a Cape Kennedy capsuler.
+Let us now exercise our intellectual faculties as best we can to apprehend the evolutionary
+patternings transcending our spontaneous cognitions and recognitions. We may first note an
+evolutionary trend that countered all of the educational systems and the deliberately increased
+professional specialization of scientists. This contradiction occurred at the beginning of World
+War II, when extraordinary new scientific instruments had been developed and the biologists and
+chemists and physicists were meeting in Washington, D. C., on special war missions. Those scientists
+began to realize that whereas a biologist used to think he was dealing only in cells and that a
+chemist was dealing only in molecules and the physicist was dealing only in atoms, they now found
+their new powerful instrumentation and contiguous operations overlapping. Each specialist suddenly
+realized that he was concerned alike with atoms, molecules, and cells. They found there was no real
+dividing line between their professional interests. They hadn’t meant to do this, but their
+professional fields were being integrated ‹inadvertently, on their part, but apparently
+purposefully-by inexorable evolution. So, as of World War II, the scientists began to invert
+new professional designations: the bio-chemist, the bio-physicist, and
+                </p>
+            </page>
+            <page style="text">
+                <p>
+so forth. They were forced to. Despite their deliberate attempts only to specialize, they were
+being merged into ever more inclusive fields of consideration. Thus was deliberately specializing
+man led back unwittingly once more to reemploy his innately comprehensive capabilities.
+                </p>
+                <p>
+I find it very important in disembarrassing ourselves of our vanity, short-sightedness, biases, and
+ignorance in general, in respect to universal evolution, to think in the following manner. I’ve
+often heard people say, ’I wonder what it would be like to be on board a spaceship," and the answer
+is very simple. What does it feel like? That’s all we have ever experienced. We are all astronauts.
+                </p>
+                <p>
+I know you are paying attention, but I’m sure you don’t immediately agree and say, "Yes, that’s
+right, I am an astronaut." I’m sure that you don’t really sense yourself to be aboard a
+fantastically real spaceship‹our spherical Spaceship Earth. Of our little sphere you have seen
+only small portions. However, you have viewed more than did pre-twentieth-century man, for in
+his entire lifetime he saw only one-millionth of the Earth’s surface. You’ve seen a lot more.
+If you are a veteran world airlines pilot you may have seen one one-hundredth of Earth’s
+                </p>
+                <p>
+surface. But even that is sum totally not enough to see and feel Earth to be a sphere‹unless,
+unbeknownst to me, one of you happens to be a Cape Kennedy capsuler.
                 </p>
             </page>
         </spread>
@@ -850,38 +850,38 @@ today of that which I am relating.
         <spread>
             <page style="text">
                    <p>
-                       Our little Spaceship Earth is only eight thousand miles in diameter, which is almost a negligible
-                       dimension in the great vastness of space. Our nearest star‹our energy-supplying mother-ship, the
-                       Sun‹is ninety-two million miles away, and the nearest star is one hundred thousand times further
-                       away. It takes approximately four and one third years for light to get to us from the next
-                       nearest energy supply ship star. That is the kind of space-distanced pattern we are flying.
-                       Our little Spaceship Earth is right now travelling at sixty thousand miles an hour around the
-                       around the sun and is also spinning axially, which, at the latitude of Washington, D. C., adds
-                       approximately one thousand miles per hour to our motion. Each minute we both spin at one hundred
-                       miles and zip in orbit at one thousand miles. That is a whole lot of spin and zip. When we launch
-                       our rocketed space capsules at fifteen thousand miles an hour, that additional acceleration speed
-                       we give the rocket to attain its own orbit around our speeding Spaceship Earth is only one-fourth
-                       greater than the speed of our big planetary spaceship.Spaceship Earth was so extraordinarily well
-                       invented and designed that to our knowledge
+Our little Spaceship Earth is only eight thousand miles in diameter, which is almost a negligible
+dimension in the great vastness of space. Our nearest star‹our energy-supplying mother-ship, the
+Sun‹is ninety-two million miles away, and the nearest star is one hundred thousand times further
+away. It takes approximately four and one third years for light to get to us from the next
+nearest energy supply ship star. That is the kind of space-distanced pattern we are flying.
+Our little Spaceship Earth is right now travelling at sixty thousand miles an hour around the
+around the sun and is also spinning axially, which, at the latitude of Washington, D. C., adds
+approximately one thousand miles per hour to our motion. Each minute we both spin at one hundred
+miles and zip in orbit at one thousand miles. That is a whole lot of spin and zip. When we launch
+our rocketed space capsules at fifteen thousand miles an hour, that additional acceleration speed
+we give the rocket to attain its own orbit around our speeding Spaceship Earth is only one-fourth
+greater than the speed of our big planetary spaceship.Spaceship Earth was so extraordinarily well
+invented and designed that to our knowledge
                    </p>
             </page>
             <page style="text">
                 <p>
-                    humans have been on board it for two million years not even knowing that they were on board a ship.
-                    And our spaceship is so superbly designed as to be able to keep life regenerating on board despite
-                    the phenomenon, entropy, by which all local physical systems lose energy. So we have to obtain our
-                    biological life-regenerating energy from another spaceship‹the sun.
+humans have been on board it for two million years not even knowing that they were on board a ship.
+And our spaceship is so superbly designed as to be able to keep life regenerating on board despite
+the phenomenon, entropy, by which all local physical systems lose energy. So we have to obtain our
+biological life-regenerating energy from another spaceship‹the sun.
 
                 </p>
                 <p>
-                    Our sun is flying in company with us, within the vast reaches of the Galactic system, at just the
-                    right distance to give us enough radiation to keep us alive, yet not close enough to burn us up.
-                    And the whole scheme of Spaceship Earth and its live passengers is so superbly designed that the
-                    Van Allen belts, which we didn’t even know we had until yesterday, filter the sun and other star
-                    radiation which as it impinges upon our spherical ramparts is so concentrated that if we went
-                    nakedly outside the Van Allen belts it would kill us. Our Spaceship Earth’s designed infusion of
-                    that radiant energy of the stars is processed in such a way that you and I can carry on safely.
-                    You and I can go out and take a sunbath, but are unable
+Our sun is flying in company with us, within the vast reaches of the Galactic system, at just the
+right distance to give us enough radiation to keep us alive, yet not close enough to burn us up.
+And the whole scheme of Spaceship Earth and its live passengers is so superbly designed that the
+Van Allen belts, which we didn’t even know we had until yesterday, filter the sun and other star
+radiation which as it impinges upon our spherical ramparts is so concentrated that if we went
+nakedly outside the Van Allen belts it would kill us. Our Spaceship Earth’s designed infusion of
+that radiant energy of the stars is processed in such a way that you and I can carry on safely.
+You and I can go out and take a sunbath, but are unable
                 </p>
             </page>
         </spread>
@@ -889,89 +889,46 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    to take in enough energy through our skins to keep alive. So part of the invention of the Spaceship
-                    Earth and its biological life-sustaining is that the vegetation on the land and the algae in the
-                    sea, employing photosynthesis, are designed to impound the life-regenerating energy for us to
-                    adequate amount.
+to take in enough energy through our skins to keep alive. So part of the invention of the Spaceship
+Earth and its biological life-sustaining is that the vegetation on the land and the algae in the
+sea, employing photosynthesis, are designed to impound the life-regenerating energy for us to
+adequate amount.
                 </p>
                 <p>
-                    But we can’t eat all the vegetation. As a matter of fact, we can eat very little of it. We can’t
-                    eat the bark nor wood of the trees nor the grasses. But insects can eat these, and there are many
-                    other animals and creatures that can. We get the energy relayed to us by taking the milk and meat
-                    from the animals. The animals can eat the vegetation, and there are a few of the fruits and tender
-                    vegetation petals and seeds that we can eat. We have learned to cultivate more of those botanical
-                    edibles by genetical inbreeding.
+But we can’t eat all the vegetation. As a matter of fact, we can eat very little of it. We can’t
+eat the bark nor wood of the trees nor the grasses. But insects can eat these, and there are many
+other animals and creatures that can. We get the energy relayed to us by taking the milk and meat
+from the animals. The animals can eat the vegetation, and there are a few of the fruits and tender
+vegetation petals and seeds that we can eat. We have learned to cultivate more of those botanical
+edibles by genetical inbreeding.
                 </p>
                 <p>
-                    That we are endowed with such intuitive and intellectual capabilities as that of discovering the
-                    genes and the R.N.A. and D.N.A. and other fundamental principles governing the fundamental design
-                    controls of life systems as well as of nuclear energy and chemical structuring is part of the
-                    extraordinary design of
+That we are endowed with such intuitive and intellectual capabilities as that of discovering the
+genes and the R.N.A. and D.N.A. and other fundamental principles governing the fundamental design
+controls of life systems as well as of nuclear energy and chemical structuring is part of the
+extraordinary design of
                 </p>
             </page>
             <page style="text">
                <p>
-                   the Spaceship Earth, its equipment, passengers, and internal support systems. It is therefore
-                   paradoxical but strategically explicable, as we shall see, that up to now we have been mis-using,
-                   abusing, and polluting this extraordinary chemical energy-interchanging system for successfully
-                   regenerating all life aboard our planetary spaceship.
+the Spaceship Earth, its equipment, passengers, and internal support systems. It is therefore
+paradoxical but strategically explicable, as we shall see, that up to now we have been mis-using,
+abusing, and polluting this extraordinary chemical energy-interchanging system for successfully
+regenerating all life aboard our planetary spaceship.
                </p>
                 <p>
-                    One of the interesting things to me about our spaceship is that it is a mechanical vehicle, just
-                    as is an automobile. If you own an automobile, you realize that you must put oil and gas into it,
-                    and you must put water in the radiator and take care of the car as a whole. You begin to develop
-                    quite a little thermodynamic sense. You know that you’re either going to have to keep the machine
-                    in good order or it’s going to be in trouble and fail to function. We have not been seeing our
-                    Spaceship Earth as an integrally-designed machine which to be persistently successful must be
-                    comprehended and serviced in total.
+One of the interesting things to me about our spaceship is that it is a mechanical vehicle, just
+as is an automobile. If you own an automobile, you realize that you must put oil and gas into it,
+and you must put water in the radiator and take care of the car as a whole. You begin to develop
+quite a little thermodynamic sense. You know that you’re either going to have to keep the machine
+in good order or it’s going to be in trouble and fail to function. We have not been seeing our
+Spaceship Earth as an integrally-designed machine which to be persistently successful must be
+comprehended and serviced in total.
                 </p>
                 <p>
-                    Now there is one outstandingly important fact regarding Spaceship Earth, and that is that no
-                    instruction book came with it. I think it’s very significant that there is no instruction book
-                    for successfully operating our ship. In view of the
-                </p>
-            </page>
-        </spread>
-
-        <spread>
-            <page style="text">
-                <p>
-                    infinite attention to all other details displayed by our ship, it must be taken as deliberate and
-                    purposeful that an instruction book was omitted. Lack of instruction has forced us to find that
-                    there are two kinds of berries-red berries that will kill us and red berries that will nourish us.
-                    And we had to find out ways of telling which-was-which red berry before we ate it or otherwise we
-                    would die. So we were forced, because of a lack of an instruction book, to use our intellect, which
-                    is our supreme faculty, to devise scientific experimental procedures and to interpret effectively
-                    the significance of the experimental findings. Thus, because the instruction manual was missing we
-                    are learning how we safely can anticipate the consequences of an increasing number of alternative
-                    ways of extending our satisfactory survival and growth-both physical and metaphysical.
-                </p>
-                <p>
-                    Quite clearly, all of life as designed and born is utterly helpless at the moment of birth. The
-                    human child stays helpless longer than does the young of any other species. Apparently it is part
-                    of the invention "man" that he is meant to be utterly helpless through certain anthropological
-                    phases and that, when he begins to be
-                </p>
-            </page>
-            <page style="text">
-                <p>
-                    able to get on a little better, he is meant to discover some of the physical leverage-multiplying
-                    principles inherent in universe as well as the many nonobvious resources around him which will
-                    further compoundingly multiply his knowledge-regenerating and life-fostering advantages.
-                </p>
-                <p>
-                    I would say that designed into this Spaceship Earth’s total wealth was a big safety factor which
-                    allowed man to be very ignorant for a long time until he had amassed enough experiences from which
-                    to extract progressively the system of generalized principles governing the increases of energy
-                    managing advantages over environment. The designed omission of the instruction book on how to
-                    operate and maintain Spaceship Earth and its complex life-supporting and regenerating systems has
-                    forced man to discover retrospectively just what his most important forward capabilities are. His
-                    intellect had to discover itself. Intellect in turn had to compound the facts of his experience.
-                    Comprehensive reviews of the compounded facts of experiences by intellect brought forth awareness
-                    of the generalized principles underlying all special and only superficially-sensed experiences.
-                    Objective employment of those generalized principles in rearranging the physical resources of
-                    environment seems to be leading to humanity’s eventually total success and readiness to cope with
-                    far vaster problems of universe.
+Now there is one outstandingly important fact regarding Spaceship Earth, and that is that no
+instruction book came with it. I think it’s very significant that there is no instruction book
+for successfully operating our ship. In view of the
                 </p>
             </page>
         </spread>
@@ -979,33 +936,76 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    To comprehend this total scheme we note that long ago a man went through the woods, as you may have
-                    done, and I certainly have, trying to find the shortest way through the woods in a given direction.
-                    He found trees fallen across his path. He climbed over those crisscrossed trees and suddenly found
-                    himself poised on a tree that was slowly teetering. It happened to be lying across another great
-                    tree, and the other end of the tree on which he found himself teetering lay under a third great
-                    fallen tree. As he teetered he saw the third big tree lifting. It seemed impossible to him. He went
-                    over and tried using his own muscles to lift that great tree. He couldn’t budge it. Then he climbed
-                    back atop the first smaller tree, purposefully teetering it, and surely enough it again elevated
-                    the larger tree. I’m certain that the first man who found such a tree thought that it was a magic
-                    tree, and may have dragged it home and erected it as man’s first totem. It was probably a long
-                    time before he learned that any stout tree would do, and thus extracted the concept of the
+infinite attention to all other details displayed by our ship, it must be taken as deliberate and
+purposeful that an instruction book was omitted. Lack of instruction has forced us to find that
+there are two kinds of berries-red berries that will kill us and red berries that will nourish us.
+And we had to find out ways of telling which-was-which red berry before we ate it or otherwise we
+would die. So we were forced, because of a lack of an instruction book, to use our intellect, which
+is our supreme faculty, to devise scientific experimental procedures and to interpret effectively
+the significance of the experimental findings. Thus, because the instruction manual was missing we
+are learning how we safely can anticipate the consequences of an increasing number of alternative
+ways of extending our satisfactory survival and growth-both physical and metaphysical.
+                </p>
+                <p>
+Quite clearly, all of life as designed and born is utterly helpless at the moment of birth. The
+human child stays helpless longer than does the young of any other species. Apparently it is part
+of the invention "man" that he is meant to be utterly helpless through certain anthropological
+phases and that, when he begins to be
                 </p>
             </page>
             <page style="text">
                 <p>
-                    generalized principle of leverage out of all his earlier successive special-case experiences with
-                    such accidental discoveries. Only as he learned to generalize fundamental principles of physical
-                    universe did man learn to use his intellect effectively.
+able to get on a little better, he is meant to discover some of the physical leverage-multiplying
+principles inherent in universe as well as the many nonobvious resources around him which will
+further compoundingly multiply his knowledge-regenerating and life-fostering advantages.
                 </p>
                 <p>
-                    Once man comprehended that any tree would serve as a lever his intellectual advantages accelerated.
-                    Man freed of special-case superstition by intellect has had his survival potentials multiplied
-                    millions fold. By virtue of the leverage principles in gears, pulleys, transistors, and so forth,
-                    it is literally possible to do more with less in a multitude of physio-chemical ways. Possibly it
-                    was this intellectual augmentation of humanity’s survival and success through the metaphysical
-                    perception of generalized principles which may be objectively employed that Christ was trying to
-                    teach in the obscurely told story of the loaves and the fishes.
+I would say that designed into this Spaceship Earth’s total wealth was a big safety factor which
+allowed man to be very ignorant for a long time until he had amassed enough experiences from which
+to extract progressively the system of generalized principles governing the increases of energy
+managing advantages over environment. The designed omission of the instruction book on how to
+operate and maintain Spaceship Earth and its complex life-supporting and regenerating systems has
+forced man to discover retrospectively just what his most important forward capabilities are. His
+intellect had to discover itself. Intellect in turn had to compound the facts of his experience.
+Comprehensive reviews of the compounded facts of experiences by intellect brought forth awareness
+of the generalized principles underlying all special and only superficially-sensed experiences.
+Objective employment of those generalized principles in rearranging the physical resources of
+environment seems to be leading to humanity’s eventually total success and readiness to cope with
+far vaster problems of universe.
+                </p>
+            </page>
+        </spread>
+
+        <spread>
+            <page style="text">
+                <p>
+To comprehend this total scheme we note that long ago a man went through the woods, as you may have
+done, and I certainly have, trying to find the shortest way through the woods in a given direction.
+He found trees fallen across his path. He climbed over those crisscrossed trees and suddenly found
+himself poised on a tree that was slowly teetering. It happened to be lying across another great
+tree, and the other end of the tree on which he found himself teetering lay under a third great
+fallen tree. As he teetered he saw the third big tree lifting. It seemed impossible to him. He went
+over and tried using his own muscles to lift that great tree. He couldn’t budge it. Then he climbed
+back atop the first smaller tree, purposefully teetering it, and surely enough it again elevated
+the larger tree. I’m certain that the first man who found such a tree thought that it was a magic
+tree, and may have dragged it home and erected it as man’s first totem. It was probably a long
+time before he learned that any stout tree would do, and thus extracted the concept of the
+                </p>
+            </page>
+            <page style="text">
+                <p>
+generalized principle of leverage out of all his earlier successive special-case experiences with
+such accidental discoveries. Only as he learned to generalize fundamental principles of physical
+universe did man learn to use his intellect effectively.
+                </p>
+                <p>
+Once man comprehended that any tree would serve as a lever his intellectual advantages accelerated.
+Man freed of special-case superstition by intellect has had his survival potentials multiplied
+millions fold. By virtue of the leverage principles in gears, pulleys, transistors, and so forth,
+it is literally possible to do more with less in a multitude of physio-chemical ways. Possibly it
+was this intellectual augmentation of humanity’s survival and success through the metaphysical
+perception of generalized principles which may be objectively employed that Christ was trying to
+teach in the obscurely told story of the loaves and the fishes.
                 </p>
             </page>
         </spread>
@@ -1022,43 +1022,43 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    How may we use our intellectual capability to higher advantage? Our muscle is very meager as
-                    compared to the muscles of many animals. Our integral muscles are as nothing compared to the power
-                    of a tornado or the atom bomb which society contrived-in fear-out of the intellect’s fearless
-                    discoveries of generalized principles governing the fundamental energy behaviors of physical
-                    universe.In organizing our grand strategy we must first discover where we are now; that is, what
-                    our present navigational position in the universal scheme of evolution is. To begin our
-                    position-fixing aboard our Spaceship Earth we must first acknowledge that the abundance of
-                    immediately consumable, obviously desirable or utterly essential resources have been sufficient
-                    until now to allow us to carry on despite our ignorance. Being eventually exhaustible and spoilable,
-                    they have been adequate only up to this critical moment. This cushion-for-error of humanity’s
-                    survival and growth up to now was apparently provided just as a bird inside of the egg is provided
-                    with liquid nutriment to develop it to a certain point. But then by design the nutriment is
-                    exhausted at just the time when the chick is large enough to be able to locomote on its own legs.
-                    And
+How may we use our intellectual capability to higher advantage? Our muscle is very meager as
+compared to the muscles of many animals. Our integral muscles are as nothing compared to the power
+of a tornado or the atom bomb which society contrived-in fear-out of the intellect’s fearless
+discoveries of generalized principles governing the fundamental energy behaviors of physical
+universe.In organizing our grand strategy we must first discover where we are now; that is, what
+our present navigational position in the universal scheme of evolution is. To begin our
+position-fixing aboard our Spaceship Earth we must first acknowledge that the abundance of
+immediately consumable, obviously desirable or utterly essential resources have been sufficient
+until now to allow us to carry on despite our ignorance. Being eventually exhaustible and spoilable,
+they have been adequate only up to this critical moment. This cushion-for-error of humanity’s
+survival and growth up to now was apparently provided just as a bird inside of the egg is provided
+with liquid nutriment to develop it to a certain point. But then by design the nutriment is
+exhausted at just the time when the chick is large enough to be able to locomote on its own legs.
+And
                 </p>
             </page>
             <page style="text">
                 <p>
-                    so as the chick pecks at the shell seeking more nutriment it inadvertently breaks open the shell.
-                    Stepping forth from its initial sanctuary, the young bird must now forage on its own legs and wings
-                    to discover the next phase of its regenerative sustenance.
+so as the chick pecks at the shell seeking more nutriment it inadvertently breaks open the shell.
+Stepping forth from its initial sanctuary, the young bird must now forage on its own legs and wings
+to discover the next phase of its regenerative sustenance.
                 </p>
                 <p>
-                    My own picture of humanity today finds us just about to step out from amongst the pieces of our just
-                    one-second-ago broken eggshell. Our innocent, trial-and-error-sustaining nutriment is exhausted. We
-                    are faced with an entirely new relationship to the universe. We are going to have to spread our
-                    wings of intellect and fly or perish; that is, we must dare immediately to fly by the generalized
-                    principles governing universe and not by the ground rules of yesterday’s superstitious and
-                    erroneously conditioned reflexes. And as we attempt competent thinking we immediately begin to
-                    reemploy our innate drive for comprehensive understanding.
+My own picture of humanity today finds us just about to step out from amongst the pieces of our just
+one-second-ago broken eggshell. Our innocent, trial-and-error-sustaining nutriment is exhausted. We
+are faced with an entirely new relationship to the universe. We are going to have to spread our
+wings of intellect and fly or perish; that is, we must dare immediately to fly by the generalized
+principles governing universe and not by the ground rules of yesterday’s superstitious and
+erroneously conditioned reflexes. And as we attempt competent thinking we immediately begin to
+reemploy our innate drive for comprehensive understanding.
                 </p>
                 <p>
-                    The architects and planners, particularly the planners, though rated as specialists, have a little
-                    wider focus than do the other professions. Also as human beings they often battle the narrow views
-                    of specialists-in particular, their patrons-the politicians, and the financial and other legal, but
-                    no longer comprehensively effective, heirs to the great pirates’-now only ghostly‹prerogatives.
-                    At least
+The architects and planners, particularly the planners, though rated as specialists, have a little
+wider focus than do the other professions. Also as human beings they often battle the narrow views
+of specialists-in particular, their patrons-the politicians, and the financial and other legal, but
+no longer comprehensively effective, heirs to the great pirates’-now only ghostly‹prerogatives.
+At least
                 </p>
             </page>
         </spread>
@@ -1066,48 +1066,48 @@ today of that which I am relating.
         <spread>
             <page style="text">
                   <p>
-                      the planners are allowed to look at all of Philadelphia, and not just to peek through a hole at
-                      one house or through one door at one room in that house. So I think it’s appropriate that we
-                      assume the role of planners and begin to do the largest scale comprehensive thinking of which we
-                      are capable.
+the planners are allowed to look at all of Philadelphia, and not just to peek through a hole at
+one house or through one door at one room in that house. So I think it’s appropriate that we
+assume the role of planners and begin to do the largest scale comprehensive thinking of which we
+are capable.
                   </p>
                 <p>
-                    We begin by eschewing the role of specialists who deal only in parts. Becoming deliberately
-                    expansive instead of contractive, we ask, "How do we think in terms of wholes?" If it is true that
-                    the bigger the thinking becomes the more lastingly effective it is, we must ask, "How big can we
-                    think?"
+We begin by eschewing the role of specialists who deal only in parts. Becoming deliberately
+expansive instead of contractive, we ask, "How do we think in terms of wholes?" If it is true that
+the bigger the thinking becomes the more lastingly effective it is, we must ask, "How big can we
+think?"
                 </p>
                 <p>
-                    One of the modern tools of high intellectual advantage is the development of what is called general
-                    systems theory. Employing it we begin to think of the largest and most comprehensive systems, and
-                    try to do so scientifically. We start by inventorying all the important, known variables that are
-                    operative in the problem. But if we don’t really know how big "big" is, we may not start big enough,
-                    and are thus likely to leave unknown, but critical, variables outside the system which will continue
-                    to plague us. Interaction of
+One of the modern tools of high intellectual advantage is the development of what is called general
+systems theory. Employing it we begin to think of the largest and most comprehensive systems, and
+try to do so scientifically. We start by inventorying all the important, known variables that are
+operative in the problem. But if we don’t really know how big "big" is, we may not start big enough,
+and are thus likely to leave unknown, but critical, variables outside the system which will continue
+to plague us. Interaction of
                 </p>
             </page>
             <page style="text">
                 <p>
-                    the unknown variables inside and outside the arbitrarily chosen limits of the system are probably
-                    going to generate misleading or outrightly wrong answers. If we are to be effective, we are going
-                    to have to think in both the biggest and most minutely-incisive ways permitted by intellect and by
-                    the information thus far won through experience.
+the unknown variables inside and outside the arbitrarily chosen limits of the system are probably
+going to generate misleading or outrightly wrong answers. If we are to be effective, we are going
+to have to think in both the biggest and most minutely-incisive ways permitted by intellect and by
+the information thus far won through experience.
 
                 </p>
                 <p>
-                    Can we think of, and state adequately and incisively, what we mean by universe? For universe is,
-                    inferentially, the biggest system. If we could start with universe, we would automatically avoid
-                    leaving out any strategically critical variables. We find no record as yet of man having
-                    successfully defined the universe-scientifically and comprehensively-to include the nonsimultaneous
-                    and only partially overlapping, micro-macro, always and everywhere transforming, physical and
-                    metaphysical, omni-complementary but nonidentical events.
+Can we think of, and state adequately and incisively, what we mean by universe? For universe is,
+inferentially, the biggest system. If we could start with universe, we would automatically avoid
+leaving out any strategically critical variables. We find no record as yet of man having
+successfully defined the universe-scientifically and comprehensively-to include the nonsimultaneous
+and only partially overlapping, micro-macro, always and everywhere transforming, physical and
+metaphysical, omni-complementary but nonidentical events.
                 </p>
                 <p>
-                    Man has failed thus far, as a specialist, to define the microcosmic limits of divisibility of the
-                    nucleus of the atom, but, epochally, as accomplished by Einstein, has been able to define
-                    successfully the physical universe but not the metaphysical universe; nor has he, as yet, defined
-                    total universe itself as combining both the physical and metaphysical. The scientist was able to
-                    define physical universe by virtue of the experimentally-verified discovery that energy
+Man has failed thus far, as a specialist, to define the microcosmic limits of divisibility of the
+nucleus of the atom, but, epochally, as accomplished by Einstein, has been able to define
+successfully the physical universe but not the metaphysical universe; nor has he, as yet, defined
+total universe itself as combining both the physical and metaphysical. The scientist was able to
+define physical universe by virtue of the experimentally-verified discovery that energy
                 </p>
             </page>
         </spread>
@@ -1115,54 +1115,54 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    can neither be created nor lost and, therefore, that energy is conserved and is therefore finite.
-                    That means it is equatable.
+can neither be created nor lost and, therefore, that energy is conserved and is therefore finite.
+That means it is equatable.
                 </p>
                 <p>
-                    Einstein successfully equated the physical universe as E = Mc2. His definition was only a
-                    hypothetical venture until fission proved it to be true. The physical universe of associative
-                    and disassociative energy was found to be a closed, but nonsimultaneously occurring, system-its
-                    separately occurring events being mathematically measurable; i.e., weighable and equatable. But
-                    the finite physical universe did not include the metaphysical weightless experiences of universe.
-                    All the unweighables, such as any and all our thoughts and all the abstract mathematics, are
-                    weightless. The metaphysical aspects of universe have been thought by the physical scientists to
-                    defy "closed system’s" analysis. I have found, however, as we shall soon witness, that total
-                    universe including both its physical and metaphysical behaviors and aspects are scientifically definable.
+Einstein successfully equated the physical universe as E = Mc2. His definition was only a
+hypothetical venture until fission proved it to be true. The physical universe of associative
+and disassociative energy was found to be a closed, but nonsimultaneously occurring, system-its
+separately occurring events being mathematically measurable; i.e., weighable and equatable. But
+the finite physical universe did not include the metaphysical weightless experiences of universe.
+All the unweighables, such as any and all our thoughts and all the abstract mathematics, are
+weightless. The metaphysical aspects of universe have been thought by the physical scientists to
+defy "closed system’s" analysis. I have found, however, as we shall soon witness, that total
+universe including both its physical and metaphysical behaviors and aspects are scientifically definable.
                 </p>
                 <p>
-                    Einstein and others have spoken exclusively about the physical department of universe in words
-                    which may be integrated and digested as the aggregate of nonsimultaneous and only partially
-                    overlapping, nonidentical, but always complementary, omni-transforming, and weighable energy
-                    events. Eddington defines science as "the earnest attempt to set in order the facts of experience."
-                    Einstein and
+Einstein and others have spoken exclusively about the physical department of universe in words
+which may be integrated and digested as the aggregate of nonsimultaneous and only partially
+overlapping, nonidentical, but always complementary, omni-transforming, and weighable energy
+events. Eddington defines science as "the earnest attempt to set in order the facts of experience."
+Einstein and
                 </p>
             </page>
             <page style="text">
                 <p>
-                    many other first-rank scientists noted that science is concerned exclusively with "facts of
-                    experience."
+many other first-rank scientists noted that science is concerned exclusively with "facts of
+experience."
                 </p>
                 <p>
-                    Holding to the scientists’ experiences as all important, I define universe, including both the
-                    physical and metaphysical, as follows: The universe is the aggregate of all of humanity’s
-                    consciously-apprehended and communicated experience with the nonsimultaneous, nonidentical, and
-                    only partially overlapping, always complementary, weighable and unweighable, ever omni-transforming,
-                    event sequences.
+Holding to the scientists’ experiences as all important, I define universe, including both the
+physical and metaphysical, as follows: The universe is the aggregate of all of humanity’s
+consciously-apprehended and communicated experience with the nonsimultaneous, nonidentical, and
+only partially overlapping, always complementary, weighable and unweighable, ever omni-transforming,
+event sequences.
                 </p>
                 <p>
-                    Each experience begins and ends-ergo, is finite. Because our apprehending is packaged, both
-                    physically and metaphysically, into time increments of alternate awakeness and asleepness as well
-                    as into separate finite conceptions such as the discrete energy quanta and the atomic nucleus
-                    components of the fundamental physical discontinuity, all experiences are finite. Physical
-                    experiments have found no solids, no continuous surfaces or lines‹only discontinuous constellations
-                    of individual events. An aggregate of finites is finite. Therefore, universe as experientially
-                    defined, including both the physical and metaphysical, is finite.
+Each experience begins and ends-ergo, is finite. Because our apprehending is packaged, both
+physically and metaphysically, into time increments of alternate awakeness and asleepness as well
+as into separate finite conceptions such as the discrete energy quanta and the atomic nucleus
+components of the fundamental physical discontinuity, all experiences are finite. Physical
+experiments have found no solids, no continuous surfaces or lines‹only discontinuous constellations
+of individual events. An aggregate of finites is finite. Therefore, universe as experientially
+defined, including both the physical and metaphysical, is finite.
                 </p>
                 <p>
-                    It is therefore possible to initiate our general systems formulation at the all inclusive level
-                    of universe whereby no strategic variables will be omitted. There is an operational grand strategy
-                    of General Systems Analysis that proceeds from here. It is played somewhat like the game of
-                    "Twenty Questions," but G. S. A.
+It is therefore possible to initiate our general systems formulation at the all inclusive level
+of universe whereby no strategic variables will be omitted. There is an operational grand strategy
+of General Systems Analysis that proceeds from here. It is played somewhat like the game of
+"Twenty Questions," but G. S. A.
                 </p>
             </page>
         </spread>
@@ -1170,94 +1170,49 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    is more efficient-that is, is more economical‹ in reaching its answers. It is the same procedural
-                    strategy that is used by the computer to weed out al1 the wrong answers until only the right answer
-                    is left.
+is more efficient-that is, is more economical‹ in reaching its answers. It is the same procedural
+strategy that is used by the computer to weed out al1 the wrong answers until only the right answer
+is left.
                 </p>
                 <p>
-                    Having adequately defined the whole system we may proceed to subdivide progressively. This is
-                    accomplished through progressive division into two parts‹one of which, by definition, could not
-                    contain the answer-and discarding of the sterile part. Each progressively-retained live part is
-                    called a "bit" because of its being produced by the progressive binary "yes" or "no" bi-section of
-                    the previously residual live part. The magnitude of such weeding operations is determined by the
-                    number of successive bits necessary to isolate the answer.
+Having adequately defined the whole system we may proceed to subdivide progressively. This is
+accomplished through progressive division into two parts‹one of which, by definition, could not
+contain the answer-and discarding of the sterile part. Each progressively-retained live part is
+called a "bit" because of its being produced by the progressive binary "yes" or "no" bi-section of
+the previously residual live part. The magnitude of such weeding operations is determined by the
+number of successive bits necessary to isolate the answer.
                 </p>
                 <p>
-                    How many "bi-secting bits" does it take to get rid of all the irrelevancies and leave in lucid
-                    isolation that specific information you are seeking? We find that the first subdividing of the
-                    concept of universe-bit one‹is into what we call a system. A system subdivides universe into all
-                    the universe outside the system (macrocosm) and all the rest of the universe which is inside the
-                    system (microcosm) with the exception of the minor fraction of universe which constitutes the system
+How many "bi-secting bits" does it take to get rid of all the irrelevancies and leave in lucid
+isolation that specific information you are seeking? We find that the first subdividing of the
+concept of universe-bit one‹is into what we call a system. A system subdivides universe into all
+the universe outside the system (macrocosm) and all the rest of the universe which is inside the
+system (microcosm) with the exception of the minor fraction of universe which constitutes the system
                 </p>
             </page>
             <page style="text">
                  <p>
-                     itself. The system divides universe not only into macrocosm and microcosm but also coincidentally
-                     into typical conceptual and nonconceptual aspects of universe-that is, an overlappingly-associable
-                     consideration, on the one hand, and, on the other hand, all the nonassociable,
-                     nonoverlappingly-considerable, nonsimultaneously-transforming events of nonsynchronizable disparate
-                     wave frequency rate ranges.
+itself. The system divides universe not only into macrocosm and microcosm but also coincidentally
+into typical conceptual and nonconceptual aspects of universe-that is, an overlappingly-associable
+consideration, on the one hand, and, on the other hand, all the nonassociable,
+nonoverlappingly-considerable, nonsimultaneously-transforming events of nonsynchronizable disparate
+wave frequency rate ranges.
                  </p>
                 <p>
-                    A thought is a system, and is inherently conceptual-though often only dimly and confusedly
-                    conceptual at the moment of first awareness of the as yet only vaguely describable thinking activity.
-                    Because total universe is nonsimultaneous it is not conceptual. Conceptuality is produced by isolation,
-                    such as in the instance of one single, static picture held out from a moving-picture film’s continuity,
-                    or scenario. Universe is an evolutionary-process scenario without beginning or end, because the shown
-                    part is continually transformed chemically into fresh film and reexposed to the ever self-reorganizing
-                    process of latest thought realizations which must continually introduce new significance into the
-                    freshly written description of the ever-transforming events before splicing the film in again for its
-                    next projection phase.
+A thought is a system, and is inherently conceptual-though often only dimly and confusedly
+conceptual at the moment of first awareness of the as yet only vaguely describable thinking activity.
+Because total universe is nonsimultaneous it is not conceptual. Conceptuality is produced by isolation,
+such as in the instance of one single, static picture held out from a moving-picture film’s continuity,
+or scenario. Universe is an evolutionary-process scenario without beginning or end, because the shown
+part is continually transformed chemically into fresh film and reexposed to the ever self-reorganizing
+process of latest thought realizations which must continually introduce new significance into the
+freshly written description of the ever-transforming events before splicing the film in again for its
+next projection phase.
                 </p>
                 <p>
-                    Heisenberg’s principle of "indeterminism" which recognized the experimental discovery that the act
-                    of measuring always alters that which was being measured turns experience into a continuous and
-                    never-repeatable evolutionary scenario. One picture
-                </p>
-            </page>
-        </spread>
-
-        <spread>
-            <page style="text">
-                <p>
-                    of the scenario about the caterpillar phase does not communicate its transformation into the
-                    butterfly phase, etc. The question, "I wonder what is outside the outside-of-universe?" is a
-                    request for a single picture description of a scenario of transformations and is an inherently
-                    invalid question. It is the same as looking at a dictionary and saying, ’"Which word is the
-                    dictionary?" It is a meaningless question.
-                </p>
-                <p>
-                    It is characteristic of "all" thinking‹of all system’s conceptioning-that all the lines of thought
-                    interrelationships must return cyclically upon themselves in a plurality of directions, as do
-                    various great circles around spheres. Thus may we interrelatedly comprehend the constellation-or
-                    system-of experiences under consideration. Thus may we comprehend how the special-case economy
-                    demonstrated by the particular system considered also discloses the generalized law of energy
-                    conservation of physical universe.
-                </p>
-                <p>
-                    To hit a duck in flight a hunter does not fire his gun at the bird where the gunner sees him but
-                    ahead of the bird, so that the bird and the bullet will meet each other at a point not in line
-                    between the gunner and the bird at time of firing. Gravity and wind also pull the bullet in two
-                    different directions which altogether
-                </p>
-            </page>
-            <page style="text">
-                <p>
-                    impart a mild corkscrew trajectory to the bullet. Two airplanes in nighttime dogfights of World
-                    War II firing at each other with tracer bullets and photographed by a third plane show clearly
-                    the corkscrew trajectories as one hits the other. Einstein and Reiman, the Hindu mathematician,
-                    gave the name geodesic lines to these curvilinear and most economical lines of interrelationship
-                    between two independently moving~events"‹the events in this case being the two airplanes.
-                </p>
-                <p>
-                    A great circle is a line formed on a sphere’s surface by a plane going through the sphere’s
-                    centre. Lesser circles are formed on the surfaces of spheres by planes cutting through spheres
-                    but not passing through the sphere’s centre. When a lesser circle is superimposed on a great
-                    circle it cuts across the latter at two points, A and B. It is a shorter distance between A and B
-                    on the great circle’s shortest arc than it is on the lesser circle’s shortest arc. Great circles
-                    are geodesic lines because they provide the most economical (energy, effort) distances between any
-                    two points on a spherical system’s surface; therefore, nature, which always employs only the most
-                    economical realizations, must use those great circles which, unlike spiral lines, always
+Heisenberg’s principle of "indeterminism" which recognized the experimental discovery that the act
+of measuring always alters that which was being measured turns experience into a continuous and
+never-repeatable evolutionary scenario. One picture
                 </p>
             </page>
         </spread>
@@ -1265,53 +1220,44 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    return upon themselves in the most economical manner. All the system’s paths must be topologically
-                    and circularly interrelated for conceptually definitive, locally transformable, polyhedronal
-                    understanding to be attained in our spontaneous-ergo, most economical- geodesicly structured thoughts.
+of the scenario about the caterpillar phase does not communicate its transformation into the
+butterfly phase, etc. The question, "I wonder what is outside the outside-of-universe?" is a
+request for a single picture description of a scenario of transformations and is an inherently
+invalid question. It is the same as looking at a dictionary and saying, ’"Which word is the
+dictionary?" It is a meaningless question.
                 </p>
                 <p>
-                    Thinking itself consists of self-disciplined dismissal of both the macrocosmic and microcosmic
-                    irrelevancies which leaves only the lucidly-relevant considerations. The macrocosmic irrelevancies
-                    are all the events too large and too infrequent to be synchronizably tuneable in any possible
-                    way with our consideration (a beautiful word meaning putting stars together). The microcosmic
-                    irrelevancies are all the events which are obviously too small and too frequent to be differentially
-                    resolved in any way or to be synchronizably-tuneable within the lucidly-relevant wave-frequency
-                    limits of the system we are considering.
+It is characteristic of "all" thinking‹of all system’s conceptioning-that all the lines of thought
+interrelationships must return cyclically upon themselves in a plurality of directions, as do
+various great circles around spheres. Thus may we interrelatedly comprehend the constellation-or
+system-of experiences under consideration. Thus may we comprehend how the special-case economy
+demonstrated by the particular system considered also discloses the generalized law of energy
+conservation of physical universe.
                 </p>
                 <p>
-                    How many stages of dismissal of irrelevancies does it take-that is, proceeding from "universe" as
-                    I defined it, how many bits does it take-lucidly to isolate all the geodesic interrelations of
-                    all the "star" identities in the constellation under consideration? The answer is the formula
-                    (redo in finished text) where N is the number of stars in the thought-discerned constellation
-                    of focal point entities comprising the problem.
-                </p>
-                <p>
-                    "Comprehension" means identifying all the most uniquely economical inter-relationships of
+To hit a duck in flight a hunter does not fire his gun at the bird where the gunner sees him but
+ahead of the bird, so that the bird and the bullet will meet each other at a point not in line
+between the gunner and the bird at time of firing. Gravity and wind also pull the bullet in two
+different directions which altogether
                 </p>
             </page>
             <page style="text">
                 <p>
-                    the focal point entities involved. We may say then that:
+impart a mild corkscrew trajectory to the bullet. Two airplanes in nighttime dogfights of World
+War II firing at each other with tracer bullets and photographed by a third plane show clearly
+the corkscrew trajectories as one hits the other. Einstein and Reiman, the Hindu mathematician,
+gave the name geodesic lines to these curvilinear and most economical lines of interrelationship
+between two independently moving~events"‹the events in this case being the two airplanes.
                 </p>
                 <p>
-                    Comprehension = (redo in finished text)
-                </p>
-                <p>
-                    This is the way in which thought processes operate with mathematical logic. The mathematics
-                    involved consist of topology, combined with vectorial geometry, which combination I call
-                    "synergetics"-which word I will define while clarifying its use. By questioning many audiences,
-                    I have discovered that only about one in three hundred are familiar with synergy. The word is
-                    obviously not a popular word. Synergy is the only word in our language that means behavior of
-                    whole systems unpredicted by the separately observed behaviors of any of the system’s separate
-                    parts or any subassembly of the system’s parts. There is nothing in the chemistry of a toenail
-                    that predicts the existence of a human being.
-                </p>
-                <p>
-                    I once asked an audience of the National Honors Society in chemistry, "How many of you are
-                    familiar with the word, synergy?" and all hands went up. Synergy is the essence of chemistry.
-                    The tensile strength of chrome-nickel-steel, which is approximately 350,000 pounds per square
-                    inch, is 100,OOO P.S.I. greater than the sum of the tensile strengths of each of all its alloyed
-                    together, component, metallic elements. Here is a "chain" that is
+A great circle is a line formed on a sphere’s surface by a plane going through the sphere’s
+centre. Lesser circles are formed on the surfaces of spheres by planes cutting through spheres
+but not passing through the sphere’s centre. When a lesser circle is superimposed on a great
+circle it cuts across the latter at two points, A and B. It is a shorter distance between A and B
+on the great circle’s shortest arc than it is on the lesser circle’s shortest arc. Great circles
+are geodesic lines because they provide the most economical (energy, effort) distances between any
+two points on a spherical system’s surface; therefore, nature, which always employs only the most
+economical realizations, must use those great circles which, unlike spiral lines, always
                 </p>
             </page>
         </spread>
@@ -1319,40 +1265,53 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    50 per cent stronger than the sum of the strengths of all its links. We think popularly only
-                    in the terms of a chain being no stronger than its weakest link, which concept fails to consider,
-                    for instance, the case of an endlessly interlinked chain of atomically self-renewing links of
-                    omni-equal strength or of an omni-directionally interlinked chain matrix of ever renewed atomic
-                    links in which one broken link would be, only momentarily, a local cavern within the whole mass
-                    having no weakening effect on the whole, for every link within the matrix is a high frequency,
-                    recurring, break-and-make restructuring of the system.
+return upon themselves in the most economical manner. All the system’s paths must be topologically
+and circularly interrelated for conceptually definitive, locally transformable, polyhedronal
+understanding to be attained in our spontaneous-ergo, most economical- geodesicly structured thoughts.
                 </p>
                 <p>
-                    Since synergy is the only word in our language meaning behavior of wholes unpredicted by behavior
-                    of their parts, it is clear that society does not think there are behaviors of whole systems
-                    unpredicted by their separate parts. This means that society’s formally-accredited thoughts and
-                    ways of accrediting others are grossly inadequate in comprehending the nonconceptual qualities
-                    of the scenario "universal evolution."
+Thinking itself consists of self-disciplined dismissal of both the macrocosmic and microcosmic
+irrelevancies which leaves only the lucidly-relevant considerations. The macrocosmic irrelevancies
+are all the events too large and too infrequent to be synchronizably tuneable in any possible
+way with our consideration (a beautiful word meaning putting stars together). The microcosmic
+irrelevancies are all the events which are obviously too small and too frequent to be differentially
+resolved in any way or to be synchronizably-tuneable within the lucidly-relevant wave-frequency
+limits of the system we are considering.
                 </p>
                 <p>
-                    There is nothing about an electron alone that forecasts the proton, nor is there anything about
-                    the Earth or the Moon that forecasts the co-existence of the Sun. The solar system is
-                    synergetic-unpredicted by
+How many stages of dismissal of irrelevancies does it take-that is, proceeding from "universe" as
+I defined it, how many bits does it take-lucidly to isolate all the geodesic interrelations of
+all the "star" identities in the constellation under consideration? The answer is the formula
+(redo in finished text) where N is the number of stars in the thought-discerned constellation
+of focal point entities comprising the problem.
+                </p>
+                <p>
+"Comprehension" means identifying all the most uniquely economical inter-relationships of
                 </p>
             </page>
             <page style="text">
                 <p>
-                    its separate parts. But the interplay of Sun as supply ship of Earth and the Moon’s
-                    gravitationally produced tidal pulsations on Earth all interact to produce the biosphere’s
-                    chemical conditions which permit but do not cause the regeneration of life on Spaceship
-                    Earth. This is all synergetic. There is nothing about the gases given off respiratorily by
-                    Earth’s green vegetation that predicts that those gases will be essential to the life support
-                    of all mammals aboard Spaceship Earth, and nothing about the mammals that predicts that the
-                    gases which they give off respiratorily are essential to the support of the vegetation aboard
-                    our Spaceship Earth. Universe is synergetic. Life is synergetic.
+the focal point entities involved. We may say then that:
                 </p>
                 <p>
-                    Summarizing synergetically I may conclude that since my experimental interrogation of more than one hundred audiences all around the world has shown that less than one in three hundred university students has ever heard of the word synergy, and since it is the only word that has that meaning it is obvious that the world has not thought there are any behaviors of whole systems unpredictable by their parts. This is partially the consequence of over-specialization and of leaving the business of the whole to the old pirates to
+Comprehension = (redo in finished text)
+                </p>
+                <p>
+This is the way in which thought processes operate with mathematical logic. The mathematics
+involved consist of topology, combined with vectorial geometry, which combination I call
+"synergetics"-which word I will define while clarifying its use. By questioning many audiences,
+I have discovered that only about one in three hundred are familiar with synergy. The word is
+obviously not a popular word. Synergy is the only word in our language that means behavior of
+whole systems unpredicted by the separately observed behaviors of any of the system’s separate
+parts or any subassembly of the system’s parts. There is nothing in the chemistry of a toenail
+that predicts the existence of a human being.
+                </p>
+                <p>
+I once asked an audience of the National Honors Society in chemistry, "How many of you are
+familiar with the word, synergy?" and all hands went up. Synergy is the essence of chemistry.
+The tensile strength of chrome-nickel-steel, which is approximately 350,000 pounds per square
+inch, is 100,OOO P.S.I. greater than the sum of the tensile strengths of each of all its alloyed
+together, component, metallic elements. Here is a "chain" that is
                 </p>
             </page>
         </spread>
@@ -1360,30 +1319,71 @@ today of that which I am relating.
         <spread>
             <page style="text">
                 <p>
-                    be visibly conducted by their stooges, the feudal kings or local politicians.
+50 per cent stronger than the sum of the strengths of all its links. We think popularly only
+in the terms of a chain being no stronger than its weakest link, which concept fails to consider,
+for instance, the case of an endlessly interlinked chain of atomically self-renewing links of
+omni-equal strength or of an omni-directionally interlinked chain matrix of ever renewed atomic
+links in which one broken link would be, only momentarily, a local cavern within the whole mass
+having no weakening effect on the whole, for every link within the matrix is a high frequency,
+recurring, break-and-make restructuring of the system.
                 </p>
                 <p>
-                    There is a corollary of synergy which says that the known behavior of the whole and the known
-                    behavior of a minimum of known parts often makes possible the discovery of the values of the
-                    remaining parts as does the known sum of the angles of a triangle plus the known behavior of
-                    three of its six parts make possible evaluating the others. Topology provides the synergetic
-                    means of ascertaining the values of any system of experiences.
+Since synergy is the only word in our language meaning behavior of wholes unpredicted by behavior
+of their parts, it is clear that society does not think there are behaviors of whole systems
+unpredicted by their separate parts. This means that society’s formally-accredited thoughts and
+ways of accrediting others are grossly inadequate in comprehending the nonconceptual qualities
+of the scenario "universal evolution."
                 </p>
                 <p>
-                    Topology is the science of fundamental pattern and structural relationships of event constellations.
-                    It was discovered and developed by the mathematician Euler. He discovered that all patterns can be
-                    reduced to three prime conceptual characteristics: to lines; points where two lines cross or the same
-                    line crosses itself; and areas, bound by lines. He found that there is a constant relative abundance
-                    of these three fundamentally unique and no further reducible aspects of all patterning
+There is nothing about an electron alone that forecasts the proton, nor is there anything about
+the Earth or the Moon that forecasts the co-existence of the Sun. The solar system is
+synergetic-unpredicted by
+                </p>
+            </page>
+            <page style="text">
+                <p>
+its separate parts. But the interplay of Sun as supply ship of Earth and the Moon’s
+gravitationally produced tidal pulsations on Earth all interact to produce the biosphere’s
+chemical conditions which permit but do not cause the regeneration of life on Spaceship
+Earth. This is all synergetic. There is nothing about the gases given off respiratorily by
+Earth’s green vegetation that predicts that those gases will be essential to the life support
+of all mammals aboard Spaceship Earth, and nothing about the mammals that predicts that the
+gases which they give off respiratorily are essential to the support of the vegetation aboard
+our Spaceship Earth. Universe is synergetic. Life is synergetic.
                 </p>
                 <p>
-                    P + A = L + 2
+Summarizing synergetically I may conclude that since my experimental interrogation of more than one hundred audiences all around the world has shown that less than one in three hundred university students has ever heard of the word synergy, and since it is the only word that has that meaning it is obvious that the world has not thought there are any behaviors of whole systems unpredictable by their parts. This is partially the consequence of over-specialization and of leaving the business of the whole to the old pirates to
+                </p>
+            </page>
+        </spread>
+
+        <spread>
+            <page style="text">
+                <p>
+be visibly conducted by their stooges, the feudal kings or local politicians.
                 </p>
                 <p>
-                    This reads: the number of points plus the number of areas always equals the number of lines plus
-                    the number constant two. There are times when one area happens to coincide with others. When the
-                    faces of polyhedra coincide illusionarily the congruently hidden faces must be accounted
-                    arithmetically in formula.
+There is a corollary of synergy which says that the known behavior of the whole and the known
+behavior of a minimum of known parts often makes possible the discovery of the values of the
+remaining parts as does the known sum of the angles of a triangle plus the known behavior of
+three of its six parts make possible evaluating the others. Topology provides the synergetic
+means of ascertaining the values of any system of experiences.
+                </p>
+                <p>
+Topology is the science of fundamental pattern and structural relationships of event constellations.
+It was discovered and developed by the mathematician Euler. He discovered that all patterns can be
+reduced to three prime conceptual characteristics: to lines; points where two lines cross or the same
+line crosses itself; and areas, bound by lines. He found that there is a constant relative abundance
+of these three fundamentally unique and no further reducible aspects of all patterning
+                </p>
+                <p>
+P + A = L + 2
+                </p>
+                <p>
+This reads: the number of points plus the number of areas always equals the number of lines plus
+the number constant two. There are times when one area happens to coincide with others. When the
+faces of polyhedra coincide illusionarily the congruently hidden faces must be accounted
+arithmetically in formula.
                 </p>
             </page>
             <page style="empty">
@@ -1649,7 +1649,7 @@ today of that which I am relating.
         <spread>
             <page style="empty"></page>
             <page style="front">
-                <title></title>
+                <title>Regenerative Landscape</title>
             </page>
         </spread>
 

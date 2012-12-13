@@ -57,8 +57,6 @@ public class BookApplication extends starling.display.Sprite {
         backgroundImage.y = 0;
         backgroundImage.scaleY=1.2;
         addChild(backgroundImage);
-        setChildIndex(backgroundImage, 0);
-
 
         backgroundImage.x = Starling.current.stage.stageWidth/2 - backgroundImage.width/2;
 
@@ -72,7 +70,8 @@ public class BookApplication extends starling.display.Sprite {
         }
 
         if(appModel.lightMode){
-            background = new Quad( Starling.current.stage.stageWidth, Starling.current.stage.stageHeight, 0x000000, 0.5);
+            background = new Quad( Starling.current.stage.stageWidth, Starling.current.stage.stageHeight, 0x000000);
+            background.alpha = 0.7;
             addChildAt(background, 1);
             setChildIndex(backgroundImage, 0);
 
@@ -91,14 +90,15 @@ public class BookApplication extends starling.display.Sprite {
         addChild(controls);
 
         setChildIndex(controls, 0);
-        appModel.currentSpread = 0;
 
 
         pageViewer = new PageViewer();
         addChild(pageViewer);
 
+        appModel.currentSpread = 0;
         setChildIndex(pageViewer, 0);
 
+        setChildIndex(backgroundImage, 0);
 
     }
 

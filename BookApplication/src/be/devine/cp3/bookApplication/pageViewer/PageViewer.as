@@ -45,8 +45,6 @@ public class PageViewer extends Sprite{
 
         appModel = AppModel.getInstance();
 
-
-
         trace(appModel.arrBook[appModel.currentSpread]);
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, currentSpreadChangedHandler)
 
@@ -61,7 +59,10 @@ public class PageViewer extends Sprite{
     /*************************************/
 
     private function currentSpreadChangedHandler(event:flash.events.Event):void {
-        this.removeChild(spread);
+        if(spread){
+            spread.dispose();
+            this.removeChild(spread);
+        }
 
         spread = new Spread(appModel.arrBook[appModel.currentSpread]);
         addChild(spread);

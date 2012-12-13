@@ -31,6 +31,11 @@ public class AppModel extends EventDispatcher{
     [Embed(source='../../../../libs/CENTURY.TTF', embedAsCFF="false", fontFamily='CENTURY')]
     public static const CENTURY:Class;
 
+    [Embed(source='../../../../libs/georgia.ttf', embedAsCFF="false", fontFamily='GEORGIA')]
+    public static const GEORGIA:Class;
+
+
+
     public static var instance:AppModel;
 
     private var texture:Texture = Texture.fromBitmap(new uiTexture);

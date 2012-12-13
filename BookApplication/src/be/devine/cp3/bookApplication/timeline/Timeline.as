@@ -43,7 +43,6 @@ public class Timeline extends Sprite{
     private var btnTimelineTexture:Texture;
     private var btnTimeline:Image;
 
-    private var isVisible:Boolean;
     private var timelineScroll:TimelineScroll;
 
     private var tween:Tween;

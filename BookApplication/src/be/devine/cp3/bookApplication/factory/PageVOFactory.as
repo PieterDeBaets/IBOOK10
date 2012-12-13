@@ -25,8 +25,15 @@ public class PageVOFactory {
                     }
 
                     //set X and Y offset if filled in
-                    if(int(pageXML.@X) != 0) pageVO.paragraphX = pageXML.@X;
+                    if(int(pageXML.@X) != 0){
+                        trace('x is momenteel: ' + int(pageXML.@X));
+                    }
+
+                    //TODO deze werkt beter! i.p.v. != 0
+                    if(pageXML.@X != pageXML.@noneExistingAttributeInXml) pageVO.paragraphX = pageXML.@X;
                     if(int(pageXML.@Y) != 0) pageVO.paragraphY = pageXML.@Y;
+
+
 
                     //set width and heigth if filled in
                     if(int(pageXML.@width) != 0) pageVO.paragraphWidth = pageXML.@width;
@@ -75,10 +82,8 @@ public class PageVOFactory {
 
         function removeTabsAndNewLines($str:String):String
         {
-            trace($str);
             var rex:RegExp = /(\t|\n|\r)/gi;
             $str = $str.replace(rex,'');
-            trace($str);
             return $str;
         }
 
