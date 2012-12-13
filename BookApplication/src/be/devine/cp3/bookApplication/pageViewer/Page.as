@@ -47,6 +47,7 @@ public class Page extends starling.display.Sprite{
 
     public function Page(data:PageVO) {
         trace("IN PAGE");
+        //test
 
         appModel = AppModel.getInstance();
         switch (data.style){
