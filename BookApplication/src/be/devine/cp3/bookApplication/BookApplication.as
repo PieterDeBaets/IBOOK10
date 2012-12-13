@@ -46,7 +46,18 @@ public class BookApplication extends starling.display.Sprite {
         bookService.addEventListener(Event.COMPLETE, bookCompleted);
         bookService.load();
 
-        //TODO FONTS EMBEDDEN
+        appModel.addEventListener(AppModel.LIGHTMODE_CHANGED, lightModeChanged);
+    }
+
+    private function lightModeChanged(event:Event):void {
+        if(q){
+            removeChild(q);
+        }
+
+        if(appModel.lightMode){
+            var q:Quad = new Quad( Starling.current.stage.stageWidth, Starling.current.stage.stageHeight, 0x333333);
+            addChild(q);
+        }
     }
 
     private function bookCompleted(event:Event){

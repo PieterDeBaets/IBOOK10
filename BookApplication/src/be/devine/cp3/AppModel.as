@@ -28,6 +28,9 @@ public class AppModel extends EventDispatcher{
     [Embed(source='../../../../libs/GothamMedium.otf', embedAsCFF="false", fontFamily='Gotham')]
     public static const HitRoad:Class;
 
+    [Embed(source='../../../../libs/CENTURY.TTF', embedAsCFF="false", fontFamily='CENTURY')]
+    public static const CENTURY:Class;
+
     public static var instance:AppModel;
 
     private var texture:Texture = Texture.fromBitmap(new uiTexture);
@@ -36,6 +39,8 @@ public class AppModel extends EventDispatcher{
 
     //2 is random. gewoon om de setter te activeren de eerste keer.
     private var _currentSpread:int = 2;
+    private var _currentChapter:int = 0;
+
     private var _totalPages:int = 0;
     private var _totalSpreads:int = 0;
 
@@ -90,6 +95,7 @@ public class AppModel extends EventDispatcher{
             }else if(_currentSpread > (arrBook.length -1)){
                 _currentSpread = arrBook.length -1;
             }
+
             dispatchEvent(new Event(CURRENT_SPREAD_CHANGED))
         }
     }
@@ -196,6 +202,14 @@ public class AppModel extends EventDispatcher{
             dispatchEvent(new flash.events.Event(INDEXVISIBLE_CHANGED,true));
         }
 
+    }
+
+    public function get currentChapter():int {
+        return _currentChapter;
+    }
+
+    public function set currentChapter(value:int):void {
+        _currentChapter = value;
     }
 }
 }

@@ -64,6 +64,7 @@ public class Controls extends Sprite{
         lightSwitch.x =18;
         lightSwitch.y = 11;
         lightSwitch.alpha = 0.3;
+
         addChild(lightSwitch);
 
         Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);

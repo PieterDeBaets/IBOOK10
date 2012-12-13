@@ -25,7 +25,7 @@ public class PageVO {
     public var paragraphHeight:int = 489;
 
     public var image1:ImageLoader;
-    public var imageUrl:String = "assets/";
+    public var imageUrl:String = "assets/img/";
     public var image1X:int = 64;
     public var image1Y:int = 46;
     public var image1Width:int = 391;
