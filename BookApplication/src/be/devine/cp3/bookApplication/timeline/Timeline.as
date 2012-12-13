@@ -77,6 +77,12 @@ public class Timeline extends Sprite{
 
     }
 
+
+
+    /*************************************/
+    //Methods
+    /*************************************/
+
     private function changePosition(event:flash.events.Event):void {
         timelineScroll.scrollProcent = appModel.currentSpread/(appModel.totalSpreads-1);
     }
@@ -150,12 +156,6 @@ public class Timeline extends Sprite{
         tween.animate("y", value);
         Starling.juggler.add(tween);
     }
-
-
-    /*************************************/
-    //Methods
-    /*************************************/
-
 
     /*************************************/
     //Getters & Setters

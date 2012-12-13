@@ -67,10 +67,15 @@ public class SpreadIcon extends Sprite{
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, toggleBorder);
     }
 
+
+    /*************************************/
+    //Methods
+    /*************************************/
+
     private function selectNewSpread(event:TouchEvent):void {
         var touch:Touch = event.getTouch(this);
         if(touch){
-            if(touch.phase == TouchPhase.BEGAN){
+            if(touch.phase == TouchPhase.ENDED){
                 //trace(this.spreadNumber);
                 appModel.currentSpread = this.spreadNumber;
             }else if(touch.phase == TouchPhase.HOVER){
@@ -113,11 +118,6 @@ public class SpreadIcon extends Sprite{
 
         this.flatten();
     }
-
-    /*************************************/
-    //Methods
-    /*************************************/
-
 
     /*************************************/
     //Getters & Setters

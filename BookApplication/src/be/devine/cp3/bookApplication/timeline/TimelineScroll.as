@@ -63,6 +63,11 @@ public class TimelineScroll extends Sprite{
         addButton();
     }
 
+
+    /*************************************/
+    //Methods
+    /*************************************/
+
     private function addButton(){
         buttonTexture= appModel.atlas.getTexture('scrubber');
         button = new Image(buttonTexture);
@@ -130,7 +135,7 @@ public class TimelineScroll extends Sprite{
     private function clickHandler(event:TouchEvent):void{
         var touch:Touch = event.getTouch(totalScroll);
         if(touch){
-            if(touch.phase == TouchPhase.BEGAN){
+            if(touch.phase == TouchPhase.ENDED){
                 var position:Point = touch.getLocation(totalScroll);
 
                 //gebruik _scrollProcent anders komt hij in de setter.
@@ -154,11 +159,6 @@ public class TimelineScroll extends Sprite{
             Mouse.cursor = MouseCursor.ARROW;
         }
     }
-
-    /*************************************/
-    //Methods
-    /*************************************/
-
 
     /*************************************/
     //Getters & Setters

@@ -26,7 +26,7 @@ public class IndexButton extends Sprite{
     public function IndexButton(text:String, color:int) {
         this.width = 162;
         this.height = 50;
-        textfield = new TextField(162, 50, text, "Century", 12 ,color);
+        textfield = new TextField(162, 50, text, "HitRoad", 12 ,color);
         textfield.hAlign = "left";
         addChild(textfield);
 

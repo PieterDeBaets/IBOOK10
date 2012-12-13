@@ -32,7 +32,6 @@ public class BookApplication extends starling.display.Sprite {
     private var pageViewer:PageViewer;
 
 
-
     /*************************************/
     //Constructor
     /*************************************/
