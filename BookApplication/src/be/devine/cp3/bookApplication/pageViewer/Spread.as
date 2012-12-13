@@ -39,12 +39,12 @@ public class Spread extends starling.display.Sprite{
 
         spreadChapter = data.chapterIndex;
 
-        page1 = new Page(data.page1);
+        page1 = new Page(data.page1, spreadChapter);
         page1.x = 0;
         page1.y = 0;
         addChild(page1);
 
-        page2 = new Page(data.page2);
+        page2 = new Page(data.page2,spreadChapter);
         page2.x = Starling.current.stage.stageWidth/2;
         page2.y = 0;
 

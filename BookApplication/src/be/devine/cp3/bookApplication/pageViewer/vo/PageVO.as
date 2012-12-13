@@ -18,14 +18,14 @@ public class PageVO {
     public var titleWidth:int = 390;
     public var titleHeight:int = 400;
 
-    public var paragraph:String;
-    public var paragraphX:int = 58;
-    public var paragraphY:int= 43;
+    public var paragraph:String = '';
+    public var paragraphX:int = 75;
+    public var paragraphY:int= 70;
     public var paragraphWidth:int = 351;
     public var paragraphHeight:int = 489;
 
     //public var image1:ImageLoader;
-    public var imageUrl:String = "assets/";
+    public var imageUrl:String = "assets/img/";
     public var image1X:int = 64;
     public var image1Y:int = 46;
     public var image1Width:int = 391;
@@ -39,15 +39,15 @@ public class PageVO {
     public var pageNumberHeight:int = 30;
 
     public var index:String;
-    public var indexX:int;
-    public var indexY:int;
-    public var indexWidth:int;
-    public var indexHeight:int;
+    public var indexX:int = 95;
+    public var indexY:int = 70;
+    public var indexWidth:int=351;
+    public var indexHeight:int = 30;
 
     public var chapter:String;
     public var chapterWidth:int = 200;
     public var chapterHeight:int = 30;
-    public var chapterX:int = paragraphX;
+    public var chapterX:int = 65;
     public var chapterY:int = paragraphY + paragraphHeight + 140;
 
 

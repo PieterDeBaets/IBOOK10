@@ -11,9 +11,15 @@ import be.devine.cp3.bookApplication.pageViewer.vo.PageVO;
 import be.devine.cp3.bookApplication.requestQueue.ImageTask;
 import be.devine.cp3.bookApplication.requestQueue.RequestQueue;
 
+import flash.display.Bitmap;
+
+import flash.display.BitmapData;
+
 import flash.display.Loader;
+import flash.events.Event;
 
 import starling.display.DisplayObject;
+import starling.display.Image;
 
 import starling.display.Sprite;
 import starling.events.Event;
@@ -45,21 +51,38 @@ public class Page extends starling.display.Sprite{
     //Constructor
     /*************************************/
 
-    public function Page(data:PageVO) {
+    public function Page(data:PageVO,spreadChapter:int) {
         trace("IN PAGE");
+        //test
         //test
 
         appModel = AppModel.getInstance();
         switch (data.style){
             case "index":
                 //TODO CHAPTERS OPHALEN
+                    trace("IN INDEX");
+                    trace(appModel.arrChapter);
+
+                    var yPos:int = data.indexY;
+                for(var i:int = 1; i < appModel.arrChapter.length; i++){
+                    var c:TextField = new TextField(data.indexWidth, data.indexHeight, i + ". " +appModel.arrChapter[i], "Gotham", 14, color);
+                    c.x = data.indexX;
+                    c.y = yPos;
+                    c.hAlign = "left";
+                    addChild(c);
+
+                    yPos += data.indexHeight + 10;
+                }
+
+
+
                 break;
             case "text":
                     trace("EERSTE TEKST");
                // string = string.split("\r").join("");
                     //var paragraphText:String;
                     //if(data.paragraph != "") paragraphText = removeTabsAndNewLines(data.paragraph);
-                    paragraph = new TextField(data.paragraphWidth, data.paragraphHeight, data.paragraph, "Century", 12, color);
+                    paragraph = new TextField(data.paragraphWidth, data.paragraphHeight, data.paragraph, "GEORGIA", 14, color);
                     paragraph.x = data.paragraphX;
                     paragraph.y = data.paragraphY;
                     paragraph.hAlign = "left";
@@ -68,14 +91,15 @@ public class Page extends starling.display.Sprite{
 
                 break;
             case "image":
-                    /*
+                trace("in page switch image");
+                trace(data.imageUrl);
                 imageX = data.image1X;
-                imageY = data.image1Height;
+                imageY = data.image1Y;
                 queue = new RequestQueue();
                 queue.add(new ImageTask(String(data.imageUrl)));
                 queue.start();
-                queue.addEventListener(Event.COMPLETE, requestQueueCompleted);
-                    */
+                queue.addEventListener(flash.events.Event.COMPLETE, requestQueueCompleted);
+
                 break;
             case "front":
 
@@ -106,18 +130,20 @@ public class Page extends starling.display.Sprite{
             pageNumberField.x = data.pageNumberX_even;
             //NOG CURRENT CHAPTER OP TE HALEN
 
+            trace("CHAPTER");
+            trace(appModel.arrChapter[spreadChapter]);
 
-            chapter = new TextField(data.chapterWidth, data.chapterHeight, "test", "Gotham", 12, color);
+        }else{
+            chapter = new TextField(data.chapterWidth, data.chapterHeight, String(appModel.arrChapter[spreadChapter - 1]), "Gotham", 12, color);
+            chapter.hAlign = "left";
             chapter.x = data.chapterX;
             chapter.y = data.chapterY;
             addChild(chapter);
-
-
-
-        }else{
             pageNumberField.x = data.pageNumberX_odd;
         }
-        addChild(pageNumberField);
+
+        if(pageNumber != 0) addChild(pageNumberField);
+
 
 
 
@@ -131,10 +157,14 @@ public class Page extends starling.display.Sprite{
     /*************************************/
     //Methods
     /*************************************/
-    private function requestQueueCompleted(event:Event):void {
+    private function requestQueueCompleted(event:flash.events.Event):void {
         var xPos:uint = 0;
         for (var i:uint = 0; i < queue.completedTasks.length; i++) {
-            var image:DisplayObject = queue.completedTasks[i] as DisplayObject;
+            var imageFlash:flash.display.DisplayObject = queue.completedTasks[i] as flash.display.DisplayObject;
+            var bd:BitmapData = new BitmapData(imageFlash.width, imageFlash.height, true,0xFFFFFFFF);
+            bd.draw(imageFlash);
+            var b:Bitmap = new Bitmap(bd);
+            var image:Image = Image.fromBitmap(b);
             image.x = imageX;
             image.y = imageY;
             addChild(image);

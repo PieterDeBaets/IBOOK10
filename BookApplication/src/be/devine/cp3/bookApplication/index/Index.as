@@ -85,9 +85,15 @@ public class Index extends starling.display.Sprite{
         addChild(btnIndex);
 
 
-        arrChapters = appModel.arrChapter;
+        arrChapters = new Array();
+        //arrChapters = appModel.arrChapter;
+        for each (var chapter:String in appModel.arrChapter) {
+            arrChapters.push(chapter);
+        }
         arrChapters.shift();
 
+        trace("appmodel.arrChapters " + appModel.arrChapter);
+        trace("arrChapters " + arrChapters);
         arrColors = appModel.arrColors;
 
 
