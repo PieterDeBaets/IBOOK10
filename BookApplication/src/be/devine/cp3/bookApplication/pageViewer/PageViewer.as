@@ -30,8 +30,7 @@ public class PageViewer extends Sprite{
     private var spread: Spread;
     private var appModel:AppModel;
 
-    private var backgroundTexture:Texture;
-    private var backgroundImage:Image;
+
 
     /*************************************/
     //Constructor
@@ -46,17 +45,10 @@ public class PageViewer extends Sprite{
 
         appModel = AppModel.getInstance();
 
-        backgroundTexture = appModel.atlas.getTexture('BasicCenterSpreadBackground');
-        backgroundImage = new Image(backgroundTexture);
-        backgroundImage.y = 0;
-        backgroundImage.scaleY=1.2;
-        addChild(backgroundImage);
+
 
         trace(appModel.arrBook[appModel.currentSpread]);
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, currentSpreadChangedHandler)
-
-
-        backgroundImage.x = Starling.current.stage.stageWidth/2 - backgroundImage.width/2;
 
        // trace(appModel.currentSpread);
         //trace(appModel.arrBook);

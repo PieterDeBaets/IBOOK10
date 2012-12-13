@@ -18,7 +18,7 @@ public class PageVO {
     public var titleWidth:int = 390;
     public var titleHeight:int = 400;
 
-    public var paragraph:String;
+    public var paragraph:String = '';
     public var paragraphX:int = 58;
     public var paragraphY:int= 43;
     public var paragraphWidth:int = 351;

@@ -21,7 +21,7 @@ public class PageVOFactory {
 
             case 'text':
                     for each(var paragraph in pageXML.p){
-                        pageVO.paragraph += paragraph + '\n \n';
+                        pageVO.paragraph +=  removeTabsAndNewLines(paragraph) + '\n \n';
                     }
 
                     //set X and Y offset if filled in
@@ -73,8 +73,19 @@ public class PageVOFactory {
                 break;
         }
 
+        function removeTabsAndNewLines($str:String):String
+        {
+            trace($str);
+            var rex:RegExp = /(\t|\n|\r)/gi;
+            $str = $str.replace(rex,'');
+            trace($str);
+            return $str;
+        }
+
         return pageVO;
     }
+
+
 
 }
 }

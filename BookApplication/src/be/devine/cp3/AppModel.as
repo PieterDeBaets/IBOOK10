@@ -98,6 +98,8 @@ public class AppModel extends EventDispatcher{
                 _currentSpread = arrBook.length -1;
             }
 
+
+
             dispatchEvent(new Event(CURRENT_SPREAD_CHANGED))
         }
     }

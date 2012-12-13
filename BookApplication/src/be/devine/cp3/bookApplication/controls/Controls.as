@@ -64,10 +64,24 @@ public class Controls extends Sprite{
         lightSwitch.x =18;
         lightSwitch.y = 11;
         lightSwitch.alpha = 0.3;
-
+        lightSwitch.addEventListener(TouchEvent.TOUCH, lightModeChanged);
         addChild(lightSwitch);
 
         Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
+    }
+
+    private function lightModeChanged(event:TouchEvent):void {
+        var touch:Touch = event.getTouch(lightSwitch);
+        if(touch){
+            if(touch.phase == TouchPhase.BEGAN){
+                appModel.lightMode = !appModel.lightMode;
+                trace(appModel.lightMode);
+            }else if(touch.phase == TouchPhase.HOVER){
+                Mouse.cursor = MouseCursor.BUTTON;
+            }
+        }else{
+            Mouse.cursor = MouseCursor.ARROW;
+        }
     }
 
     private function keyHandler(event:KeyboardEvent):void {

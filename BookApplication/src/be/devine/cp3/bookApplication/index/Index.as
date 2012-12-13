@@ -9,10 +9,8 @@ package be.devine.cp3.bookApplication.index {
 import avmplus.factoryXml;
 
 import be.devine.cp3.AppModel;
-import be.devine.cp3.bookApplication.BookApplication;
 
 import flash.events.Event;
-import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
 import flash.ui.Mouse;
 import flash.ui.MouseCursor;
