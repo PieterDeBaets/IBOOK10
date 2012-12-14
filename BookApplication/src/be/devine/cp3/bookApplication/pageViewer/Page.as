@@ -6,8 +6,14 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.bookApplication.pageViewer {
+import avmplus.variableXml;
+
 import be.devine.cp3.AppModel;
+import be.devine.cp3.bookApplication.pageViewer.vo.FrontPageVO;
+import be.devine.cp3.bookApplication.pageViewer.vo.ImagePageVO;
+import be.devine.cp3.bookApplication.pageViewer.vo.IndexPageVo;
 import be.devine.cp3.bookApplication.pageViewer.vo.PageVO;
+import be.devine.cp3.bookApplication.pageViewer.vo.TextPageVO;
 import be.devine.cp3.bookApplication.requestQueue.ImageTask;
 import be.devine.cp3.bookApplication.requestQueue.RequestQueue;
 
@@ -65,70 +71,27 @@ public class Page extends starling.display.Sprite{
 
         switch (data.style){
             case "index":
-                    trace("IN INDEX");
-                    trace(appModel.arrChapter);
-
-                    var yPos:int = data.indexY;
-                for(var i:int = 1; i < appModel.arrChapter.length; i++){
-                    c = new TextField(data.indexWidth, data.indexHeight, i + ". " +appModel.arrChapter[i], "Gotham", 14, color);
-                    c.x = data.indexX;
-                    c.y = yPos;
-                    c.hAlign = "left";
-                    addChild(c);
-                    indexArr.push(c);
-
-                    yPos += data.indexHeight + 10;
-                }
+                    createIndexPage(data);
                 break;
+
             case "text":
-                    trace("EERSTE TEKST");
-               // string = string.split("\r").join("");
-                    //var paragraphText:String;
-                    //if(data.paragraph != "") paragraphText = removeTabsAndNewLines(data.paragraph);
-                    paragraph = new TextField(data.paragraphWidth, data.paragraphHeight, data.paragraph, "GEORGIA", 14, color);
-                    paragraph.x = data.paragraphX;
-                    paragraph.y = data.paragraphY;
-                    paragraph.hAlign = "left";
-                    paragraph.vAlign = "top";
-                    addChild(paragraph);
-
+                    createTextPage(data);
                 break;
+
             case "image":
-                trace("in page switch image");
-                trace(data.imageUrl);
-                imageX = data.image1X;
-                imageY = data.image1Y;
-                queue = new RequestQueue();
-                queue.add(new ImageTask(String(data.imageUrl)));
-                queue.start();
-                queue.addEventListener(flash.events.Event.COMPLETE, requestQueueCompleted);
-
+                    crateImagePage(data);
                 break;
+
             case "front":
-
-                    title = new TextField(data.titleWidth, data.titleHeight, data.title, "Gotham", 24, color);
-                    title.x = data.titleX;
-                    title.y = data.titleY;
-                    addChild(title);
-
+                    createFrontPage(data);
                 break;
         }
 
         appModel.addEventListener(AppModel.LIGHTMODE_CHANGED, lightModeChanged);
 
-
         pageNumber = data.pageNumber;
         pageNumberField = new TextField(data.pageNumberWidth, data.pageNumberHeight, String(pageNumber), "Gotham", 12, color);
         pageNumberField.y = data.pageNumberY;
-
-        /*
-        trace("pagenumber " + pageNumber);
-        trace("number width " + data.pageNumberWidth);
-        trace("number height " + data.pageNumberHeight);
-        trace("x " + data.pageNumberX_even);
-        trace("y even" + data.pageNumberX_odd);
-        trace("y odd" + data.pageNumberY);
-        */
 
         if(isEven(pageNumber)){
             pageNumberField.x = data.pageNumberX_even;
@@ -147,6 +110,53 @@ public class Page extends starling.display.Sprite{
         }
 
         if(pageNumber != 0) addChild(pageNumberField);
+    }
+
+    private function createIndexPage(data:PageVO):void {
+        var ivo:IndexPageVo = data as IndexPageVo;
+
+        //TODO CHAPTERS OPHALEN
+        trace("IN INDEX");
+        trace(appModel.arrChapter);
+
+        var yPos:int = ivo.y;
+        for(var i:int = 1; i < appModel.arrChapter.length; i++){
+            c = new TextField(ivo.width, ivo.width, i + ". " +appModel.arrChapter[i], "Gotham", 14, color);
+            c.x = ivo.x;
+            c.y = yPos;
+            c.hAlign = "left";
+            addChild(c);
+            indexArr.push(c);
+            yPos += ivo.height + 10;
+        }
+    }
+
+    private function createFrontPage(data:PageVO):void {
+        var fvo:FrontPageVO = data as FrontPageVO;
+        title = new TextField(fvo.width, fvo.height, fvo.title, "Gotham", 24, color);
+        title.x = fvo.x;
+        title.y = fvo.y;
+        addChild(title);
+    }
+
+    private function crateImagePage(data:PageVO):void {
+        var imgvo:ImagePageVO = data as ImagePageVO;
+        imageX = imgvo.x;
+        imageY = imgvo.y;
+        queue = new RequestQueue();
+        queue.add(new ImageTask(String(imgvo.imgUrl)));
+        queue.start();
+        queue.addEventListener(flash.events.Event.COMPLETE, requestQueueCompleted);
+    }
+
+    private function createTextPage(data:PageVO):void {
+        var tvo:TextPageVO = data as TextPageVO;
+        paragraph = new TextField(tvo.width, tvo.height, tvo.paragraph, "GEORGIA", 14, color);
+        paragraph.x = tvo.x;
+        paragraph.y = tvo.y;
+        paragraph.hAlign = "left";
+        paragraph.vAlign = "top";
+        addChild(paragraph);
     }
 
     private function lightModeChanged(event:flash.events.Event):void {
@@ -179,6 +189,7 @@ public class Page extends starling.display.Sprite{
             var b:Bitmap = new Bitmap(bd);
             var image:Image = Image.fromBitmap(b);
 
+            //TODO scalen van te grote images
             image.x = imageX;
             image.y = imageY;
             addChild(image);

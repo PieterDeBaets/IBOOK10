@@ -12,6 +12,28 @@ public class PageVO {
     /*************************************/
     //Properties
     /*************************************/
+
+
+    public var width:int;
+    public var height:int;
+    public var x:int;
+    public var y:int;
+    public var style:String;
+
+    public var pageNumber:int;
+    public var pageNumberY:int = 675;
+    public var pageNumberX_odd:int = 407;
+    public var pageNumberX_even:int = 90;
+    public var pageNumberWidth:int = 30;
+    public var pageNumberHeight:int = 30;
+
+    public var chapter:String;
+    public var chapterWidth:int = 326;
+    public var chapterHeight:int = 30;
+    public var chapterX:int = 65;
+    public var chapterY:int = pageNumberY;
+
+    /*
     public var title:String;
     public var titleX:int= 58;
     public var titleY:int= 57;
@@ -31,13 +53,6 @@ public class PageVO {
     public var image1Width:int = 391;
     public var image1Height:int = 585;
 
-    public var pageNumber:int;
-    public var pageNumberY:int = 675;
-    public var pageNumberX_odd:int = 407;
-    public var pageNumberX_even:int = 90;
-    public var pageNumberWidth:int = 30;
-    public var pageNumberHeight:int = 30;
-
     public var index:String;
     public var indexX:int = 95;
     public var indexY:int = 70;
@@ -49,10 +64,8 @@ public class PageVO {
     public var chapterHeight:int = 30;
     public var chapterX:int = 65;
     public var chapterY:int = paragraphY + paragraphHeight + 140;
+    */
 
-
-
-    public var style:String;
 
     /*************************************/
     //Constructor

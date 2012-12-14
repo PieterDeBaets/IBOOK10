@@ -122,11 +122,11 @@
     <!--<programMenuFolder></programMenuFolder>-->
 
     <!-- The icon the system uses for the application. For at least one resolution, specify the path to a PNG file included in the AIR package. Optional. -->
-    <icon>
+    <!--<icon>
         <image16x16>assets/icons/smallIcon.png</image16x16>
         <image128x128>assets/icons/icon.png</image128x128>
     </icon>
-
+    -->
     <!-- Whether the application handles the update when a user double-clicks an update version of the AIR file (true),
          or the default AIR application installer handles the update (false). Optional. Default false. -->
     <!--<customUpdateUI></customUpdateUI>-->

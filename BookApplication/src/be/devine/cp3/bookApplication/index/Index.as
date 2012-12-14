@@ -6,9 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3.bookApplication.index {
-import be.devine.cp3.AppModel;
+import avmplus.factoryXml;
 
-import flash.display.Sprite;
+import be.devine.cp3.AppModel;
 
 import flash.events.Event;
 import flash.ui.Keyboard;
@@ -16,22 +16,30 @@ import flash.ui.Mouse;
 import flash.ui.MouseCursor;
 
 import starling.animation.Transitions;
+
+
 import starling.animation.Tween;
 import starling.core.Starling;
+
 import starling.display.Image;
+
 import starling.display.Quad;
 import starling.display.Sprite;
+import starling.events.Event;
 import starling.events.KeyboardEvent;
 import starling.events.Touch;
 import starling.events.TouchEvent;
 import starling.events.TouchPhase;
+import starling.text.TextField;
 import starling.textures.Texture;
+import starling.textures.TextureAtlas;
 
-public class Index extends Sprite{
+
+public class Index extends starling.display.Sprite{
     /*************************************/
     //Properties
     /*************************************/
-    private var background:Quad; // BasicIndexBackground
+    private var background:starling.display.Quad; // BasicIndexBackground
     private var transparency:Number = 0.76;
     private var arrChapters:Array;
     private var btnIndexTexture:Texture;
@@ -46,8 +54,6 @@ public class Index extends Sprite{
     private var animation:Tween;
     private var tweenSpeed:Number = .5;
     private var arrTextfields:Array;
-    private var containter:starling.display.Sprite;
-
 
     /*************************************/
     //Constructor
@@ -55,11 +61,7 @@ public class Index extends Sprite{
 
     public function Index() {
         appModel = AppModel.getInstance();
-        //this.y = 5;
-
-        containter = new Sprite();
-        containter.y = 5;
-
+        this.y = 5;
 
         //clickhandler dispatcht CURRENT_PAGE_CHANGED naar 1e pagina van het geselecteerde chapter
 
@@ -67,7 +69,7 @@ public class Index extends Sprite{
 
         background = new Quad(212, 530, 0x000000);
         background.alpha = transparency;
-        containter.addChild(background);
+        addChild(background);
 
         //PIJL
 
@@ -77,8 +79,8 @@ public class Index extends Sprite{
         btnIndex.pivotY = btnIndex.height/2;
         btnIndex.rotation = Math.PI;
         btnIndex.alpha = transparency;
-        btnIndex.addEventListener(TouchEvent.TOUCH, clickHandler);
-        containter.addChild(btnIndex);
+        btnIndex.addEventListener(starling.events.TouchEvent.TOUCH, clickHandler);
+        addChild(btnIndex);
 
 
         arrChapters = new Array();
@@ -111,16 +113,13 @@ public class Index extends Sprite{
             var t:IndexButton = new IndexButton(chapterString, color);
             t.x = xPos;
             t.y = yPos;
-            t.addEventListener(TouchEvent.TOUCH,chapterClickHandler);
+            t.addEventListener(starling.events.TouchEvent.TOUCH,chapterClickHandler);
             arrTextfields.push(t);
             textContainer.addChild(t);
             yPos += 50;
         }
 
-        containter.addChild(textContainer);
-
-
-
+        addChild(textContainer);
 
         appModel.addEventListener(AppModel.INDEXVISIBLE_CHANGED, toggleVisible);
 
@@ -133,10 +132,8 @@ public class Index extends Sprite{
         textContainer.x = background.x + 20;
         textContainer.y = background.y + 20;
 
-        Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keydownHandler)
+        Starling.current.stage.addEventListener(starling.events.KeyboardEvent.KEY_DOWN, keydownHandler)
         toggleVisible(null);
-
-        addChild(containter);
     }
 
 
@@ -144,37 +141,37 @@ public class Index extends Sprite{
     //Methods
     /*************************************/
 
-        //TODO als je blijft drukken op spatie dan flipt de index
-    private function keydownHandler(event:KeyboardEvent):void {
+    //TODO als je blijft drukken op spatie dan flipt de index
+    private function keydownHandler(event:starling.events.KeyboardEvent):void {
         if(event.keyCode == Keyboard.SPACE){
             appModel.indexVisible = !appModel.indexVisible;
         }
 
     }
 
-    private function clickHandler(event:TouchEvent):void{
+    private function clickHandler(event:starling.events.TouchEvent):void{
         var touch:Touch = event.getTouch(btnIndex);
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
-                appModel.indexVisible = !appModel.indexVisible;
+               appModel.indexVisible = !appModel.indexVisible;
 
 
             }
         }
     }
 
-    private function toggleVisible(event:Event):void{
+    private function toggleVisible(event:flash.events.Event):void{
         if(!appModel.indexVisible){
             setupAnimation(Starling.current.stage.stageHeight-190);
         }else{
-            setupAnimation(Starling.current.stage.stageHeight-containter.height-60);
+            setupAnimation(Starling.current.stage.stageHeight-this.height-60);
 
         }
     }
 
     private function setupAnimation(value:uint):void{
-        if (animation) animation.reset(containter, tweenSpeed,Transitions.EASE_OUT);
-        else           animation = new Tween(containter, tweenSpeed,Transitions.EASE_OUT);
+        if (animation) animation.reset(this, tweenSpeed,Transitions.EASE_OUT);
+        else           animation = new Tween(this, tweenSpeed,Transitions.EASE_OUT);
 
         animation.animate("y", value);
 
@@ -182,7 +179,7 @@ public class Index extends Sprite{
     }
 
 
-    private function chapterClickHandler(event:TouchEvent):void {
+    private function chapterClickHandler(event:starling.events.TouchEvent):void {
         var touch:Touch = event.getTouch(textContainer);
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
