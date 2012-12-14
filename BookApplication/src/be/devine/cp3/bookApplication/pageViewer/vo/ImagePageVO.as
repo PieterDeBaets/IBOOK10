@@ -10,7 +10,7 @@ public class ImagePageVO extends PageVO{
     public var imgUrl:String;
     public function ImagePageVO() {
         x = 64;
-        y = 46;
+        y = 70;
         width = 391;
         height = 585;
 
