@@ -55,6 +55,7 @@ public class BookApplication extends starling.display.Sprite {
         backgroundTexture = appModel.atlas.getTexture('BasicCenterSpreadBackground');
         backgroundImage = new Image(backgroundTexture);
         backgroundImage.y = 0;
+        backgroundImage.blendMode = 'multiply' ;
         backgroundImage.scaleY=1.2;
         addChild(backgroundImage);
 
@@ -99,6 +100,7 @@ public class BookApplication extends starling.display.Sprite {
         setChildIndex(pageViewer, 0);
 
         setChildIndex(backgroundImage, 0);
+        //setChildIndex(background, 0);
 
     }
 

@@ -36,6 +36,8 @@ public class Page extends starling.display.Sprite{
     private var paragraph:TextField;
     private var caption:TextField;
     private var chapter:TextField;
+    private var c:TextField;
+    private var indexArr:Array = new Array();
     private var image:Loader;
     private var pageNumber:int;
     private var pageNumberField:TextField;
@@ -69,11 +71,12 @@ public class Page extends starling.display.Sprite{
 
                     var yPos:int = data.indexY;
                 for(var i:int = 1; i < appModel.arrChapter.length; i++){
-                    var c:TextField = new TextField(data.indexWidth, data.indexHeight, i + ". " +appModel.arrChapter[i], "Gotham", 14, color);
+                    c = new TextField(data.indexWidth, data.indexHeight, i + ". " +appModel.arrChapter[i], "Gotham", 14, color);
                     c.x = data.indexX;
                     c.y = yPos;
                     c.hAlign = "left";
                     addChild(c);
+                    indexArr.push(c);
 
                     yPos += data.indexHeight + 10;
                 }
@@ -158,6 +161,11 @@ public class Page extends starling.display.Sprite{
         if(title) title.color = color;
         if(pageNumberField) pageNumberField.color = color;
         if(chapter) chapter.color = color;
+        if(indexArr.length >0){
+            for each (var o:TextField in indexArr) {
+                o.color = color;
+            }
+        }
     }
 
     /*************************************/
