@@ -67,8 +67,6 @@ public class PageViewer extends Sprite{
         spread = new Spread(appModel.arrBook[appModel.currentSpread]);
         addChild(spread);
         trace("IN CURRENTSPREADCHANGEDHANDLER PAGEVIEWER");
-
-
     }
     /*************************************/
     //Getters & Setters
