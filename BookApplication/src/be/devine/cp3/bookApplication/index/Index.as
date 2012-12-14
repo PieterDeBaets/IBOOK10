@@ -11,6 +11,8 @@ import avmplus.factoryXml;
 import be.devine.cp3.AppModel;
 import be.devine.cp3.bookApplication.BookApplication;
 
+import flash.display.Sprite;
+
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 import flash.ui.Keyboard;
@@ -56,6 +58,7 @@ public class Index extends starling.display.Sprite{
     private var animation:Tween;
     private var tweenSpeed:Number = .5;
     private var arrTextfields:Array;
+
 
     /*************************************/
     //Constructor
@@ -122,6 +125,37 @@ public class Index extends starling.display.Sprite{
         }
 
         addChild(textContainer);
+
+        //SCROLL OP TEXTCONTAINER
+/*
+        contentMask = new Sprite();
+        contentMask.graphics.beginFill(0x555555,1);
+        contentMask.graphics.drawRect(0,0,content.width,300);
+        contentMask.graphics.endFill();
+        addChild(contentMask);
+
+        content.x = content.y = contentMask.x = contentMask.y = 0;
+        content.mask = contentMask;
+
+        var config:ScrollBarOptions = new ScrollBarOptions();
+        config.height = contentMask.height;
+        config.width = 10;
+        config.thumbcolor = 0xAAAAAA;
+        config.thumbheight = 10;
+        config.trackcolor = 0x222222;
+
+        scrollbar = new ScrollBar(config);
+        scrollbar.x = contentMask.width + contentMask.x;
+        scrollbar.y = contentMask.y;
+        scrollbar.addEventListener(ScrollBar.POSITION_UPDATED,positionUpdatedHandler);
+        addChild(scrollbar);
+
+*/
+
+
+
+
+
 
         appModel.addEventListener(AppModel.INDEXVISIBLE_CHANGED, toggleVisible);
 
