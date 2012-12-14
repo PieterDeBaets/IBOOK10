@@ -17,6 +17,7 @@ import flash.display.BitmapData;
 
 import flash.display.Loader;
 import flash.events.Event;
+import flash.system.ApplicationDomain;
 
 import starling.display.DisplayObject;
 import starling.display.Image;
@@ -35,6 +36,8 @@ public class Page extends starling.display.Sprite{
     private var paragraph:TextField;
     private var caption:TextField;
     private var chapter:TextField;
+    private var c:TextField;
+    private var indexArr:Array = new Array();
     private var image:Loader;
     private var pageNumber:int;
     private var pageNumberField:TextField;
@@ -57,25 +60,25 @@ public class Page extends starling.display.Sprite{
         //test
 
         appModel = AppModel.getInstance();
+
+        lightModeChanged(null);
+
         switch (data.style){
             case "index":
-                //TODO CHAPTERS OPHALEN
                     trace("IN INDEX");
                     trace(appModel.arrChapter);
 
                     var yPos:int = data.indexY;
                 for(var i:int = 1; i < appModel.arrChapter.length; i++){
-                    var c:TextField = new TextField(data.indexWidth, data.indexHeight, i + ". " +appModel.arrChapter[i], "Gotham", 14, color);
+                    c = new TextField(data.indexWidth, data.indexHeight, i + ". " +appModel.arrChapter[i], "Gotham", 14, color);
                     c.x = data.indexX;
                     c.y = yPos;
                     c.hAlign = "left";
                     addChild(c);
+                    indexArr.push(c);
 
                     yPos += data.indexHeight + 10;
                 }
-
-
-
                 break;
             case "text":
                     trace("EERSTE TEKST");
@@ -111,6 +114,7 @@ public class Page extends starling.display.Sprite{
                 break;
         }
 
+        appModel.addEventListener(AppModel.LIGHTMODE_CHANGED, lightModeChanged);
 
 
         pageNumber = data.pageNumber;
@@ -143,16 +147,25 @@ public class Page extends starling.display.Sprite{
         }
 
         if(pageNumber != 0) addChild(pageNumberField);
-
-
-
-
-
-
-
     }
 
+    private function lightModeChanged(event:flash.events.Event):void {
+        if(appModel.lightMode){
+            color = 0xffffff;
+        }else{
+            color = 0x000000;
+        }
 
+        if(paragraph) paragraph.color = color;
+        if(title) title.color = color;
+        if(pageNumberField) pageNumberField.color = color;
+        if(chapter) chapter.color = color;
+        if(indexArr.length >0){
+            for each (var o:TextField in indexArr) {
+                o.color = color;
+            }
+        }
+    }
 
     /*************************************/
     //Methods
@@ -165,6 +178,7 @@ public class Page extends starling.display.Sprite{
             bd.draw(imageFlash);
             var b:Bitmap = new Bitmap(bd);
             var image:Image = Image.fromBitmap(b);
+
             image.x = imageX;
             image.y = imageY;
             addChild(image);

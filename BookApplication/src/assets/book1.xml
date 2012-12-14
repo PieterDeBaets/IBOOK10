@@ -1,6 +1,13 @@
 <book title='Operating Manual For Spaceship Earth' author='R. Buckminster Füller' year='1968' src='cover.jpg'>
 
     <chapter title='Index'>
+        <!--<spread>
+            <page style="empty"></page>
+            <page style="cover">
+                <title>Operating Manual for Spaceship Earth</title>
+                <author>R.Buckminster Fuller</author>
+            </page>
+        </spread> -->
         <spread>
             <page style="emtpy"></page>
             <page style="index"></page>
@@ -18,7 +25,7 @@
         </spread>
 
         <spread>
-            <page style="text">
+            <page style="text" X='0' Y='0' width='200'>
                 <p>
                     I am enthusiastic over humanity’s extraordinary and sometimes very timely ingenuities. If you are in a shipwreck and all the boats are gone, a piano top buoyant enough to keep you afloat that comes
 along makes a fortuitous life preserver. But this is not to say that the best way to design a life preserver is in the form of a piano top. I think that we are clinging to a great many piano tops in accepting yesterday’s fortuitous contrivings as constituting the only means for solving a given problem. Our brains deal exclusively with special-case experiences. Only our minds are able to discover the generalized principles operating without exception in each and every special-experience case which if detected and mastered will give knowledgeable advantage in all instances.Because our spontaneous initiative has been frustrated, too often inadvertently, in earliest childhood we do not tend, customarily, to dare to think competently regarding our potentials. We find it socially easier to go on with our narrow, shortsighted specialization’s and leave it to others---primarily to the politicians---to find some way of resolving our common dilemmas. Countering that spontaneous grownup trend to narrowness I will do my, hopefully "childish," best to confront
@@ -46,7 +53,7 @@ new and usually more effective uses. At any rate, in 1927 I evolved a forecast. 
         </spread>
 
         <spread>
-            <page style="text" X='100'>
+            <page style="text">
                 <p>
 1927’S prognosticating went only to 1952---that is, for a quarter-century, but some of it went on
 for a half-century, to 1977.
@@ -234,6 +241,7 @@ cargoes in their ships, due to nature’s floatability-cargoes so large they cou
 carried on the backs of animals or the backs of men. Furthermore, the ships could sail across a
                 </p>
             </page>
+
         </spread>
 
         <spread>
@@ -272,6 +280,11 @@ anti-evolutionary or men will no longer be living on Earth. If you don’t compr
 listen to me closely.
                 </p>
             </page>
+        </spread>
+
+        <spread>
+            <page style="image" url='1-3.jpg'></page>
+            <page style="empty"></page>
         </spread>
     </chapter>
 
@@ -329,24 +342,7 @@ therefore found it necessary to surround themselves with super-loyal,
         </spread>
 
         <spread>
-            <page style="text">
-                <p>
-muscular but dull-brained illiterates who could not see nor savvy their masters’ stratagems. There
-was great safety in the mental dullness of these henchmen. The Great Pirates realized that the only
-people who could possibly contrive to displace them were the truly bright people. For this reason
-their number-one strategy was secrecy. If the other powerful pirates did not know where you were going,
-nor when you had gone, nor when you were coming back, they would not know how to waylay you. If anyone
-knew when you were coming home, "small-timers" could come out in small boats and waylay you in the
-dark and take you over-just before you got home tiredly after a two-year treasure-harvesting voyage.
-Thus hijacking and second-rate piracy became a popular activity around the world’s shores and harbors.
-Thus secrecy became the essence of the lives of the successful pirates; ergo, how little is known
-today of that which I am relating.
-                </p>
-                <p>
-Leonardo da Vinci is the outstanding example of the comprehensively anticipatory design scientist.
-Operating under the patronage of the Duke of Milan he designed the fortified defenses and weaponry
-as well as the tools of peaceful production. Many other great military powers had
-                </p>
+            <page style='image' url='2-1.jpg'>
             </page>
             <page style="text">
                 <p>
@@ -394,24 +390,8 @@ sovereigns and their prime ministers, as only innocuously and locally modified h
 the separate sovereignties’ internal democratic processes. As we soon shall see, the
                 </p>
             </page>
-            <page style="text">
-                <p>
-British Isles lying off the coast of Europe constituted in effect a fleet of unsinkable ships and
-naval bases commanding all the great harbours of Europe. Those islands were the possession of the
-topmost Pirates. Since the Great Pirates were building, maintaining, supplying their ships on those
-islands, they also logically made up their crews out of the native islanders who were simply seized
-or commanded aboard by imperial edict. Seeing these British Islanders aboard the top pirate ships
-the people around the world mistakenly assumed that the world conquest by the Great Pirates was a
-conquest by the will, ambition, and organization of the British people. Thus was the G. P.’s grand
-deception victorious. But the people of those islands never had the ambition to go out and conquer
-the world. As a people they were manipulated by the top pirates and learned to cheer as they were told of their nation’s world prowess.
-                </p>
-                <p>
-The topmost Great Pirates’ Leonardos discovered-both in their careful, long-distance planning and
-in their anticipatory inventing‹that the grand strategies of sea power made it experimentally clear
-that a plurality of ships could usually outmaneuver one ship. So the Great Pirates’ Leonardos
-invented navies. Then, of
-                </p>
+            <page style='image' url='2-2.jpg'>
+
             </page>
         </spread>
 
@@ -511,25 +491,8 @@ exchange media and trade balancing tricks by which the top pirate, as (in gamble
         </spread>
 
         <spread>
-            <page style="text">
-                <p>
-Then there came a time, which was World War I, when the most powerful out-pirates challenged the
-in-pirates with the scientific and technological innovation of an entirely new geometry of thinking.
-The out-pirates attack went under and above the sea surface and into the invisible realm of
-electronics and chemical warfaring. Caught off-guard, the in-pirates, in order to save themselves,
-had to allow their scientists to go to work on their own inscrutable terms. Thus, in saving
-themselves, the Great Pirates allowed the scientists to plunge their grand, industrial logistics,
-support strategy into the vast ranges of the electro-magnetic spectrum that were utterly invisible
-to the pirates.The pirates until then had ruled the world through their extraordinarily keen senses.
-They judged things for themselves, and they didn’t trust anyone else’s eyes. They trusted only that
-which they could personally smell, hear, touch, or see. But the Great Pirates couldn’t see what was
-going on in the vast ranges of the electro-magnetic reality. Technology was going from wire to
-wireless, from track to trackless, from pipe to pipeless, and from visible structural muscle to the
-invisible chemical element strengths of metallic alloys and electro-magnetics.
-                </p>
-                <p>
-The Great Pirates came out of that
-                </p>
+            <page style='image' url='3-1.jpg'>
+
             </page>
             <page style="text">
                 <p>
@@ -572,29 +535,8 @@ write the equation of intellect. That equation is operating inexorably, and the 
 now manifesting its ability to reign over the physical.
                 </p>
             </page>
-            <page style="text">
-                <p>
-This is the essence of human evolution upon Spaceship Earth. If the present planting of humanity
-upon Spaceship Earth cannot comprehend this inexorable process and discipline itself to serve
-exclusively that function of metaphysical mastering of the physical it will be discontinued, and
-its potential mission in universe will be carried on by the metaphysically endowed capabilities of
-other beings on other spaceship planets of universe.
-                </p>
-                <p>
-The Great Pirates did run the world. They were the first and last to do so. They were world men,
-and they ran the world with ruthless and brilliant pragmatism based on the mis-seemingly
-"fundamental" information of their scientifically specialized servants. First came their Royal
-Society scientific servants, with their "Great" Second Law of thermodynamics, whose "entropy"
-showed that every energy machine kept losing energy and eventually "ran down." In their
-pre-speed-of-light-measurement misconceptioning of an omnisimultaneous-instant universe"‹that
-universe, as an energy machine was thought, also to be "running down." And thus the energy
-wealth and life support were erroneously thought to be in continuous depletion-orginating the
-misconception of "spending."
-                </p>
-                <p>
-Next came Thomas Malthus, professor of political economics of the Great Pirate’s East India
-Company, who said that man was multiplying himself at a
-                </p>
+            <page style='image' url='3-2.jpg'>
+
             </page>
         </spread>
 
@@ -669,22 +611,8 @@ a typical history-that of a type of bird which lived on a special variety of mic
 Flying around, these birds
                 </p>
             </page>
-            <page style="text">
-                 <p>
-gradually discovered that there were certain places in which that particular marine life tended
-to pocket-in the marshes along certain ocean shores of certain lands. So, instead of flying
-aimlessly for chance finding of that marine life they went to where it was concentrated in
-bayside marshes. After a while, the water began to recede in the marshes, because the Earth’s
-polar ice cap was beginning to increase. Only the birds with very long beaks could reach deeply
-enough in the marsh holes to get at the marine life. The unfed, short-billed birds died off. This
-left only the long-beakers. When the birds’ inborn drive to reproduce occurred there were only
-other long-beakers surviving with whom to breed. This concentrated their long-beak genes. So, with
-continually receding waters and generation to generation inbreeding, longer and longer beaked
-birds were produced. The waters kept receding, and the beaks of successive generations of the
-birds grew bigger and bigger. The long-beakers seemed to be prospering when all at once there was
-a great fire in the marshes. It was discovered that because their beaks had become so heavy these
-birds could no longer fly. They could not escape the flames by flying
-                 </p>
+            <page style='image' url='2-5.jpg'>
+
             </page>
         </spread>
 
@@ -711,26 +639,8 @@ none of the comprehensive and realistic world knowledge that the Great Pirates h
 Because world societies thought mistakenly of their local politicians,
                 </p>
             </page>
-            <page style="text">
-                <p>
-who were only the stooges of the Great Pirates, as being realistically the head men, society went
-to them to get the industrial and economic machinery going again. Because industry is inherently
-world-coordinate these world economic depression events of the 1920’S and 1930’S meant that each
-of the local head politicians of a number of countries were asked separately to make the world work.
-On this basis the world-around inventory of resources was no longer integratable. Each of the
-political leaders’ mandates were given from different ideological groups, and their differing
-viewpoints and resource difficulties led inevitably to World War II.
-                </p>
-                <p>
-The politicians, having an automatic bias, were committed to defend and advantage only their own
-side. Each assumed the validity of the Malthusian-Darwin-you-or-me-to-the-death struggle. Because
-of the working concept that there was not enough to go around, the most aggressive political
-leaders exercised their political leadership by heading their countries into war to overcome the
-rest of the world, thus to dispose of the unsupportable excess population through decimation and
-starvation-the age-old, lethal formula of ignorant men. Thus we had all our world society
-specializing, whether under fascism, communism, or capitalism. All the great ideological groups
-assumed Armageddon.
-                </p>
+            <page style='image' url='2-6.jpg'>
+
             </page>
         </spread>
 
@@ -838,22 +748,8 @@ unbeknownst to me, one of you happens to be a Cape Kennedy capsuler.
         </spread>
 
         <spread>
-            <page style="text">
-                   <p>
-Our little Spaceship Earth is only eight thousand miles in diameter, which is almost a negligible
-dimension in the great vastness of space. Our nearest star‹our energy-supplying mother-ship, the
-Sun‹is ninety-two million miles away, and the nearest star is one hundred thousand times further
-away. It takes approximately four and one third years for light to get to us from the next
-nearest energy supply ship star. That is the kind of space-distanced pattern we are flying.
-Our little Spaceship Earth is right now travelling at sixty thousand miles an hour around the
-around the sun and is also spinning axially, which, at the latitude of Washington, D. C., adds
-approximately one thousand miles per hour to our motion. Each minute we both spin at one hundred
-miles and zip in orbit at one thousand miles. That is a whole lot of spin and zip. When we launch
-our rocketed space capsules at fifteen thousand miles an hour, that additional acceleration speed
-we give the rocket to attain its own orbit around our speeding Spaceship Earth is only one-fourth
-greater than the speed of our big planetary spaceship.Spaceship Earth was so extraordinarily well
-invented and designed that to our knowledge
-                   </p>
+            <page style='image' url='4-2.jpg'>
+
             </page>
             <page style="text">
                 <p>
@@ -899,27 +795,8 @@ controls of life systems as well as of nuclear energy and chemical structuring i
 extraordinary design of
                 </p>
             </page>
-            <page style="text">
-               <p>
-the Spaceship Earth, its equipment, passengers, and internal support systems. It is therefore
-paradoxical but strategically explicable, as we shall see, that up to now we have been mis-using,
-abusing, and polluting this extraordinary chemical energy-interchanging system for successfully
-regenerating all life aboard our planetary spaceship.
-               </p>
-                <p>
-One of the interesting things to me about our spaceship is that it is a mechanical vehicle, just
-as is an automobile. If you own an automobile, you realize that you must put oil and gas into it,
-and you must put water in the radiator and take care of the car as a whole. You begin to develop
-quite a little thermodynamic sense. You know that you’re either going to have to keep the machine
-in good order or it’s going to be in trouble and fail to function. We have not been seeing our
-Spaceship Earth as an integrally-designed machine which to be persistently successful must be
-comprehended and serviced in total.
-                </p>
-                <p>
-Now there is one outstandingly important fact regarding Spaceship Earth, and that is that no
-instruction book came with it. I think it’s very significant that there is no instruction book
-for successfully operating our ship. In view of the
-                </p>
+            <page style='image' url='4-3.jpg'>
+
             </page>
         </spread>
 
@@ -1127,33 +1004,8 @@ events. Eddington defines science as "the earnest attempt to set in order the fa
 Einstein and
                 </p>
             </page>
-            <page style="text">
-                <p>
-many other first-rank scientists noted that science is concerned exclusively with "facts of
-experience."
-                </p>
-                <p>
-Holding to the scientists’ experiences as all important, I define universe, including both the
-physical and metaphysical, as follows: The universe is the aggregate of all of humanity’s
-consciously-apprehended and communicated experience with the nonsimultaneous, nonidentical, and
-only partially overlapping, always complementary, weighable and unweighable, ever omni-transforming,
-event sequences.
-                </p>
-                <p>
-Each experience begins and ends-ergo, is finite. Because our apprehending is packaged, both
-physically and metaphysically, into time increments of alternate awakeness and asleepness as well
-as into separate finite conceptions such as the discrete energy quanta and the atomic nucleus
-components of the fundamental physical discontinuity, all experiences are finite. Physical
-experiments have found no solids, no continuous surfaces or lines‹only discontinuous constellations
-of individual events. An aggregate of finites is finite. Therefore, universe as experientially
-defined, including both the physical and metaphysical, is finite.
-                </p>
-                <p>
-It is therefore possible to initiate our general systems formulation at the all inclusive level
-of universe whereby no strategic variables will be omitted. There is an operational grand strategy
-of General Systems Analysis that proceeds from here. It is played somewhat like the game of
-"Twenty Questions," but G. S. A.
-                </p>
+            <page style='image' url='4-5.jpg'>
+
             </page>
         </spread>
 
@@ -1208,28 +1060,8 @@ never-repeatable evolutionary scenario. One picture
         </spread>
 
         <spread>
-            <page style="text">
-                <p>
-of the scenario about the caterpillar phase does not communicate its transformation into the
-butterfly phase, etc. The question, "I wonder what is outside the outside-of-universe?" is a
-request for a single picture description of a scenario of transformations and is an inherently
-invalid question. It is the same as looking at a dictionary and saying, ’"Which word is the
-dictionary?" It is a meaningless question.
-                </p>
-                <p>
-It is characteristic of "all" thinking‹of all system’s conceptioning-that all the lines of thought
-interrelationships must return cyclically upon themselves in a plurality of directions, as do
-various great circles around spheres. Thus may we interrelatedly comprehend the constellation-or
-system-of experiences under consideration. Thus may we comprehend how the special-case economy
-demonstrated by the particular system considered also discloses the generalized law of energy
-conservation of physical universe.
-                </p>
-                <p>
-To hit a duck in flight a hunter does not fire his gun at the bird where the gunner sees him but
-ahead of the bird, so that the bird and the bullet will meet each other at a point not in line
-between the gunner and the bird at time of firing. Gravity and wind also pull the bullet in two
-different directions which altogether
-                </p>
+            <page style='image' url='5-1.jpg'>
+
             </page>
             <page style="text">
                 <p>
@@ -1279,30 +1111,8 @@ of focal point entities comprising the problem.
 "Comprehension" means identifying all the most uniquely economical inter-relationships of
                 </p>
             </page>
-            <page style="text">
-                <p>
-the focal point entities involved. We may say then that:
-                </p>
-                <p>
-Comprehension = (redo in finished text)
-                </p>
-                <p>
-This is the way in which thought processes operate with mathematical logic. The mathematics
-involved consist of topology, combined with vectorial geometry, which combination I call
-"synergetics"-which word I will define while clarifying its use. By questioning many audiences,
-I have discovered that only about one in three hundred are familiar with synergy. The word is
-obviously not a popular word. Synergy is the only word in our language that means behavior of
-whole systems unpredicted by the separately observed behaviors of any of the system’s separate
-parts or any subassembly of the system’s parts. There is nothing in the chemistry of a toenail
-that predicts the existence of a human being.
-                </p>
-                <p>
-I once asked an audience of the National Honors Society in chemistry, "How many of you are
-familiar with the word, synergy?" and all hands went up. Synergy is the essence of chemistry.
-The tensile strength of chrome-nickel-steel, which is approximately 350,000 pounds per square
-inch, is 100,OOO P.S.I. greater than the sum of the tensile strengths of each of all its alloyed
-together, component, metallic elements. Here is a "chain" that is
-                </p>
+            <page style='image' url='5-3.jpg'>
+
             </page>
         </spread>
 
@@ -1411,9 +1221,8 @@ arithmetically in formula.
             </page>
         </spread>
         <spread>
-            <page style="text">
-                <p>expeditiously shrugged off because of seemingly more pressing, seemingly higher priority, new demands for the money. The most pressing of those demands is for war, for which the politicians suddenly accredit weaponry acquisitions and military tasks costing many times their previously asserted concepts of what we can afford.</p>
-                <p>Thus under lethal emergencies vast new magnitudes of wealth come mysteriously into effective operation. We don’t seem to be able to afford to do peacefully the logical things we say we ought to be doing to forestall warring-by producing enough to satisfy all the world needs. Under pressure we always find that we can afford to wage the wars brought about by the vital struggle of "have-nots" to share or take over the bounty of the "haves." Simply because it had seemed, theretofore, to cost too much to provide vital support of those "have-nots." The "haves" are thus forced in self-defense suddenly to articulate and realize productive wealth capabilities worth many times the amounts of monetary units they had known themselves to possess and, far more importantly, many times what it would have cost to give adequate economic support to the particular "have-nots" involved in the warring and, in fact, to all</p>
+            <page style='image' url='6-1.jpg'>
+
             </page>
             <page style="text">
                 <p>the world’s ’have-nots."</p>
@@ -1429,10 +1238,8 @@ arithmetically in formula.
                 <p>At present there is about seventy billion dollars of mined gold known to exist on board our Spaceship Earth. A little more than half of it-about forty billion-is classified as being "monetary"; that is, it exists in the forms of various national coinages or in the form of officially banked gold bullion bars. The remaining thirty billion is in private metallic hordes, jewelry, gold teeth, etc.</p>
                 <p>Since banks have no money of their own and only our deposits on which they earn "interest," bank wealth or money consists only of accrued bank income. Income represents an average return of 5 per cent on capital invested. We may assume therefore from an estimate of the world’s annual gross product that the capital assets, in the form of industrial production, on board</p>
             </page>
-            <page style="text">
-                <p>our Spaceship Earth are at present worth in excess of a quadrillion dollars. The world’s total of seventy billion dollars in gold represents only three one-thousandths of I per cent of the value of the world’s organized industrial production resources. The gold supply is so negligible as to make it pure voodoo to attempt to valve the world’s economic evolution traffic through the gold-sized needle’s "eye."</p>
-                <p>Gold was used for trading by the Great Pirates in lieu of any good faith whatsoever‹ and in lieu of any mutual literacy, scientific knowledge, intelligence, or scientific and technical know-how on both sides of the trading. Gold trading assumed universal rascality to exist. Yet the realization of the planners’ earnest conceptioning and feasible work on behalf of the ill-fated 60 per cent of humanity are entirely frustrated by this kind of nonsense.</p>
-                <p>We therefore proceed ever more earnestly with our general systems analysis of the problems of human survival, with the premise that at present neither the world’s political officials nor its bankers know what wealth is. In organizing our thoughts to discover and clarify what wealth is we also will attempt to establish an effective means to develop immediate working procedures for</p>
+            <page style='image' url='6-3.jpg'>
+
             </page>
         </spread>
 
@@ -1467,10 +1274,8 @@ arithmetically in formula.
                 <p>It is obvious that the real wealth of life aboard our planet is a forwardly-operative, metabolic, and intellectual regenerating system. Quite clearly we have vast amounts of income wealth as Sun radiation and Moon gravity to implement our forward success. Wherefore living only on our energy savings by burning up the fossil fuels which took billions of years to impound from the Sun or living on our capital by burning up our Earth’s atoms is lethally ignorant and also utterly irresponsible to our coming generations and their forward days. Our children and their children are our future days. If we do not comprehend and realize our potential ability to support all life forever we are cosmicly bankrupt.</p>
                 <p>Having identified the ignorance of society regarding its wealth capabilities to be a major factor in the frustration of effective planning and having roughly identified the meaning of wealth to which everyone can realistically subscribe, and intending later to sharpen its identity, we will now tackle the next phase of humanity’s total survival, prosperity, happiness, and regenerative inspiration with the problem-solving power of General Systems Theory as combined with both computer strategy-which is</p>
             </page>
-            <page style="text">
-                <p>known as cybernetics-and with synergetics -the latter consisting of the solving of problems by starting with known behaviors of whole systems plus the known behaviors of some of the systems’ parts, which advantageous information makes possible the discovery of other parts of the system and their respective behaviors, as for instance in geometry the known sum-180 degrees-of a triangle’s angles, plus the known behavior of any two sides and their included angle and vice versa, enables the discovery and use of the precise values of the other three parts.</p>
-                <p>Synergetics discloses that wealth, which represents our ability to deal successfully with our forward energetic regeneration and provide increased degrees of freedom of initiation and noninterfering actions, breaks down cybernetically into two main parts: physical energy and metaphysical know-how. Physical energy in turn divides into two interchangeable phases: associative and disassociative‹energy associative as matter and energy disassociative as radiation.</p>
-                <p>Stating first that physical universe is all energy and symbolizing energy by E, Einstein formulated his famous equation E = M (matter’s mass, explained in the terms of C2‹speed of an omni-directional [radiant] surface wave’s expansion, unfettered, in a vacuum). Energy as matter and energy as radiation, as Einstein had generalized hypothetically,</p>
+            <page style='image' url='6-4.jpg'>
+
             </page>
         </spread>
 
@@ -1498,11 +1303,8 @@ arithmetically in formula.
         </spread>
 
         <spread>
-            <page style="text">
-                <p>not true. By the elimination of a false premise, his basic capital wealth which in his given lifetime is disembarrassed of further preoccupation with considerations of how to employ a worthless time-consuming hypothesis. Freeing his time for its more effective exploratory investment is to give man increased wealth.</p>
-                <p>We find experimentally, regarding the metaphysical phenomenon, intellect, which we call know-how, that every time we employ and test our intellectual know-how by experimental</p>
-                <p>rearrangement of physical energy interactions (either associated as mass or disassociated as radiation, free energy) we always learn more. The know-how can only increase. Very interesting. Now we have carefully examined and experimented with the two basic constituents of wealth-the physical and the metaphysical.</p>
-                <p>Sum-totally, we find that the physical constituent of wealth-energy-cannot decrease and that the metaphysical constituent-know-how-can only increase. This is to say that everytime we use our wealth it increases. This is to say that, countering entropy, wealth can only increase. Whereas entropy is increasing disorder evoked by dispersion of energy, wealth locally is increased order-that is to say, the increasingly orderly concentration of physical power in our ever-expanding locally explored and comprehended universe by the metaphysical capability of man, as informed by repeated experiences</p>
+            <page style='image' url='6-5.jpg'>
+
             </page>
             <page style="text">
                 <p>from which he happens in an unscheduled manner to progressively distill the ever-increasing inventory of omni-interrelated and omni-interaccommodative generalized principles found to be operative in all the special-case experiences. Irreversible wealth is the so far attained effective magnitude of our physically organized ordering of the use of those generalized principles.</p>
@@ -1583,11 +1385,8 @@ arithmetically in formula.
                 <p>it needs and wishes to do and that it cannot afford anything else. As a consequence Earth-planet-based humanity will be physically and economically successful and individually free in the most important sense. While all enjoy total Earth no human will be interfering with the other, and none will be profiting at the expense of the other. Humans will be free in the sense that 99.9 per cent of their waking hours will be freely investable at their own discretion. They will be free in the sense that they will not struggle for survival on a `’you" or "me" basis, and will therefore be able to trust one another and be free to co-operate in spontaneous and logical ways.</p>
                 <p>It is also probable that during that one-third of a century of the curtain raising of the twenty-first century that the number of boo-boo’s, biased blunders, short-sighted misjudgments, opinionated self-deceits of humanity will total, at minimum, six hundred trillion errors. Clearly, man will have backed into his future while evolution, operating as inexorably as fertilized ovaries gestate in the womb, will have brought about his success in ways as synergetically unforeseeable to us today as were the ten-trillion-dollar developments of the last </p>
             </page>
-            <page style="text">
-                <p>I50 years unforeseen by our wisest great-grandfathers of 1810.</p>
-                <p>All of this does not add up to say that man is stupidly ignorant and does not deserve to prosper. It adds up to the realization that in the design of universal evolution man was given an enormous safety factor as an economic cushion, within which to learn by trial and error to dare to use his most sensitively intuited intellectual conceptioning and greatest vision in joining forces with all of humanity to advance into the future in full accreditation of the individual human intellect’s most powerfully loving conceptions of the potential functioning of man in universe. All the foregoing is to say also that the opinions of any negatively conditioned reflexes regarding what I am saying and am about to say are unrealistically inconsequential.</p>
-                <p>I have so far introduced to you a whole new synergetic assessment of wealth and have asked that you indicate your disagreement if you detected fallacies in the progressively-stated concepts of our common wealth. Thus we have discovered together that we are unanimous in saying that we can afford to do anything we need or wish to do.</p>
-                <p>It is utterly clear to me that the</p>
+            <page style='image' url='6-6.png'>
+
             </page>
         </spread>
 
@@ -1654,10 +1453,8 @@ arithmetically in formula.
         </spread>
 
         <spread>
-            <page style="text">
-                <p>further action of the tools which reproduce other tools which may be used informatively to make other tools. In the craft economies craftsman artists make only end- or consumer-products. In the industrial economy the craftsman artists make the tools and the tools make the end- or consumer-products. In this industrial development the mechanical advantages of men are pyramided rapidly and synergetically into invisible magnitudes of ever more incisive and inclusive tooling which produces ever more with ever less resource investment per each unit of end-product, or service, performance.</p>
-                <p>As we study industrialization, we see that we cannot have mass production unless we have mass consumption. This was effected evolutionarily by the great social struggles of labor to increase wages and spread the benefits and prevent the reduction of the numbers of workers employed. The labor movement made possible mass purchasing; ergo, mass production; ergo, low prices on vastly improved products and services, which have altogether established entirely new and higher standards of humanity’s living.</p>
-                <p>Our labor world and all salaried workers, including school teachers and college professors, are now, at least subconsciously if not consciously, afraid that automation will take away their jobs. They are afraid they won’t be able</p>
+            <page style='image' url='6-7.jpg'>
+
             </page>
 
             <page style="text">
@@ -1686,9 +1483,8 @@ arithmetically in formula.
                 <p>Now we have comprehended and peeled off</p>
             </page>
 
-            <page style="text">
-                <p>the layers of petals which disclosed not only that physical energy is conserved but also that it is ever increasingly deposited as a fossil-fuel savings account aboard our Spaceship Earth through photosynthesis and progressive, complex, topsoil fossilization buried ever deeper within Earth’s crust by frost, wind, flood, volcanoes, and earthquake upheavals. We have thus discovered also that we can make all of humanity successful through science’s world-engulfing industrial evolution provided that we are not so foolish as to continue to exhaust in a split second of astronomical history the orderly energy savings of billions of years’ energy conservation aboard our Spaceship Earth. These energy savings have been put into our Spaceship’s life-regeneration-guaranteeing bank account for use only in self-starter functions.</p>
-                <p>The fossil fuel deposits of our Spaceship Earth correspond to our automobile’s storage battery which must be conserved to turn over our main engine’s self-starter. Thereafter, our "main engine," the life regenerating processes, must operate exclusively on our vast daily energy income from the powers of wind, tide, water, and the direct Sun radiation energy. The fossil-fuel savings account has been put aboard Spaceship Earth for the exclusive function of getting the new machinery built with which to support life</p>
+            <page style='image' url='7-1.png'>
+
             </page>
         </spread>
 

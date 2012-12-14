@@ -45,7 +45,7 @@ public class PageVO {
     public var indexHeight:int = 30;
 
     public var chapter:String;
-    public var chapterWidth:int = 200;
+    public var chapterWidth:int = 326;
     public var chapterHeight:int = 30;
     public var chapterX:int = 65;
     public var chapterY:int = paragraphY + paragraphHeight + 140;

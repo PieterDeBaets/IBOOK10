@@ -16,9 +16,11 @@ import starling.animation.Transitions;
 import starling.animation.Tween;
 
 import starling.core.Starling;
+import starling.display.Image;
 
 import starling.display.Quad;
 import starling.text.TextField;
+import starling.textures.Texture;
 
 public class BookApplication extends starling.display.Sprite {
     /*************************************/
@@ -30,6 +32,10 @@ public class BookApplication extends starling.display.Sprite {
     private var index:Index;
     private var controls:Controls;
     private var pageViewer:PageViewer;
+    private var background:Quad;
+
+    private var backgroundTexture:Texture;
+    private var backgroundImage:Image;
 
 
     /*************************************/
@@ -46,23 +52,34 @@ public class BookApplication extends starling.display.Sprite {
         bookService.addEventListener(Event.COMPLETE, bookCompleted);
         bookService.load();
 
+        backgroundTexture = appModel.atlas.getTexture('BasicCenterSpreadBackground');
+        backgroundImage = new Image(backgroundTexture);
+        backgroundImage.y = 0;
+        backgroundImage.blendMode = 'multiply' ;
+        backgroundImage.scaleY=1.2;
+        addChild(backgroundImage);
+
+        backgroundImage.x = Starling.current.stage.stageWidth/2 - backgroundImage.width/2;
+
         appModel.addEventListener(AppModel.LIGHTMODE_CHANGED, lightModeChanged);
     }
 
     private function lightModeChanged(event:Event):void {
-        if(q){
-            removeChild(q);
+        if(background){
+            background.dispose();
+            removeChild(background);
         }
 
         if(appModel.lightMode){
-            var q:Quad = new Quad( Starling.current.stage.stageWidth, Starling.current.stage.stageHeight, 0x333333);
-            addChild(q);
+            background = new Quad( Starling.current.stage.stageWidth, Starling.current.stage.stageHeight, 0x000000);
+            background.alpha = 0.7;
+            addChildAt(background, 1);
+            setChildIndex(backgroundImage, 0);
+
         }
     }
 
     private function bookCompleted(event:Event){
-
-
 
         timeline = new Timeline();
         addChild(timeline);
@@ -82,6 +99,8 @@ public class BookApplication extends starling.display.Sprite {
         appModel.currentSpread = 0;
         setChildIndex(pageViewer, 0);
 
+        setChildIndex(backgroundImage, 0);
+        //setChildIndex(background, 0);
 
     }
 
