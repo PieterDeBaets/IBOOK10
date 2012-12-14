@@ -36,11 +36,11 @@ public class PageVOFactory {
                     //set X and Y offset if filled in
                     //TODO deze werkt beter! i.p.v. != 0
                     if(pageXML.@X != pageXML.@noneExistingAttributeInXml) textPageVO.x = pageXML.@X;
-                    if(int(pageXML.@Y) != 0) textPageVO.y = pageXML.@Y;
+                    if(pageXML.@Y != pageXML.@noneExistingAttributeInXml) textPageVO.y = pageXML.@Y;
 
                     //set width and heigth if filled in
-                    if(int(pageXML.@width) != 0) textPageVO.width = pageXML.@width;
-                    if(int(pageXML.@height) != 0) textPageVO.height = pageXML.@height;
+                    if(pageXML.@width != pageXML.@noneExistingAttributeInXml) textPageVO.width = pageXML.@width;
+                    if(pageXML.@height != pageXML.@noneExistingAttributeInXml) textPageVO.height = pageXML.@height;
 
                     returnPage = textPageVO;
                 break;
@@ -49,12 +49,12 @@ public class PageVOFactory {
                     var imagePageVo:ImagePageVO = new ImagePageVO();
                     imagePageVo.imgUrl += pageXML.@url;
                     //set X and Y offset if filled in
-                    if(int(pageXML.img.@X) != 0) imagePageVo.x =pageXML.img.@X;
-                    if(int(pageXML.img.@Y) != 0) imagePageVo.y =pageXML.img.@Y;
+                    if(pageXML.img.@X != pageXML.img.@noneExistingAttributeInXml) imagePageVo.x =pageXML.img.@X;
+                    if(pageXML.img.@Y != pageXML.img.@noneExistingAttributeInXml) imagePageVo.y =pageXML.img.@Y;
 
                     //set width and heigth if filled in
-                    if(int(pageXML.img.@width) != 0) imagePageVo.width = pageXML.img.@width;
-                    if(int(pageXML.img.@height) != 0) imagePageVo.height = pageXML.img.@height;
+                    if(pageXML.img.@width != pageXML.@noneExistingAttributeInXml) imagePageVo.width = pageXML.img.@width;
+                    if(pageXML.img.@height != pageXML.@noneExistingAttributeInXml) imagePageVo.height = pageXML.img.@height;
 
                     returnPage = imagePageVo;
                 break;
@@ -63,12 +63,12 @@ public class PageVOFactory {
             //set X and Y offset if filled in
                     var indexPageVo:IndexPageVo = new IndexPageVo();
 
-                if(int(pageXML.@X) != 0) indexPageVo.x = pageXML.@X;
-                if(int(pageXML.@Y) != 0) indexPageVo.y= pageXML.@Y;
+                if(pageXML.@X != pageXML.@noneExistingAttributeInXml) indexPageVo.x = pageXML.@X;
+                if(pageXML.@Y != pageXML.@noneExistingAttributeInXml) indexPageVo.y= pageXML.@Y;
 
                 //set width and heigth if filled in
-                if(int(pageXML.@width) != 0) indexPageVo.width = pageXML.@width;
-                if(int(pageXML.@height) != 0) indexPageVo.height= pageXML.@height;
+                if(pageXML.@width != pageXML.@noneExistingAttributeInXml) indexPageVo.width = pageXML.@width;
+                if(pageXML.@height != pageXML.@noneExistingAttributeInXml) indexPageVo.height= pageXML.@height;
 
                 //de hele xml is hier nog niet ingeladen, dus kan nog niet aan alle chapterTitles
                 //index inladen in de page zelf
@@ -79,12 +79,12 @@ public class PageVOFactory {
                 //set X and Y offset if filled in
                     var frontPageVo:FrontPageVO = new FrontPageVO();
 
-                if(int(pageXML.@X) != 0) frontPageVo.x = pageXML.@X;
-                if(int(pageXML.@Y) != 0) frontPageVo.y= pageXML.@Y;
+                if(pageXML.@X != pageXML.@noneExistingAttributeInXml) frontPageVo.x = pageXML.@X;
+                if(pageXML.@Y != pageXML.@noneExistingAttributeInXml) frontPageVo.y= pageXML.@Y;
 
                 //set width and heigth if filled in
-                if(int(pageXML.@width) != 0) frontPageVo.width = pageXML.@width;
-                if(int(pageXML.@height) != 0) frontPageVo.height = pageXML.@height;
+                if(pageXML.@width != pageXML.@noneExistingAttributeInXml) frontPageVo.width = pageXML.@width;
+                if(pageXML.@height != pageXML.@noneExistingAttributeInXml) frontPageVo.height = pageXML.@height;
 
                 if(String(pageXML.title) != "") frontPageVo.title = pageXML.title;
 

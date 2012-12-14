@@ -41,8 +41,6 @@ public class PageViewer extends Sprite{
         //instantie Spread
         //Spread luistert naar CHANGE_CURRENT_SPREAD
         //animatie
-        trace("IN PAGEVIEWER");
-
         appModel = AppModel.getInstance();
 
         trace(appModel.arrBook[appModel.currentSpread]);
@@ -66,7 +64,6 @@ public class PageViewer extends Sprite{
 
         spread = new Spread(appModel.arrBook[appModel.currentSpread]);
         addChild(spread);
-        trace("IN CURRENTSPREADCHANGEDHANDLER PAGEVIEWER");
     }
     /*************************************/
     //Getters & Setters

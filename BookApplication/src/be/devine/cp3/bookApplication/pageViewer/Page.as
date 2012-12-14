@@ -61,9 +61,6 @@ public class Page extends starling.display.Sprite{
     /*************************************/
 
     public function Page(data:PageVO,spreadChapter:int) {
-        trace("IN PAGE");
-        //test
-        //test
 
         appModel = AppModel.getInstance();
 
@@ -73,15 +70,12 @@ public class Page extends starling.display.Sprite{
             case "index":
                     createIndexPage(data);
                 break;
-
             case "text":
                     createTextPage(data);
                 break;
-
             case "image":
                     crateImagePage(data);
                 break;
-
             case "front":
                     createFrontPage(data);
                 break;
@@ -97,7 +91,6 @@ public class Page extends starling.display.Sprite{
             pageNumberField.x = data.pageNumberX_even;
             //NOG CURRENT CHAPTER OP TE HALEN
 
-            trace("CHAPTER");
             trace(appModel.arrChapter[spreadChapter]);
 
         }else{
@@ -110,6 +103,7 @@ public class Page extends starling.display.Sprite{
         }
 
         if(pageNumber != 0) addChild(pageNumberField);
+
     }
 
     private function createIndexPage(data:PageVO):void {
@@ -194,6 +188,7 @@ public class Page extends starling.display.Sprite{
             image.y = imageY;
             addChild(image);
         }
+        this.flatten();
     }
 
     private function isEven(num:Number):Boolean
