@@ -148,6 +148,7 @@ public class Controls extends Sprite{
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
                 appModel.currentSpread --;
+                appModel.indexVisible = false;
             }else if(touch.phase == TouchPhase.HOVER){
                 Mouse.cursor = MouseCursor.BUTTON;
             }
@@ -161,6 +162,7 @@ public class Controls extends Sprite{
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
                 appModel.currentSpread ++;
+                appModel.indexVisible = false;
             }else if(touch.phase == TouchPhase.HOVER){
                 Mouse.cursor = MouseCursor.BUTTON;
             }
