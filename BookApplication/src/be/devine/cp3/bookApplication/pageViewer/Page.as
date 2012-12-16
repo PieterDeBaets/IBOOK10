@@ -121,7 +121,13 @@ public class Page extends starling.display.Sprite{
     }
 
     private function createFirstPage(data:PageVO):void {
-        firstPage = new Quad(Starling.current.stage.stageWidth/2, Starling.current.stage.stageHeight, 0xffffff);
+        var bookColor:uint;
+        if(appModel.lightMode){
+            bookColor = 0x000000;
+        }else{
+            bookColor = 0xffffff;
+        }
+        firstPage = new Quad(Starling.current.stage.stageWidth/2, Starling.current.stage.stageHeight, bookColor);
         var bookBorder:Quad = new Quad(10, Starling.current.stage.stageHeight, 0xaaaaaa);
         bookBorder.x = Starling.current.stage.stageWidth/2 - bookBorder.width;
         addChild(firstPage);

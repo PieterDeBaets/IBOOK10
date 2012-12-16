@@ -83,6 +83,7 @@ public class Controls extends Sprite{
             nextButton.removeEventListener(TouchEvent.TOUCH, prevPageHandler);
             Mouse.cursor = MouseCursor.ARROW;
         }else{
+
             prevButton.alpha = nextButton.alpha = 1;
             if(!prevButton.hasEventListener(TouchEvent.TOUCH)){
                 prevButton.addEventListener(TouchEvent.TOUCH, prevPageHandler);
@@ -90,6 +91,12 @@ public class Controls extends Sprite{
 
             if(! nextButton.hasEventListener(TouchEvent.TOUCH)){
                 nextButton.addEventListener(TouchEvent.TOUCH, prevPageHandler);
+            }
+
+            if(appModel.lightMode){
+                prevButton.alpha = nextButton.alpha = 0.3;
+            }else{
+                prevButton.alpha = nextButton.alpha = 1;
             }
 
             Mouse.cursor = MouseCursor.BUTTON;
@@ -112,9 +119,12 @@ public class Controls extends Sprite{
         if(appModel.lightMode){
             lightSwitch.texture = appModel.atlas.getTexture('lighton');
             lightSwitch.alpha = 1;
+
+            prevButton.alpha = nextButton.alpha = 0.3;
         }else{
             lightSwitch.texture = appModel.atlas.getTexture('lightoff');
             lightSwitch.alpha = 0.3;
+            prevButton.alpha = nextButton.alpha = 1;
         }
     }
 
