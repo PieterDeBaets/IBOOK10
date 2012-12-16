@@ -65,12 +65,25 @@ public class Controls extends Sprite{
         lightSwitch.x =18;
         lightSwitch.y = 11;
         lightSwitch.alpha = 0.3;
-        lightSwitch.addEventListener(TouchEvent.TOUCH, lightModeChanged);
+        lightSwitch.addEventListener(TouchEvent.TOUCH, lightMode);
         addChild(lightSwitch);
 
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, checkIfLastOrFirst);
+        appModel.addEventListener(AppModel.LIGHTMODE_CHANGED, lightModeChanged);
 
         Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
+    }
+
+    private function lightModeChanged(event:Event):void {
+        if(appModel.lightMode){
+            lightSwitch.texture = appModel.atlas.getTexture('lighton');
+            lightSwitch.alpha = 1;
+        }else{
+            lightSwitch.texture = appModel.atlas.getTexture('lightoff');
+            lightSwitch.alpha = 0.3;
+        }
+
+        checkIfLastOrFirst(null);
     }
 
     private function checkIfLastOrFirst(event:Event):void {
@@ -83,8 +96,12 @@ public class Controls extends Sprite{
             nextButton.removeEventListener(TouchEvent.TOUCH, prevPageHandler);
             Mouse.cursor = MouseCursor.ARROW;
         }else{
+            if(appModel.lightMode){
+                prevButton.alpha = nextButton.alpha = 0.3;
+            }else{
+                prevButton.alpha = nextButton.alpha = 1;
+            }
 
-            prevButton.alpha = nextButton.alpha = 1;
             if(!prevButton.hasEventListener(TouchEvent.TOUCH)){
                 prevButton.addEventListener(TouchEvent.TOUCH, prevPageHandler);
             }
@@ -92,18 +109,11 @@ public class Controls extends Sprite{
             if(! nextButton.hasEventListener(TouchEvent.TOUCH)){
                 nextButton.addEventListener(TouchEvent.TOUCH, prevPageHandler);
             }
-
-            if(appModel.lightMode){
-                prevButton.alpha = nextButton.alpha = 0.3;
-            }else{
-                prevButton.alpha = nextButton.alpha = 1;
-            }
-
             Mouse.cursor = MouseCursor.BUTTON;
         }
     }
 
-    private function lightModeChanged(event:TouchEvent):void {
+    private function lightMode(event:TouchEvent):void {
         var touch:Touch = event.getTouch(lightSwitch);
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
@@ -115,18 +125,8 @@ public class Controls extends Sprite{
         }else{
             Mouse.cursor = MouseCursor.ARROW;
         }
-
-        if(appModel.lightMode){
-            lightSwitch.texture = appModel.atlas.getTexture('lighton');
-            lightSwitch.alpha = 1;
-
-            prevButton.alpha = nextButton.alpha = 0.3;
-        }else{
-            lightSwitch.texture = appModel.atlas.getTexture('lightoff');
-            lightSwitch.alpha = 0.3;
-            prevButton.alpha = nextButton.alpha = 1;
-        }
     }
+
 
     private function keyHandler(event:KeyboardEvent):void {
         switch (event.keyCode){
@@ -135,6 +135,10 @@ public class Controls extends Sprite{
                 break;
             case Keyboard.LEFT:
                 appModel.currentSpread --;
+                break;
+            case Keyboard.L:
+                appModel.lightMode = !appModel.lightMode;
+                lightModeChanged(null);
                 break;
         }
     }
