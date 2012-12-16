@@ -62,6 +62,9 @@ public class PageIcon extends Sprite{
             case 'empty':
                 iconTexture = null;
                 break;
+            case 'cover':
+                iconTexture = appModel.atlas.getTexture('cover');
+                break;
             case 'index':
                 iconTexture = appModel.atlas.getTexture('indexIcon');
                 break;

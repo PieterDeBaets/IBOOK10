@@ -9,6 +9,7 @@ package be.devine.cp3.bookApplication.pageViewer {
 import avmplus.variableXml;
 
 import be.devine.cp3.AppModel;
+import be.devine.cp3.bookApplication.pageViewer.vo.CoverPageVO;
 import be.devine.cp3.bookApplication.pageViewer.vo.FrontPageVO;
 import be.devine.cp3.bookApplication.pageViewer.vo.ImagePageVO;
 import be.devine.cp3.bookApplication.pageViewer.vo.IndexPageVo;
@@ -25,8 +26,11 @@ import flash.display.Loader;
 import flash.events.Event;
 import flash.system.ApplicationDomain;
 
+import starling.core.Starling;
+
 import starling.display.DisplayObject;
 import starling.display.Image;
+import starling.display.Quad;
 
 import starling.display.Sprite;
 import starling.events.Event;
@@ -39,6 +43,7 @@ public class Page extends starling.display.Sprite{
     //Properties
     /*************************************/
     private var title:TextField;
+    private var author:TextField;
     private var paragraph:TextField;
     private var caption:TextField;
     private var chapter:TextField;
@@ -47,6 +52,7 @@ public class Page extends starling.display.Sprite{
     private var image:Loader;
     private var pageNumber:int;
     private var pageNumberField:TextField;
+    private var firstPage:Quad;
     //private var backgroundColor:Sprite;
     private var color:int = 0x000000;
     private var queue:RequestQueue;
@@ -79,11 +85,19 @@ public class Page extends starling.display.Sprite{
             case "front":
                     createFrontPage(data);
                 break;
+            case 'cover':
+                    createCoverPage(data);
+                break;
+            case 'empty':
+                    if(data.pageNumber == 0){
+                        createFirstPage(data);
+                    }
+                break;
         }
 
         appModel.addEventListener(AppModel.LIGHTMODE_CHANGED, lightModeChanged);
 
-        pageNumber = data.pageNumber;
+        pageNumber = data.pageNumber -2;
         pageNumberField = new TextField(data.pageNumberWidth, data.pageNumberHeight, String(pageNumber), "Gotham", 12, color);
         pageNumberField.y = data.pageNumberY;
 
@@ -98,12 +112,35 @@ public class Page extends starling.display.Sprite{
             chapter.hAlign = "left";
             chapter.x = data.chapterX;
             chapter.y = data.chapterY;
-            addChild(chapter);
+            if(pageNumber > 0) addChild(chapter);
             pageNumberField.x = data.pageNumberX_odd;
         }
 
-        if(pageNumber != 0) addChild(pageNumberField);
+        if(pageNumber > 0) addChild(pageNumberField);
 
+    }
+
+    private function createFirstPage(data:PageVO):void {
+        firstPage = new Quad(Starling.current.stage.stageWidth/2, Starling.current.stage.stageHeight, 0xffffff);
+        var bookBorder:Quad = new Quad(10, Starling.current.stage.stageHeight, 0xaaaaaa);
+        bookBorder.x = Starling.current.stage.stageWidth/2 - bookBorder.width;
+        addChild(firstPage);
+        addChild(bookBorder);
+    }
+
+    private function createCoverPage(data:PageVO):void {
+        //var cvo:CoverPageVO = data as CoverPageVO;
+        var coverPageVO:CoverPageVO = data as CoverPageVO;
+        trace(coverPageVO);
+        title = new TextField(coverPageVO.width, coverPageVO.height, coverPageVO.title, "Gotham", 24, color);
+        title.x = coverPageVO.x;
+        title.y = coverPageVO.y;
+        addChild(title);
+
+        author = new TextField(coverPageVO.width, coverPageVO.height, coverPageVO.author, "Gotham", 18, color);
+        author.x = coverPageVO.x;
+        author.y = title.y + 50;
+        addChild(author);
     }
 
     private function createIndexPage(data:PageVO):void {
@@ -155,15 +192,19 @@ public class Page extends starling.display.Sprite{
 
     private function lightModeChanged(event:flash.events.Event):void {
         if(appModel.lightMode){
+            if(firstPage) firstPage.color = color;
             color = 0xffffff;
         }else{
+            if(firstPage) firstPage.color = color;
             color = 0x000000;
         }
+
 
         if(paragraph) paragraph.color = color;
         if(title) title.color = color;
         if(pageNumberField) pageNumberField.color = color;
         if(chapter) chapter.color = color;
+        if(author) author.color = color;
         if(indexArr.length >0){
             for each (var o:TextField in indexArr) {
                 o.color = color;

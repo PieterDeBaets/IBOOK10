@@ -7,6 +7,7 @@
  */
 package be.devine.cp3.bookApplication.factory {
 import be.devine.cp3.AppModel;
+import be.devine.cp3.bookApplication.pageViewer.vo.CoverPageVO;
 import be.devine.cp3.bookApplication.pageViewer.vo.FrontPageVO;
 import be.devine.cp3.bookApplication.pageViewer.vo.ImagePageVO;
 import be.devine.cp3.bookApplication.pageViewer.vo.IndexPageVo;
@@ -23,7 +24,6 @@ public class PageVOFactory {
         //pageVO.pageNumber = appModel.totalPages;
 
         switch(String(pageXML.@style)){
-
             case 'text':
                     var textPageVO:TextPageVO = new TextPageVO();
                     //textPageVO.style = pageXML.@style;
@@ -89,6 +89,21 @@ public class PageVOFactory {
                 if(String(pageXML.title) != "") frontPageVo.title = pageXML.title;
 
                 returnPage = frontPageVo;
+                break;
+            case 'cover':
+                    var coverPageVO:CoverPageVO = new CoverPageVO();
+
+                if(pageXML.@X != pageXML.@noneExistingAttributeInXml) coverPageVO.x = pageXML.@X;
+                if(pageXML.@Y != pageXML.@noneExistingAttributeInXml) coverPageVO.y= pageXML.@Y;
+
+                //set width and heigth if filled in
+                if(pageXML.@width != pageXML.@noneExistingAttributeInXml) coverPageVO.width = pageXML.@width;
+                if(pageXML.@height != pageXML.@noneExistingAttributeInXml) coverPageVO.height = pageXML.@height;
+
+                if(String(pageXML.title) != "") coverPageVO.title = pageXML.title;
+                if(String(pageXML.author) != "") coverPageVO.author = pageXML.author;
+                    trace('------------------------' +coverPageVO.author);
+                    returnPage = coverPageVO;
                 break;
         }
 

@@ -51,7 +51,7 @@
         <content>SWF file name is set automatically at compile time</content>
 
         <!-- The title of the main window. Optional. -->
-        <title>IBOOK 10</title>
+        <title>IBOOK 10 - Pieter De Baets &amp; Bram Seynhaeve</title>
 
         <!-- The type of system chrome to use (either "standard" or "none"). Optional. Default standard. -->
         <!--<systemChrome></systemChrome>-->
@@ -84,10 +84,10 @@
         <!--<y></y>-->
 
         <!-- The window's minimum size, specified as a width/height pair in pixels, such as "400 200". Optional. -->
-        <!--<minSize></minSize>-->
+        <minSize>1024 768</minSize>
 
         <!-- The window's initial maximum size, specified as a width/height pair in pixels, such as "1600 1200". Optional. -->
-        <!--<maxSize></maxSize>-->
+        <maxSize>1024 768</maxSize>
 
         <!-- The aspect ratio of the app ("portrait" or "landscape" or "any"). Optional. Mobile only. Default is the natural orientation of the device -->
         <!--<aspectRatio></aspectRatio>-->
@@ -122,11 +122,14 @@
     <!--<programMenuFolder></programMenuFolder>-->
 
     <!-- The icon the system uses for the application. For at least one resolution, specify the path to a PNG file included in the AIR package. Optional. -->
-    <!--<icon>
-        <image16x16>assets/icons/smallIcon.png</image16x16>
-        <image128x128>assets/icons/icon.png</image128x128>
+    <icon>
+        <!--<image16x16>assets/icons/16.png</image16x16>
+        <image48x48>assets/icons/48.png</image48x48>
+        <image72x72>assets/icons/72.png</image72x72>
+        <image114x114>assets/icons/114.png</image114x114>-->
+        <image128x128>assets/icons/128.png</image128x128>
+        <image512x512>assets/icons/512.png</image512x512>
     </icon>
-    -->
     <!-- Whether the application handles the update when a user double-clicks an update version of the AIR file (true),
          or the default AIR application installer handles the update (false). Optional. Default false. -->
     <!--<customUpdateUI></customUpdateUI>-->

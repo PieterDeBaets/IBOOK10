@@ -1,13 +1,13 @@
 <book title='Operating Manual For Spaceship Earth' author='R. Buckminster Füller' year='1968' src='cover.jpg'>
 
     <chapter title='Index'>
-        <!--<spread>
+        <spread>
             <page style="empty"></page>
             <page style="cover">
                 <title>Operating Manual for Spaceship Earth</title>
                 <author>R.Buckminster Fuller</author>
             </page>
-        </spread> -->
+        </spread>
         <spread>
             <page style="emtpy"></page>
             <page style="index"></page>

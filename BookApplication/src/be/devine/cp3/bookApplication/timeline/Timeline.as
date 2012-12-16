@@ -72,6 +72,14 @@ public class Timeline extends Sprite{
         appModel.addEventListener(AppModel.CURRENT_SPREAD_CHANGED, changePosition);
         Starling.current.stage.addEventListener(KeyboardEvent.KEY_DOWN, keyHandler);
 
+        btnTimelineTexture= appModel.atlas.getTexture('timelineBtnUp');
+        btnTimeline = new Image(btnTimelineTexture);
+        btnTimeline.x = background.width - btnTimeline.width;
+        btnTimeline.y = background.height;
+        btnTimeline.alpha = transparency;
+        btnTimeline.addEventListener(TouchEvent.TOUCH, checkHover);
+        addChild(btnTimeline);
+
         toggleVisibility(null);
 
     }
@@ -104,28 +112,6 @@ public class Timeline extends Sprite{
         }
     }
 
-    private function createBtn(){
-        if(btnTimeline != null){
-            btnTimeline.removeEventListeners();
-            btnTimeline.removeFromParent();
-            btnTimeline.dispose();
-        }
-
-        if(appModel.timelineVisible){
-            btnTimelineTexture= appModel.atlas.getTexture('timelineBtnUp');
-        }else{
-            btnTimelineTexture= appModel.atlas.getTexture('timelineBtnHover');
-        }
-
-        btnTimeline = new Image(btnTimelineTexture);
-        btnTimeline.x = background.width - btnTimeline.width;
-        btnTimeline.y = background.height;
-        btnTimeline.alpha = transparency;
-        btnTimeline.addEventListener(TouchEvent.TOUCH, checkHover);
-        addChild(btnTimeline);
-    }
-
-
     private function keyHandler(event:KeyboardEvent){
         switch (event.keyCode){
             case Keyboard.UP:
@@ -137,13 +123,12 @@ public class Timeline extends Sprite{
         }
     }
 
-    //TODO tween kan normaal met 1 tween ipv 2
-
     private function toggleVisibility(event:flash.events.Event){
-        createBtn();
         if(appModel.timelineVisible){
+            btnTimeline.texture = appModel.atlas.getTexture('timelineBtnUp');
             setupTween(0);
         }else{
+            btnTimeline.texture = appModel.atlas.getTexture('timelineBtnHover');
             setupTween(-this.height+btnTimeline.height);
         }
     }

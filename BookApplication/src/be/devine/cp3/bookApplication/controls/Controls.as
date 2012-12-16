@@ -60,7 +60,7 @@ public class Controls extends Sprite{
         prevButton.addEventListener(TouchEvent.TOUCH, prevPageHandler);
         addChild(prevButton);
 
-        var lightSwitchTexture = appModel.atlas.getTexture('BasicLightOn');
+        var lightSwitchTexture = appModel.atlas.getTexture('lightoff');
         lightSwitch = new Image(lightSwitchTexture);
         lightSwitch.x =18;
         lightSwitch.y = 11;
@@ -76,10 +76,23 @@ public class Controls extends Sprite{
     private function checkIfLastOrFirst(event:Event):void {
         if(appModel.currentSpread == 0){
             prevButton.alpha = 0;
+            prevButton.removeEventListener(TouchEvent.TOUCH, prevPageHandler);
+            Mouse.cursor = MouseCursor.ARROW;
         }else if(appModel.currentSpread == appModel.arrBook.length-1){
             nextButton.alpha = 0;
+            nextButton.removeEventListener(TouchEvent.TOUCH, prevPageHandler);
+            Mouse.cursor = MouseCursor.ARROW;
         }else{
             prevButton.alpha = nextButton.alpha = 1;
+            if(!prevButton.hasEventListener(TouchEvent.TOUCH)){
+                prevButton.addEventListener(TouchEvent.TOUCH, prevPageHandler);
+            }
+
+            if(! nextButton.hasEventListener(TouchEvent.TOUCH)){
+                nextButton.addEventListener(TouchEvent.TOUCH, prevPageHandler);
+            }
+
+            Mouse.cursor = MouseCursor.BUTTON;
         }
     }
 
@@ -94,6 +107,14 @@ public class Controls extends Sprite{
             }
         }else{
             Mouse.cursor = MouseCursor.ARROW;
+        }
+
+        if(appModel.lightMode){
+            lightSwitch.texture = appModel.atlas.getTexture('lighton');
+            lightSwitch.alpha = 1;
+        }else{
+            lightSwitch.texture = appModel.atlas.getTexture('lightoff');
+            lightSwitch.alpha = 0.3;
         }
     }
 
