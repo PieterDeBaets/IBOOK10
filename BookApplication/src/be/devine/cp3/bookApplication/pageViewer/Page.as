@@ -45,7 +45,6 @@ public class Page extends starling.display.Sprite{
     private var title:TextField;
     private var author:TextField;
     private var paragraph:TextField;
-    private var caption:TextField;
     private var chapter:TextField;
     private var c:TextField;
     private var indexArr:Array = new Array();
@@ -53,12 +52,13 @@ public class Page extends starling.display.Sprite{
     private var pageNumber:int;
     private var pageNumberField:TextField;
     private var firstPage:Quad;
-    //private var backgroundColor:Sprite;
     private var color:int = 0x000000;
     private var queue:RequestQueue;
     private var imageX:uint;
     private var imageY:uint;
     private var appModel:AppModel;
+    private var maxImageWidth:uint = 392;
+    private var maxImageHeight:uint = 588;
 
 
 
@@ -125,13 +125,13 @@ public class Page extends starling.display.Sprite{
         if(appModel.lightMode){
             bookColor = 0x000000;
         }else{
-            bookColor = 0xffffff;
+            bookColor = 0xeeeeee;
         }
         firstPage = new Quad(Starling.current.stage.stageWidth/2, Starling.current.stage.stageHeight, bookColor);
         var bookBorder:Quad = new Quad(10, Starling.current.stage.stageHeight, 0xaaaaaa);
         bookBorder.x = Starling.current.stage.stageWidth/2 - bookBorder.width;
-        addChild(firstPage);
-        addChild(bookBorder);
+        //addChild(firstPage);
+        //addChild(bookBorder);
     }
 
     private function createCoverPage(data:PageVO):void {
@@ -152,8 +152,6 @@ public class Page extends starling.display.Sprite{
     private function createIndexPage(data:PageVO):void {
         var ivo:IndexPageVo = data as IndexPageVo;
 
-        //TODO CHAPTERS OPHALEN
-        trace("IN INDEX");
         trace(appModel.arrChapter);
 
         var yPos:int = ivo.y;
@@ -205,7 +203,6 @@ public class Page extends starling.display.Sprite{
             color = 0x000000;
         }
 
-
         if(paragraph) paragraph.color = color;
         if(title) title.color = color;
         if(pageNumberField) pageNumberField.color = color;
@@ -230,12 +227,20 @@ public class Page extends starling.display.Sprite{
             var b:Bitmap = new Bitmap(bd);
             var image:Image = Image.fromBitmap(b);
 
-            //TODO scalen van te grote images
+            if(image.width> maxImageWidth){
+                image.width = maxImageWidth;
+                trace('change width!');
+                image.scaleY = image.scaleX;
+            }
+
+            if(image.height > maxImageHeight){
+                image.height = maxImageHeight;
+                image.scaleX = image.scaleY;
+            }
             image.x = imageX;
             image.y = imageY;
             addChild(image);
         }
-        this.flatten();
     }
 
     private function isEven(num:Number):Boolean

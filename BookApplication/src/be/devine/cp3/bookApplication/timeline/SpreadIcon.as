@@ -44,7 +44,7 @@ public class SpreadIcon extends Sprite{
     //Constructor
     /*************************************/
 
-    public function SpreadIcon(page1:PageVO, page2:PageVO, chapter, spreadNumber) {
+    public function SpreadIcon(page1:PageVO, page2:PageVO, chapter:uint, spreadNumber:uint) {
 
         appModel = AppModel.getInstance();
 
@@ -107,10 +107,8 @@ public class SpreadIcon extends Sprite{
 
     }
 
-    public function toggleBorder(event:Event){
+    public function toggleBorder(event:Event):void{
         //trace(appModel.currentSpread + ' VS ' + this.spreadNumber);
-
-        //TODO tween op border
 
         this.unflatten();
 

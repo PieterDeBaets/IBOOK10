@@ -68,7 +68,7 @@ public class TimelineScroll extends Sprite{
     //Methods
     /*************************************/
 
-    private function addButton(){
+    private function addButton():void{
         buttonTexture= appModel.atlas.getTexture('scrubber');
         button = new Image(buttonTexture);
         button.scaleX = button.scaleY = 0.9;
@@ -79,15 +79,15 @@ public class TimelineScroll extends Sprite{
         button.addEventListener(TouchEvent.TOUCH, sleepHandler)
     }
 
-    private function generateContent(){
+    private function generateContent():void{
         content = new Content();
         content.x = (totalScroll.width/2)-35;
         addChild(content);
     }
 
-    private function generateScrollBar(){
+    private function generateScrollBar():void{
         totalScroll = new Sprite();
-        var maxWidth = Starling.current.stage.stageWidth-36;
+        var maxWidth:uint = Starling.current.stage.stageWidth-36;
 
         var xPos:uint = 0;
         for(var i:uint = 0; i < appModel.spreadsPerChapter.length; i++){
@@ -135,15 +135,16 @@ public class TimelineScroll extends Sprite{
     private function clickHandler(event:TouchEvent):void{
         var touch:Touch = event.getTouch(totalScroll);
         if(touch){
+            var position:Point = new Point();
             if(touch.phase == TouchPhase.ENDED){
-                var position:Point = touch.getLocation(totalScroll);
+                Mouse.cursor = MouseCursor.ARROW;
+                position = touch.getLocation(totalScroll);
 
-                //gebruik _scrollProcent anders komt hij in de setter.
                 _scrollProcent =  (position.x/totalScroll.width);
                 appModel.currentSpread = Math.round(appModel.arrBook.length * _scrollProcent);
 
             }else if(touch.phase == TouchPhase.MOVED){
-                var position:Point = touch.getLocation(button.parent);
+                position = touch.getLocation(button.parent);
 
                 if(position.x < totalScroll.x){
                     this.scrollProcent = 0;
@@ -164,11 +165,11 @@ public class TimelineScroll extends Sprite{
     //Getters & Setters
     /*************************************/
 
-    public function get scrollProcent():Number {
+    public function get scrollProcent():Number{
         return _scrollProcent;
     }
 
-    public function set scrollProcent(value:Number):void {
+    public function set scrollProcent(value:Number):void{
         if(value != _scrollProcent){
             _scrollProcent = value;
 
@@ -181,7 +182,7 @@ public class TimelineScroll extends Sprite{
         }
     }
 
-    private function setupTweenContent(value){
+    private function setupTweenContent(value:int):void{
         if (tweenContent) tweenContent.reset(content, tweenspeed, Transitions.EASE_OUT);
         else tweenContent = new Tween(content, tweenspeed, Transitions.EASE_OUT);
 
@@ -189,7 +190,8 @@ public class TimelineScroll extends Sprite{
         Starling.juggler.add(tweenContent);
     }
 
-    private function setupTweenButton(value){
+    private function setupTweenButton(value:int):void{
+        trace(value);
         if (tweenButton) tweenButton.reset(button, tweenspeed, Transitions.EASE_OUT);
         else tweenButton = new Tween(button, tweenspeed, Transitions.EASE_OUT);
 

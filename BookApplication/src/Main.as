@@ -15,6 +15,8 @@ import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.geom.Rectangle;
 
+import net.hires.debug.Stats;
+
 import starling.core.Starling;
 
 [SWF(frameRate=60)]
@@ -24,6 +26,7 @@ public class Main extends Sprite {
     /*************************************/
 
     private var starling:Starling;
+
 
     /*************************************/
     //Constructor
@@ -50,7 +53,7 @@ public class Main extends Sprite {
         starling = new Starling(BookApplication, stage);
         starling.start();
 
-        //test
+        //addChild(new Stats());
     }
     /*************************************/
     //Methods

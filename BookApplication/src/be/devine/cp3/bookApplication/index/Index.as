@@ -10,6 +10,13 @@ import avmplus.factoryXml;
 
 import be.devine.cp3.AppModel;
 
+import flash.desktop.NativeApplication;
+
+import flash.display.NativeMenu;
+import flash.display.NativeMenuItem;
+import flash.display.NativeMenuItem;
+import flash.display.NativeWindow;
+
 import flash.events.Event;
 import flash.ui.Keyboard;
 import flash.ui.Mouse;
@@ -85,6 +92,7 @@ public class Index extends starling.display.Sprite{
 
         arrChapters = new Array();
         //arrChapters = appModel.arrChapter;
+
         for each (var chapter:String in appModel.arrChapter) {
             arrChapters.push(chapter);
         }
@@ -136,12 +144,15 @@ public class Index extends starling.display.Sprite{
         toggleVisible(null);
     }
 
+    private function chapterSelect(event:flash.events.Event):void {
+        trace('chapter');
+    }
+
 
     /*************************************/
     //Methods
     /*************************************/
 
-    //TODO als je blijft drukken op spatie dan flipt de index
     private function keydownHandler(event:starling.events.KeyboardEvent):void {
         if(event.keyCode == Keyboard.SPACE){
             appModel.indexVisible = !appModel.indexVisible;
@@ -154,9 +165,12 @@ public class Index extends starling.display.Sprite{
         if(touch){
             if(touch.phase == TouchPhase.BEGAN){
                appModel.indexVisible = !appModel.indexVisible;
-
-
+                Mouse.cursor = MouseCursor.ARROW;
+            }else if(touch.phase == TouchPhase.HOVER){
+                Mouse.cursor = MouseCursor.BUTTON;
             }
+        }else{
+            Mouse.cursor = MouseCursor.ARROW;
         }
     }
 

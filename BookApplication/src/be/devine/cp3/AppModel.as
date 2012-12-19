@@ -6,8 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 package be.devine.cp3 {
-import be.devine.cp3.bookApplication.BookApplication;
-
 import flash.events.Event;
 import flash.events.EventDispatcher;
 
@@ -45,8 +43,6 @@ public class AppModel extends EventDispatcher{
     //2 is random. gewoon om de setter te activeren de eerste keer.
     private var _currentSpread:int = 2;
     private var _currentChapter:int = 0;
-
-    //comment
 
     private var _totalPages:int = 0;
     private var _totalSpreads:int = 0;
@@ -130,7 +126,6 @@ public class AppModel extends EventDispatcher{
             _totalSpreads = value;
         }
     }
-
 
     public function get arrBook():Array {
         return _arrBook;

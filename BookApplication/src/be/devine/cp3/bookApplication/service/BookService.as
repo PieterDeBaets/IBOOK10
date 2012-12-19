@@ -24,7 +24,7 @@ public class BookService extends EventDispatcher{
         appModel = AppModel.getInstance();
     }
 
-    public function load(){
+    public function load():void{
         requestQueue = new RequestQueue();
         xmlTask = new XMLTask('assets/book1.xml');
 
@@ -33,7 +33,7 @@ public class BookService extends EventDispatcher{
         requestQueue.addEventListener(Event.COMPLETE, bookLoaded);
     }
 
-    private function bookLoaded(event:Event){
+    private function bookLoaded(event:Event):void{
         var bookXMLTask:XMLTask = requestQueue.completedTasks[0] as XMLTask;
         var bookXML:XML = new XML(bookXMLTask.data);
 

@@ -370,7 +370,6 @@ package com.adobe.utils
 								var optfound:Sampler = SAMPLEMAP [opts[k]];
 								if ( optfound == null )
 								{
-									// todo check that it's a number...
 									//trace( "Warning, unknown sampler option: "+opts[k] );
 									bias = Number(opts[k]); 
 									if ( verbose )

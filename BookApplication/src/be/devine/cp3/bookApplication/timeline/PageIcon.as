@@ -48,7 +48,7 @@ public class PageIcon extends Sprite{
         var backgroundColor:Quad = new Quad(33, 46, appModel.arrColors[(data.chapter-1)%appModel.arrColors.length]);
         addChild(backgroundColor);
 
-        var pageNumber:starling.text.TextField = new TextField(backgroundColor.width, 20, String(pageNumberString), "CENTURY", 14, 0xffffff);
+        var pageNumber:starling.text.TextField = new TextField(backgroundColor.width, 20, String(pageNumberString-2), "CENTURY", 14, 0xffffff);
         pageNumber.y = backgroundColor.height;
         addChild(pageNumber);
 
@@ -79,9 +79,11 @@ public class PageIcon extends Sprite{
             addChild(iconImage);
         }
 
-        if(pageNumberString == 0){
+        if(pageNumberString-2 <= 0){
             pageNumber.alpha = 0;
-            backgroundColor.alpha = 0;
+            if(pageNumberString == 0){
+                backgroundColor.alpha = 0;
+            }
         }
 
         this.flatten();

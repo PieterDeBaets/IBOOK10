@@ -24,6 +24,7 @@ import starling.events.KeyboardEvent;
 import starling.events.Touch;
 import starling.events.TouchEvent;
 import starling.events.TouchPhase;
+import starling.textures.Texture;
 
 public class Controls extends Sprite{
     /*************************************/
@@ -46,21 +47,21 @@ public class Controls extends Sprite{
 
         appModel = AppModel.getInstance();
 
-        var nextButtonTexture = appModel.atlas.getTexture('BasicNextButton');
+        var nextButtonTexture:Texture = appModel.atlas.getTexture('BasicNextButton');
         nextButton = new Image(nextButtonTexture);
         nextButton.x = Starling.current.stage.stageWidth - nextButton.width;
         nextButton.y = Starling.current.stage.stageHeight - nextButton.height;
         nextButton.addEventListener(TouchEvent.TOUCH, nextPageHandler);
         addChild(nextButton);
 
-        var prevButtonTexture = appModel.atlas.getTexture('BasicPrevButton');
+        var prevButtonTexture:Texture = appModel.atlas.getTexture('BasicPrevButton');
         prevButton = new Image(prevButtonTexture);
         prevButton.x = 0;
         prevButton.y = Starling.current.stage.stageHeight - nextButton.height;
         prevButton.addEventListener(TouchEvent.TOUCH, prevPageHandler);
         addChild(prevButton);
 
-        var lightSwitchTexture = appModel.atlas.getTexture('lightoff');
+        var lightSwitchTexture:Texture = appModel.atlas.getTexture('lightoff');
         lightSwitch = new Image(lightSwitchTexture);
         lightSwitch.x =18;
         lightSwitch.y = 11;

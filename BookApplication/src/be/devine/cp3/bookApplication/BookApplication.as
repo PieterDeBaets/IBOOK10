@@ -64,6 +64,11 @@ public class BookApplication extends starling.display.Sprite {
         appModel.addEventListener(AppModel.LIGHTMODE_CHANGED, lightModeChanged);
     }
 
+
+    /*************************************/
+    //Methods
+    /*************************************/
+
     private function lightModeChanged(event:Event):void {
         if(background){
             background.dispose();
@@ -79,7 +84,7 @@ public class BookApplication extends starling.display.Sprite {
         }
     }
 
-    private function bookCompleted(event:Event){
+    private function bookCompleted(event:Event):void{
 
         timeline = new Timeline();
         addChild(timeline);
@@ -100,30 +105,12 @@ public class BookApplication extends starling.display.Sprite {
         setChildIndex(pageViewer, 0);
 
         setChildIndex(backgroundImage, 0);
-        //setChildIndex(background, 0);
 
     }
 
     /*************************************/
-    //Methods
-    /*************************************/
-
-
-    /*************************************/
     //Getters & Setters
     /*************************************/
-
-
-        //instantie RequestQueue
-        //xml inladen
-
-        //instantie Appmodel
-        //appmodel variabelen instellen adhv xml
-
-        //instantie PageViewer
-        //instantie Controls
-        //instantie Index
-        //instantie Timeline
 
 
     }

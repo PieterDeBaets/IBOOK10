@@ -29,12 +29,11 @@ public class PageVOFactory {
                     //textPageVO.style = pageXML.@style;
                     //textPageVO.pageNumber = appModel.totalPages;
 
-                    for each(var paragraph in pageXML.p){
+                    for each(var paragraph:String in pageXML.p){
                         textPageVO.paragraph +=  removeTabsAndNewLines(paragraph) + '\n \n';
                     }
 
                     //set X and Y offset if filled in
-                    //TODO deze werkt beter! i.p.v. != 0
                     if(pageXML.@X != pageXML.@noneExistingAttributeInXml) textPageVO.x = pageXML.@X;
                     if(pageXML.@Y != pageXML.@noneExistingAttributeInXml) textPageVO.y = pageXML.@Y;
 

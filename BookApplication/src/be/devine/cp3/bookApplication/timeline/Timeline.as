@@ -94,7 +94,7 @@ public class Timeline extends Sprite{
         timelineScroll.scrollProcent = appModel.currentSpread/(appModel.totalSpreads-1);
     }
 
-    private function checkHover(event:TouchEvent){
+    private function checkHover(event:TouchEvent):void{
         var touch:Touch = event.getTouch(this);
 
         if(touch){
@@ -102,17 +102,14 @@ public class Timeline extends Sprite{
                 Mouse.cursor = MouseCursor.BUTTON;
             }else if(touch.phase == TouchPhase.ENDED){
                 appModel.timelineVisible = !appModel.timelineVisible;
-            }else if(touch.phase == TouchPhase.ENDED){
-            }else if(touch.phase == TouchPhase.MOVED){
-            }else{
-
+                Mouse.cursor = MouseCursor.ARROW;
             }
         }else{
             Mouse.cursor = MouseCursor.ARROW;
         }
     }
 
-    private function keyHandler(event:KeyboardEvent){
+    private function keyHandler(event:KeyboardEvent):void{
         switch (event.keyCode){
             case Keyboard.UP:
                 appModel.timelineVisible = false;
@@ -123,7 +120,7 @@ public class Timeline extends Sprite{
         }
     }
 
-    private function toggleVisibility(event:flash.events.Event){
+    private function toggleVisibility(event:flash.events.Event):void{
         if(appModel.timelineVisible){
             btnTimeline.texture = appModel.atlas.getTexture('timelineBtnUp');
             setupTween(0);
@@ -133,7 +130,7 @@ public class Timeline extends Sprite{
         }
     }
 
-    private function setupTween(value){
+    private function setupTween(value:int):void{
         if (tween) tween.reset(this, tweenspeed, Transitions.EASE_OUT);
         else tween = new Tween(this, tweenspeed, Transitions.EASE_OUT);
 
